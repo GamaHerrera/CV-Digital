@@ -3271,3 +3271,31 @@ body.has-sticky-header {
     border-radius: var(--border-radius-medium);
     font-size: 1.6rem;
 }
+
+/* Sección Estudios creativos */
+.education.creative {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white-color);
+    padding: 3rem 0;
+}
+.education.creative .section-header h2 {
+    color: var(--white-color);
+}
+.education.creative .section-header .section-divider, .education.creative .section-divider::before, .education.creative .section-divider::after {
+    background: var(--white-color);
+}
+.education.creative .education-container {
+    display: flex;
+    justify-content: center;
+}
+.education.creative .education-card {
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+}
+.education.creative .education-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
