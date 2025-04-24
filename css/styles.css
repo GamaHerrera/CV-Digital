@@ -881,14 +881,36 @@ body.dark-theme .theme-toggle i.fa-moon {
 /* Sección Contacto */
 .contact {
     background-color: var(--light-gray);
+    padding: 5rem 0;
 }
-
+.contact .section-header h2 {
+    color: var(--primary-color);
+}
 .contact-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5rem;
+    grid-template-columns: auto auto;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
 }
-
+@media (min-width: 1024px) {
+    .contact-content {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-cards {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .contact-card {
+        width: 280px;
+        margin: 0;
+    }
+}
 .contact-info h3 {
     font-size: 2.4rem;
     margin-bottom: 2rem;
@@ -896,6 +918,7 @@ body.dark-theme .theme-toggle i.fa-moon {
 
 .contact-info p {
     margin-bottom: 3rem;
+    max-width: 70%;
 }
 
 .contact-details {
@@ -945,6 +968,54 @@ body.dark-theme .theme-toggle i.fa-moon {
 .form-group input:focus,
 .form-group textarea:focus {
     box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.contact-card {
+    background: var(--white-color);
+    border-radius: var(--border-radius-medium);
+    padding: 2rem;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-card h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.contact-card a {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 500;
+    word-break: break-all;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Footer */
@@ -3272,7 +3343,7 @@ body.has-sticky-header {
     font-size: 1.6rem;
 }
 
-/* Sección Estudios creativos */
+/* Sección de Estudios creativos */
 .education.creative {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--white-color);
@@ -3298,4 +3369,43 @@ body.has-sticky-header {
 .education.creative .education-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+/* Desktop: mejorar layout sección Contacto */
+@media (min-width: 1024px) {
+  .contact-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-cards {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .contact-card {
+    width: 280px;
+    margin: 0;
+  }
+}
+
+/* Botones de contacto */
+.btn-contact {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius-small);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    margin-top: 1rem;
+    display: inline-block;
+}
+.btn-contact:hover,
+.btn-contact:focus {
+    background-color: var(--primary-dark);
+    outline: none;
 }
