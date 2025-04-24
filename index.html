@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamaliel Herrera | Diseñador UI/UX</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="description" content="Portafolio de Gamaliel Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
+    <meta property="og:title" content="Gamaliel Herrera | Diseñador UI/UX">
+    <meta property="og:description" content="Portafolio de Gamaliel Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
+    <meta property="og:image" content="img/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusitio.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gamaliel Herrera | Diseñador UI/UX">
+    <meta name="twitter:description" content="Portafolio de Gamaliel Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
+    <meta name="twitter:image" content="img/og-image.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
+    <div id="parallax-container" class="global-parallax-elements"></div>
+    
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Botón para ir arriba -->
+    <a href="#" id="scroll-to-top" class="scroll-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <header>
+        <nav>
+            <div class="logo">GH</div>
+            <div class="nav-links">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="#habilidades" class="nav-link">Habilidades</a>
+                <a href="#habilidades-blandas" class="nav-link">Habilidades blandas</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#certificaciones" class="nav-link">Certificaciones</a>
+                <a href="#idiomas" class="nav-link">Idiomas</a>
+                <a href="#contacto" class="nav-link">Contacto</a>               
+            </div>
+            <div class="theme-toggle">
+                <i class="ri-moon-fill"></i>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>
+                        <span class="strikethrough">Gamaliel</span> 
+                        <span class="highlight">Gama</span> 
+                        Herrera
+                    </h1>
+                    <div class="typewriter">
+                        <span id="typewriter-text"></span><span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description">Diseñador gráfico especializado en branding y diseño web. Ayudo a marcas a crear experiencias digitales que conectan emocionalmente con su audiencia, con un enfoque en funcionalidad y estética.</p>
+                    <div class="hero-cta">
+                        <a href="#contacto" class="btn btn-primary">Contáctame</a>
+                        <a href="#proyectos" class="btn btn-secondary">Ver proyectos</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gamalielherrera" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Gamaliel Herrera"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="shape"></div>
+                    <div class="profile-img-placeholder">
+                        <img src="img/profile-min.jpg" alt="Gamaliel Herrera">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre mí</h2>
+                    <span class="section-divider"></span>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>¡Hola! Soy Gamaliel Herrera, diseñador gráfico especializado en branding y diseño web. Me dedico a ayudar a marcas y negocios a crear identidades visuales coherentes y sitios web funcionales que transmitan su esencia.</p>
+                        <p>Mi enfoque integra estrategias de UI/UX para asegurar que cada experiencia digital sea tanto estética como intuitiva.</p>
+                        <div class="experience-highlight">
+                            <div class="experience-years">
+                                <span class="experience-number">7</span>
+                                <span class="experience-label">Años de experiencia</span>
+                            </div>
+                            <div class="current-position">
+                                <div class="position-info">
+                                    <h3>Diseñador Gráfico UX/UI</h3>
+                                    <p class="experience-period">2018 - Presente</p>
+                                    <p class="experience-company">Emergys México </p>
+                                    <ul class="position-details">
+                                        <li>Desarrollo de interfaces intuitivas y estéticamente agradables</li>
+                                        <li>Creación de sistemas de identidad visual coherentes</li>
+                                        <li>Optimización de experiencias digitales</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <div class="image-placeholder">
+                                <img src="img/profile-snd-min.jpg" alt="Gamaliel Herrera">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Habilidades profesionales</h2>
+                    <span class="section-divider"></span>
+                </div>
+                <div class="skills-content">
+                    <div class="skill-category">
+                        <h3>Diseño UI/UX</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Diseño de interfaces</span>
+                                    <span class="skill-level advanced">Avanzado</span>
+                                </div>
+                                <div class="skill-description">
+                                    Creación de interfaces intuitivas, accesibles y orientadas a conversión para e-commerce y aplicaciones.
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Experiencia de usuario</span>
+                                    <span class="skill-level advanced">Avanzado</span>
+                                </div>
+                                <div class="skill-description">
+                                    Investigación, pruebas de usabilidad y optimización de flujos para mejorar la interacción y retención.
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Prototipado</span>
+                                    <span class="skill-level intermediate">Intermedio</span>
+                                </div>
+                                <div class="skill-description">
+                                    Desarrollo de wireframes y prototipos interactivos para validar conceptos antes del desarrollo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Herramientas</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Affinity Designer</span>
+                                    <span class="skill-level advanced">Avanzado</span>
+                                </div>
+                                <div class="skill-description">
+                                    Prototipado visual, diseño técnico y documentación para equipos de desarrollo.
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Figma</span>
+                                    <span class="skill-level intermediate">Intermedio</span>
+                                </div>
+                                <div class="skill-description">
+                                    Diseño colaborativo, creación de sistemas escalables y componentes reutilizables.
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Photoshop</span>
+                                    <span class="skill-level intermediate">Intermedio</span>
+                                </div>
+                                <div class="skill-description">
+                                    Edición y retoque de imágenes orientadas a interfaces digitales y recursos visuales.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Desarrollo</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML/CSS</span>
+                                    <span class="skill-level advanced">Avanzado</span>
+                                </div>
+                                <div class="skill-description">
+                                    Implementación de interfaces responsivas con enfoque mobile-first y precisión visual.
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span class="skill-level basic">Básico</span>
+                                </div>
+                                <div class="skill-description">
+                                    Desarrollo de interacciones y mejoras en la experiencia de usuario.
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Frameworks UI</span>
+                                    <span class="skill-level basic">Básico</span>
+                                </div>
+                                <div class="skill-description">
+                                    Uso de bibliotecas como Bootstrap y Tailwind para maquetación ágil y consistente.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cita-ux" class="quote-section">
+            <div class="container">
+                <div class="quote-content">
+                    <div class="quote-text">
+                        <blockquote>
+                            "El diseño no es solo sobre hacer que las cosas se vean bonitas, sino sobre hacer que las cosas funcionen bien."
+                        </blockquote>
+                        <cite>- Dieter Rams</cite>
+                    </div>
+                    <div class="author-image">
+                        <div class="author-photo-frame">
+                            <img src="img/Rams_Portrait_Big.jpg.foto.rmedium.webp" alt="Dieter Rams" class="author-photo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades-blandas" class="soft-skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Habilidades blandas</h2>
+                    <p>El equilibrio entre creatividad, comunicación efectiva y trabajo en equipo es clave para llevar cada proyecto a buen término, brindando soluciones innovadoras y de calidad.</p>
+                </div>
+                
+                <div class="soft-skills-container">
+                    <!-- Habilidad blanda 1 -->
+                    <div class="soft-skills-category">
+                        <h3>🗣️ Comunicación & Relaciones</h3>
+                        <div class="skills-group">
+                            <span class="skill-word">Comunicación efectiva</span>
+                            <span class="skill-word">Trabajo en equipo</span>
+                            <span class="skill-word">Empatía</span>
+                            <span class="skill-word">Liderazgo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidad blanda 2 -->
+                    <div class="soft-skills-category">
+                        <h3>🧠 Pensamiento & Resolución</h3>
+                        <div class="skills-group">
+                            <span class="skill-word">Pensamiento crítico</span>
+                            <span class="skill-word">Resolución de problemas</span>
+                            <span class="skill-word">Creatividad</span>
+                            <span class="skill-word">Adaptabilidad</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidad blanda 3 -->
+                    <div class="soft-skills-category">
+                        <h3>🕒 Gestión personal</h3>
+                        <div class="skills-group">
+                            <span class="skill-word">Organización</span>
+                            <span class="skill-word">Gestión del tiempo</span>
+                            <span class="skill-word">Atención al detalle</span>
+                            <span class="skill-word">Proactividad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Proyectos destacados</h2>
+                    <span class="section-divider"></span>
+                </div>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="ui">UI Design</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="branding">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <span>Proximamente</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Potts - App de quinielas</h3>
+                            <p>Diseño de branding para la app Potts, una plataforma de apuestas deportivas</p>
+                            <div class="project-tags">
+                                <span>Branding</span>
+                                <span>Mobile</span>
+                                <span>Sports</span>
+                            </div>
+                            <a href="pages/proyecto-branding-potts.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="branding">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <img src="img/branding/ponce/4-min.jpg" alt="Ponce Rosales - Branding">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Ponce Rosales - Abogados</h3>
+                            <p>Diseño de branding para la empresa Ponce Rosales, un despacho de abogados</p>
+                            <div class="project-tags">
+                                <span>Branding</span>
+                                <span>Law Firm</span>
+                                <span>Identidad Visual</span>
+                            </div>
+                            <a href="pages/proyecto-branding-ponce-rosales.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="asistentes">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <span>AI</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Asistente Virtual para Salud</h3>
+                            <p>Diseño de interfaz para asistente virtual en sector salud</p>
+                            <div class="project-tags">
+                                <span>Asistente Virtual</span>
+                                <span>Healthcare</span>
+                                <span>AI</span>
+                            </div>
+                            <a href="proyecto-asistente-salud.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="ui">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <span>UI</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Dashboard Analítico</h3>
+                            <p>Diseño de panel de control para plataforma de análisis de datos</p>
+                            <div class="project-tags">
+                                <span>UI Design</span>
+                                <span>Dashboard</span>
+                                <span>Data Viz</span>
+                            </div>
+                            <a href="proyecto-dashboard.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta">
+                    <a href="proyectos.html" class="btn btn-primary">Ver todos los proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificaciones" class="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Mis Certificaciones</h2>
+                    <p>Formación continua y acreditaciones profesionales</p>
+                </div>
+                
+                <div class="certifications-container">
+                    <!-- Certificación 1 -->
+                    <div class="certification-card" data-aos="fade-up">
+                        <div class="certification-logo">
+                            <img src="img/google-wordmarks-2x.webp" alt="Google UX Design" loading="lazy">
+                        </div>
+                        <div class="certification-content">
+                            <h3>Google UX Design Professional Certificate</h3>
+                            <p class="certification-issuer">Google & Coursera</p>
+                            <p class="certification-date">Diciembre 2021</p>
+                            <p class="certification-description">Certificación profesional en diseño de experiencia de usuario, abarcando investigación, wireframing, prototipos y testing.</p>
+                            <a href="https://coursera.org/share/4ca316840f7024b6cef22b28f054faef" class="btn-credential" target="_blank" rel="noopener noreferrer">
+                                <span>Ver credencial</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificación 2 -->
+                    <div class="certification-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="certification-logo">
+                            <img src="img/google-wordmarks-2x.webp" alt="Accelerate Knowledge Exchange with Agentspace" loading="lazy">
+                        </div>
+                        <div class="certification-content">
+                            <h3>Accelerate Knowledge Exchange with Agentspace</h3>
+                            <p class="certification-issuer">Google</p>
+                            <p class="certification-date">Febrero 2025</p>
+                            <p class="certification-description">Implementación y configuración de Google Agentspace para optimizar el intercambio de conocimiento y la automatización de tareas empresariales.</p>
+                            <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14133194?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" class="btn-credential" target="_blank" rel="noopener noreferrer">
+                                <span>Ver credencial</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificación 3 -->
+                    <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certification-logo">
+                            <img src="img/google-wordmarks-2x.webp" alt="Deploy Agentspace" loading="lazy">
+                        </div>
+                        <div class="certification-content">
+                            <h3>Deploy Agentspace</h3>
+                            <p class="certification-issuer">Google</p>
+                            <p class="certification-date">Febrero 2025</p>
+                            <p class="certification-description">Insignia de habilidad en despliegue de Google Agentspace, incluyendo configuración de almacenes de datos y acciones.</p>
+                            <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14147877?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" class="btn-credential" target="_blank" rel="noopener noreferrer">
+                                <span>Ver credencial</span>
+                                <i class="ri-external-link-line"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="view-all-certifications">
+                        <a href="certificaciones.html" class="btn-view-all">
+                            <span>Ver todas mis certificaciones</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="idiomas" class="languages">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Idiomas</h2>
+                    <p>Conectando en múltiples lenguajes</p>
+                </div>
+                
+                <div class="languages-container">
+                    <!-- Idioma 1 -->
+                    <div class="language-card" data-aos="fade-up">
+                        <div class="language-flag">
+                            <img src="img/flag-mexico.svg" alt="Español">
+                        </div>
+                        <div class="language-info">
+                            <h3>Español</h3>
+                            <div class="language-level">
+                                <span class="level-label">Nativo</span>
+                                <div class="level-bar">
+                                    <div class="level-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Idioma 2 -->
+                    <div class="language-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="language-flag">
+                            <img src="img/flag-usa.svg" alt="Inglés">
+                        </div>
+                        <div class="language-info">
+                            <h3>Inglés</h3>
+                            <div class="language-level">
+                                <span class="level-label" data-level="B1">Intermedio</span>
+                                <div class="level-bar">
+                                    <div class="level-fill" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="studying-badge">
+                                <i class="ri-book-line"></i> Estudiando actualmente
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Próximos idiomas -->
+                    <div class="language-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="language-flag">
+                            <div class="coming-soon-flag">
+                                <i class="ri-add-circle-line"></i>
+                            </div>
+                        </div>
+                        <div class="language-info">
+                            <h3>Próximos idiomas</h3>
+                            <p>Estoy planeando aprender más idiomas próximamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contáctame</h2>
+                    <span class="section-divider"></span>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>¿Tienes un proyecto en mente?</h3>
+                        <p>Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales. ¡Hablemos sobre cómo puedo ayudarte!</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="ri-mail-line"></i>
+                                <span>gama-hg@hotmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ri-map-pin-2-line"></i>
+                                <span>Guadalajara, México</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/gamalielherrera" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Gamaliel Herrera"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>GH</span>
+                    <p>Gamaliel Herrera</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#habilidades-blandas">Habilidades blandas</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#certificaciones">Certificaciones</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#idiomas">Idiomas</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/gamalielherrera" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Gamaliel Herrera"><i class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gamaliel Herrera. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/parallax.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función throttle para mejorar el rendimiento
+            function throttle(func, delay) {
+                let lastCall = 0;
+                return function(...args) {
+                    const now = new Date().getTime();
+                    if (now - lastCall < delay) {
+                        return;
+                    }
+                    lastCall = now;
+                    return func(...args);
+                };
+            }
+            
+            // Navegación y scroll
+            const header = document.querySelector('header');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            
+            // Usar throttle para el evento de scroll
+            window.addEventListener('scroll', throttle(function() {
+                // Hacer el header sticky cuando se hace scroll
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                    header.classList.add('sticky');
+                    document.body.classList.add('has-sticky-header');
+                } else {
+                    header.classList.remove('scrolled');
+                    header.classList.remove('sticky');
+                    document.body.classList.remove('has-sticky-header');
+                }
+                
+                // Actualizar navegación activa según la sección visible
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }, 100));
+        });
+    </script>
+</body>
+</html>
