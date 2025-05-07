@@ -3371,6 +3371,10 @@ body.has-sticky-header {
     margin-bottom: 1rem;
 }
 
+.education-institute {
+    margin-bottom: 1rem;
+}
+
 /* Desktop: mejorar layout sección Contacto */
 @media (min-width: 1024px) {
   .contact-content {
