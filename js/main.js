@@ -1,5 +1,46 @@
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar el carrusel de frases
+    function initQuoteCarousel() {
+        const track = document.querySelector('.quote-carousel-track');
+        if (!track) return;
+
+        // Clonar los slides para el efecto infinito
+        const slides = document.querySelectorAll('.quote-carousel-slide');
+        const totalSlides = slides.length / 2; // Dividimos entre 2 porque están duplicados
+        
+        // Ajustar el ancho del track para que quepan todos los slides
+        track.style.width = `${totalSlides * 100}%`;
+        
+        // Asegurarse de que los slides tengan el ancho correcto
+        document.querySelectorAll('.quote-carousel-slide').forEach(slide => {
+            slide.style.width = `${100 / totalSlides}%`;
+        });
+        
+        // Reiniciar la animación cuando termine
+        track.addEventListener('animationiteration', () => {
+            // Forzar un reflow para reiniciar la animación sin parpadeo
+            track.style.animation = 'none';
+            track.offsetHeight; // Trigger reflow
+            track.style.animation = 'scroll 40s linear infinite';
+        });
+        
+        // Pausar animación al hacer hover
+        track.addEventListener('mouseenter', () => {
+            track.style.animationPlayState = 'paused';
+        });
+        
+        track.addEventListener('mouseleave', () => {
+            track.style.animationPlayState = 'running';
+        });
+    }
+    
+    // Inicializar el carrusel cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initQuoteCarousel);
+    } else {
+        initQuoteCarousel();
+    }
     // Variables
     const header = document.querySelector('header');
     const menuToggle = document.querySelector('.menu-toggle');
