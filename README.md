@@ -4,7 +4,7 @@
 
 ## Sobre mí
 
-Soy **Gamaliel Herrera**, diseñador gráfico especializado en UX, UI y branding, con experiencia en:
+Soy **Gama Herrera**, diseñador gráfico especializado en UX, UI y branding, con experiencia en:
 - Diseño de interfaces de usuario intuitivas.
 - Creación de identidades de marca memorables.
 - Prototipado y pruebas de usabilidad.

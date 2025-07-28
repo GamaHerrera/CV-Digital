@@ -55,56 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
-    const typewriterText = document.getElementById('typewriter-text');
     const languageLevels = document.querySelectorAll('.level-fill');
-    
-    // Textos para el efecto typewriter
-    const typewriterTexts = [
-        'Diseñador de Branding & Web',
-        'Especialista en Identidad Visual y Experiencia Digital',
-        'Diseñador UI/UX',
-        'Creador de Marcas y Experiencias Digitales'
-    ];
-    
-    // Inicializar el efecto de typewriter
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typewriterDelay = 100;
-    
-    function typeWriter() {
-        const currentText = typewriterTexts[textIndex];
-        
-        if (isDeleting) {
-            // Eliminar caracteres
-            typewriterText.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            typewriterDelay = 50; // Más rápido al borrar
-        } else {
-            // Añadir caracteres
-            typewriterText.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-            typewriterDelay = 150; // Más lento al escribir
-        }
-        
-        // Si terminó de escribir, empezar a borrar después de una pausa
-        if (!isDeleting && charIndex === currentText.length) {
-            isDeleting = true;
-            typewriterDelay = 1500; // Pausa antes de empezar a borrar
-        }
-        
-        // Si terminó de borrar, pasar al siguiente texto
-        if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % typewriterTexts.length;
-            typewriterDelay = 500; // Pausa antes de empezar a escribir
-        }
-        
-        setTimeout(typeWriter, typewriterDelay);
-    }
-    
-    // Iniciar el efecto typewriter
-    setTimeout(typeWriter, 1000);
     
     // Efecto de cursor personalizado
     document.addEventListener('mousemove', function(e) {
