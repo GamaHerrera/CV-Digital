@@ -305,8 +305,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const heroContent = heroSection.querySelector('.hero-content');
             const heroImage = heroSection.querySelector('.hero-image');
             
-            heroContent.style.transform = `translateY(${scrollY * 0.2}px)`;
-            heroImage.style.transform = `translateY(${scrollY * 0.1}px)`;
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrollY * 0.2}px)`;
+            }
+            
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrollY * 0.1}px)`;
+            }
         }
     });
     

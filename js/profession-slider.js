@@ -12,22 +12,30 @@ class ProfessionSlider {
     }
     
     init() {
-        // Set up event listeners for indicators
-        this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => this.goToSlide(index));
-        });
+        // Verificar si hay indicadores
+        if (this.indicators.length > 0) {
+            this.indicators.forEach((indicator, index) => {
+                if (indicator) {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                }
+            });
+        }
         
         // Pause on hover
         const slider = document.querySelector('.profession-slider');
-        slider.addEventListener('mouseenter', () => this.pause());
-        slider.addEventListener('mouseleave', () => this.resume());
-        
-        // Touch events for mobile
-        slider.addEventListener('touchstart', () => this.pause());
-        slider.addEventListener('touchend', () => this.resume());
-        
-        // Start the slider
-        this.start();
+        if (slider) {
+            slider.addEventListener('mouseenter', () => this.pause());
+            slider.addEventListener('mouseleave', () => this.resume());
+            
+            // Touch events for mobile
+            slider.addEventListener('touchstart', () => this.pause());
+            slider.addEventListener('touchend', () => this.resume());
+            
+            // Start the slider
+            this.start();
+        } else {
+            console.warn('No se encontró el elemento .profession-slider');
+        }
     }
     
     start() {

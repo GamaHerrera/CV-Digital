@@ -2659,6 +2659,95 @@ body.dark-theme .theme-toggle i.fa-moon {
     gap: 1.2rem;
 }
 
+/* Contenedor del botón "Ver todos los proyectos" */
+.projects-button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón "Ver todos los proyectos" */
+.view-all-projects-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+
+.view-all-projects-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary-dark);
+    transition: all 0.3s ease;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.view-all-projects-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.view-all-projects-btn:hover::before {
+    width: 100%;
+}
+
+.view-all-projects-btn i {
+    transition: transform 0.3s ease;
+}
+
+.view-all-projects-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Efecto de pulso en hover */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+    }
+}
+
+.view-all-projects-btn:active {
+    transform: translateY(1px);
+    animation: pulse 1s;
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+    .view-all-projects-btn {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+
 .projects-cta {
     text-align: center;
 }
