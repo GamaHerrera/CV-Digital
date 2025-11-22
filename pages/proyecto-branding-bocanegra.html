@@ -1,331 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bocanegra - Restaurante | Gamaliel Herrera</title>
-    <link rel="icon" type="image/png" href="../img/favicon.png">
-    <meta name="description" content="Proyecto de branding para Bocanegra, restaurante, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:title" content="Branding para Bocanegra - Restaurante | Gamaliel Herrera">
-    <meta property="og:description" content="Proyecto de branding para Bocanegra, restaurante, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:image" content="../img/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/pages/proyecto-branding-bocanegra.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Branding para Bocanegra - Restaurante | Gamaliel Herrera">
-    <meta name="twitter:description" content="Proyecto de branding para Bocanegra, restaurante, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta name="twitter:image" content="../img/og-image.png">
-    <link rel="stylesheet" href="../css/styles.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Bocanegra - Branding | Gama Herrera</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <meta name="description" content="Proyecto de branding para Bocanegra, restaurante, por Gama Herrera.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
-    <div id="parallax-container" class="global-parallax-elements"></div>
-    
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Botón para ir arriba -->
-    <a href="#" id="scroll-to-top" class="scroll-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <header>
-        <nav>
-            <div class="logo">GH</div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link" rel="noopener noreferrer">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link" rel="noopener noreferrer">Sobre mí</a>
-                <a href="../index.html#habilidades" class="nav-link" rel="noopener noreferrer">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active" rel="noopener noreferrer">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link" rel="noopener noreferrer">Contacto</a>
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="../index.html" class="logo">GH</a>
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
+                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
+                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
+                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-moon-line"></i>
             </div>
-            <div class="theme-toggle">
-                <i class="ri-moon-fill"></i>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="project-detail-header">
+        <section class="section" style="padding-top: 160px;">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <span>/</span>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <span>/</span>
-                    <span>Diseño de Branding - Bocanegra - Restaurante</span>
+                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                    <a href="../proyectos.html"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
+                        <i class="ri-arrow-left-line"></i> Volver a proyectos
+                    </a>
                 </div>
-                <h1>Diseño de Branding - Bocanegra</h1>
-                <div class="project-meta">
-                    <div class="project-meta-item">
-                        <span class="meta-label">Cliente:</span>
-                        <span class="meta-value">Bocanegra - Restaurante</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Categoría:</span>
-                        <span class="meta-value">Branding, Restaurant</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Fecha:</span>
-                        <span class="meta-value">Octubre 2019</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="project-showcase">
-            <div class="container">
-                <div class="project-showcase-image">
-                    <div class="image-placeholder showcase">
-                        <img src="../img/branding/bocanegra/bocanegra-min.jpg" alt="Showcase Bocanegra" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h1 class="section-title" style="text-align: left;">Bocanegra - Restaurante</h1>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-description">
-                    <h2>Descripción del Proyecto</h2>
-                    <p>Bocanegra es un restaurante de comida mexicana que ofrece una experiencia culinaria auténtica y tradicional. Con una filosofía centrada en la calidad, la tradición y la autenticidad, Bocanegra se posiciona como un refugio gastronómico que invita a los comensales a experimentar la rica cultura culinaria mexicana.
+                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
+                        <span style="font-weight: 600;">Bocanegra</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
+                        <span style="font-weight: 600;">Branding, Restaurant</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
+                        <span style="font-weight: 600;">Octubre 2019</span>
+                    </div>
+                </div>
 
-                        Este proyecto de branding busca posicionar a Bocanegra como un restaurante de alto nivel, con una imagen que transmita exclusividad, experiencia, confianza y una propuesta diferente a lo que tradicionalmente representa un restaurante. Una marca elegante, sobria y moderna que inspire seguridad desde la primera impresión</p>
-                    
-                    <h2>El Desafío</h2>
-                    <p>El principal reto fue desarrollar una identidad visual que no cayera en los clichés de la cultura mexicana, pero que aún así evocara tradición, autenticidad y orgullo. El objetivo era equilibrar lo rústico con lo sofisticado, apelando tanto a locales como a visitantes que buscan una experiencia gastronómica profunda y real.</p>
-                    
-                    <div class="project-goals">
-                        <h3>Objetivos del Proyecto</h3>
-                        <ul>
-                            <li>Crear una marca con identidad sólida, auténtica y memorable</li>
-                            <li>Evocar la tradición culinaria mexicana sin recurrir a estereotipos visuales</li>
-                            <li>Generar una experiencia sensorial desde lo visual que complemente lo gastronómico</li>
-                            <li>Posicionar a Bocanegra como un referente en la cocina mexicana tradicional de alta calidad</li>
-                            <li>Crear una imagen que refleje la calidad, la tradición y la autenticidad de la cocina mexicana</li>
-                        </ul>
-                    </div>
-                    
-                    <h2>Proceso de Diseño</h2>
-                    <div class="design-process">
-                        <div class="process-step">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h3>Investigación</h3>
-                                <p>Estudio de referencias culturales, textiles, artesanía, gastronomía e historia mexicana.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h3>Definición del Concepto</h3>
-                                <p>La marca debía contar una historia: la de la cocina que se transmite de generación en generación, con sabores llenos de identidad.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h3>Exploración Visual</h3>
-                                <p>Bocetos inspirados en grabados, caligrafía tradicional, y colorimetría inspirada en ingredientes típicos (maíz azul, chile pasilla, barro, etc.).</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h3>Construcción de Identidad</h3>
-                                <p>Desarrollo de logotipo, paleta cromática, tipografía, patrón gráfico y aplicaciones de marca.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">05</div>
-                            <div class="step-content">
-                                <h3>Pruebas y Ajustes</h3>
-                                <p>Ensayos de visibilidad en distintos formatos (menús, señalética, redes, empaques, etc.).</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h2>Resultados</h2>
-                    <p>El nuevo sistema de identidad visual para Bocanegra refleja con precisión el carácter de la marca: profesional, confiable y exclusivo. El resultado es una marca sólida y sofisticada que proyecta autoridad sin recurrir a los lugares comunes.</p>
-                    
-                    <div class="project-gallery">
-                        <h3>Galería del Proyecto</h3>
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/bocanegra/bocanegra-brand.jpg" alt="Showcase Bocanegra" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/bocanegra/5-min.JPG" alt="Showcase Bocanegra" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/bocanegra/3-min.JPG" alt="Showcase Bocanegra" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/bocanegra/7-min.JPG" alt="Showcase Bocanegra" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial testimonial-disruptive">
-                        <div class="testimonial-bg-shape"></div>
-                        <div class="testimonial-icon-burst">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <blockquote>
-                            <span class="testimonial-quote-text">
-                                Trabajar con el equipo de branding fue una experiencia transformadora. Lograron capturar la esencia de Bocanegra con una sensibilidad y profesionalismo que superó nuestras expectativas. Nuestra identidad ahora habla por sí sola, y conecta profundamente con nuestros clientes.
-                            </span>
-                        </blockquote>
-                        <div class="testimonial-author-disruptive">
-                            <!-- <img src="img/avatar-carlos.png" alt="Alejandro Ponce" class="testimonial-avatar" loading="lazy"> -->
-                            <div>
-                                <p class="author-name">Daniel González</p>
-                                <p class="author-title">Fundador de Bocanegra</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-image"
+                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
+                    <img src="../assets/img/branding/bocanegra/bocanegra-min.jpg" alt="Bocanegra Branding">
                 </div>
-                
-                <div class="project-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Herramientas Utilizadas</h3>
-                        <ul class="tools-list">
-                            <li><i class="ri-palette-line"></i> Affinity Designer</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Servicios Proporcionados</h3>
-                        <ul class="services-list">
-                            <li>Consultoría de Marca</li>
-                            <li>Desarrollo de Identidad Visual</li>
-                            <li>Manual de Identidad Corporativa</li>
-                            <li>Papelería Institucional</li>
-                            <li>Aplicaciones de Marca</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Proyectos Relacionados</h3>
-                        <div class="related-projects">
-                            <a href="proyecto-branding-ponce-rosales.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/ponce-mini.jpg" alt="Showcase Ponce Rosales" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Ponce Rosales</h4>
-                                    <p>Branding</p>
-                                </div>
-                            </a>
-                            <a href="proyecto-branding-potts.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/potts.jpg" alt="Showcase Ponce Rosales" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Potts</h4>
-                                    <p>Branding</p>
-                                </div>
-                            </a>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Bocanegra es un restaurante de comida mexicana que ofrece una experiencia culinaria
+                            auténtica y tradicional. Con una filosofía centrada en la calidad, la tradición y la
+                            autenticidad, Bocanegra se posiciona como un refugio gastronómico que invita a los
+                            comensales a experimentar la rica cultura culinaria mexicana.
+                        </p>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Este proyecto de branding busca posicionar a Bocanegra como un restaurante de alto nivel,
+                            con una imagen que transmita exclusividad, experiencia, confianza y una propuesta diferente
+                            a lo que tradicionalmente representa un restaurante. Una marca elegante, sobria y moderna
+                            que inspire seguridad desde la primera impresión.
+                        </p>
+
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            El principal reto fue desarrollar una identidad visual que no cayera en los clichés de la
+                            cultura mexicana, pero que aún así evocara tradición, autenticidad y orgullo. El objetivo
+                            era equilibrar lo rústico con lo sofisticado, apelando tanto a locales como a visitantes que
+                            buscan una experiencia gastronómica profunda y real.
+                        </p>
+
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
+                            Galería</h3>
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/bocanegra/bocanegra-brand.jpg" alt="Bocanegra 1">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/bocanegra/5-min.JPG" alt="Bocanegra 2">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/bocanegra/3-min.JPG" alt="Bocanegra 3">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/bocanegra/7-min.jpg" alt="Bocanegra 4">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/bocanegra/bocanegra-min.jpg" alt="Bocanegra 5">
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="sidebar-section cta-section">
-                        <h3>¿Tienes un proyecto similar?</h3>
-                        <p>Estoy disponible para nuevos proyectos. Hablemos sobre cómo puedo ayudarte a crear una experiencia digital excepcional.</p>
-                        <a href="../index.html#contacto" class="btn btn-primary" rel="noopener noreferrer">Contáctame</a>
+
+                    <div>
+                        <div
+                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
+                                <span class="tag">Affinity Designer</span>
+                                <span class="tag">Branding</span>
+                            </div>
+
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
+                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Consultoría de Marca</li>
+                                <li>Identidad Visual</li>
+                                <li>Papelería</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="next-project">
-            <div class="container">
-                <div class="next-project-content">
-                    <span>Siguiente Proyecto</span>
-                    <h2>Diseño Web - Psicóloga Sandra Ruvalcaba</h2>
-                    <a href="proyecto-sandra-ruvalcaba.html" class="btn btn-secondary" rel="noopener noreferrer">Ver proyecto <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>GH</span>
-                    <p>Gamaliel Herrera</p>
-                </div>
-                <div class="footer-links">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <a href="../index.html#sobre-mi" rel="noopener noreferrer">Sobre mí</a>
-                    <a href="../index.html#habilidades" rel="noopener noreferrer">Habilidades</a>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <a href="../index.html#contacto" rel="noopener noreferrer">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/gamaliel-herrera/" class="social-link"><i class="ri-linkedin-fill" rel="noopener noreferrer"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gamaliel Herrera. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="../js/parallax.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función throttle para mejorar el rendimiento
-            function throttle(func, delay) {
-                let lastCall = 0;
-                return function(...args) {
-                    const now = new Date().getTime();
-                    if (now - lastCall < delay) {
-                        return;
-                    }
-                    lastCall = now;
-                    return func(...args);
-                };
-            }
-            
-            // Navegación y scroll con throttling
-            const header = document.querySelector('header');
-            
-            window.addEventListener('scroll', throttle(function() {
-                // Hacer el header sticky cuando se hace scroll
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.add('sticky');
-                    document.body.classList.add('has-sticky-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.remove('sticky');
-                    document.body.classList.remove('has-sticky-header');
-                }
-            }, 100));
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

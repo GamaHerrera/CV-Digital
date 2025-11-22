@@ -1,344 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rediseño de App Financiera | Gamaliel Herrera</title>
-    <link rel="icon" type="image/png" href="../img/favicon.png">
-    <meta name="description" content="Proyecto de branding para Potts por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:title" content="Branding para Potts | Gamaliel Herrera">
-    <meta property="og:description" content="Proyecto de branding para Potts por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:image" content="../img/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/pages/proyecto-branding-potts.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Branding para Potts | Gamaliel Herrera">
-    <meta name="twitter:description" content="Proyecto de branding para Potts por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta name="twitter:image" content="../img/og-image.png">
-    <link rel="stylesheet" href="../css/styles.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Potts - Branding | Gama Herrera</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <meta name="description" content="Proyecto de branding para Potts, app de quinielas, por Gama Herrera.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
-    <div id="parallax-container" class="global-parallax-elements"></div>
-    
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Botón para ir arriba -->
-    <a href="#" id="scroll-to-top" class="scroll-to-top" rel="noopener noreferrer">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <header>
-        <nav>
-            <div class="logo">GH</div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link" rel="noopener noreferrer">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link" rel="noopener noreferrer">Sobre mí</a>
-                <a href="../index.html#habilidades" class="nav-link" rel="noopener noreferrer">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active" rel="noopener noreferrer">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link" rel="noopener noreferrer">Contacto</a>
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css?v=2">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="../index.html" class="logo">GH</a>
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
+                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
+                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
+                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-moon-line"></i>
             </div>
-            <div class="theme-toggle">
-                <i class="ri-moon-fill"></i>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="project-detail-header">
+        <section class="section" style="padding-top: 160px;">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a href="../index.html" target="_blank" rel="noopener noreferrer">Inicio</a>
-                    <span>/</span>
-                    <a href="../proyectos.html" target="_blank" rel="noopener noreferrer">Proyectos</a>
-                    <span>/</span>
-                    <span>Diseño de Branding - Potts</span>
+                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                    <a href="../proyectos.html"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
+                        <i class="ri-arrow-left-line"></i> Volver a proyectos
+                    </a>
                 </div>
-                <h1>Diseño de Branding - Potts</h1>
-                <div class="project-meta">
-                    <div class="project-meta-item">
-                        <span class="meta-label">Cliente:</span>
-                        <span class="meta-value">Potts</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Categoría:</span>
-                        <span class="meta-value">Branding, Tecnología Deportiva</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Fecha:</span>
-                        <span class="meta-value">Abril 2025</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="project-showcase">
-            <div class="container">
-                <div class="project-showcase-image">
-                    <div class="image-placeholder showcase">
-                        <img src="../img/branding/potts/potts-logo.jpg" alt="Potts - Logo" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h1 class="section-title" style="text-align: left;">Potts - App de Quinielas</h1>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-description">
-                    <h2>Descripción del Proyecto</h2>
-                    <p>Potts es una startup mexicana que busca transformar las tradicionales quinielas deportivas en una experiencia social, accesible y divertida. A través de una aplicación mobile-first, Potts permite a los usuarios crear y participar en quinielas personalizadas con amigos y familiares, eliminando la necesidad de hojas de cálculo, chats confusos o sistemas engorrosos.
-                    Este proyecto de branding se enfocó en dotar a Potts de una identidad visual moderna, limpia y flexible, capaz de crecer junto con la marca y adaptarse a diferentes entornos digitales. La marca debía transmitir dinamismo, cercanía, confianza y sobre todo: comunidad. En un mercado saturado de plataformas sobrecargadas de información, Potts apuesta por la simplicidad y la experiencia social.</p>
-                    
-                    <h2>El Desafío</h2>
-                    <p>El reto principal fue construir una identidad fresca y minimalista que se diferenciara radicalmente de las quinielas tradicionales. Mientras muchas plataformas se enfocan en estadísticas o diseños técnicos, Potts necesitaba comunicar una propuesta centrada en el usuario, intuitiva y con fuerte carga emocional.
+                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
+                        <span style="font-weight: 600;">Potts</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
+                        <span style="font-weight: 600;">Branding, Tecnología</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
+                        <span style="font-weight: 600;">Abril 2025</span>
+                    </div>
+                </div>
 
-                    Además, debía garantizar que el sistema visual se adaptara con facilidad a íconos de apps, pantallas móviles, redes sociales y eventualmente a formatos impresos, manteniendo siempre una coherencia de marca clara y funcional. La personalidad de Potts debía sentirse actual, amigable y accesible sin perder el carácter tecnológico ni el enfoque competitivo del deporte.</p>
-                    
-                    <div class="project-goals">
-                        <h3>Objetivos del Proyecto</h3>
-                        <ul>
-                            <li>Posicionar a Potts como una app líder en quinielas dentro del mundo hispano</li>
-                            <li>Reflejar los valores de comunidad, diversión y juego limpio</li>
-                            <li>Generar una experiencia de marca visualmente coherente en app, redes y materiales promocionales</li>
-                            <li>Crear un sistema visual flexible y escalable</li>
-                            <li>Diferenciarse claramente de la competencia a través de una estética moderna y limpia</li>
-                        </ul>
-                    </div>
-                    
-                    <h2>Proceso de Diseño</h2>
-                    <div class="design-process">
-                        <div class="process-step">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h3>Briefing Estratégico</h3>
-                                <p>Se trabajó en conjunto con los socios fundadores para entender la visión, la misión, el tono deseado y el público objetivo. Se identificaron los elementos clave que debía reflejar la identidad y los errores que debía evitar, como el exceso visual y la estética obsoleta.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h3>Investigación de Mercado</h3>
-                                <p>Se analizaron otras apps del sector deportivo y social, tanto en México como a nivel internacional. El objetivo fue identificar tendencias visuales, puntos débiles de la competencia y espacios de oportunidad en el mercado de apps de quiniela.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h3>Conceptualización</h3>
-                                <p>Se diseñaron rutas visuales inspiradas en conceptos como “amistad”, “conexión” y “dinamismo”. Se desarrollaron logotipos simplificados que funcionaran perfectamente como íconos móviles y que proyectaran innovación sin recurrir a clichés visuales del mundo deportivo.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h3>Identidad Visual</h3>
-                                <p>Se construyó un logotipo limpio y moderno, acompañado de una paleta de colores vibrante pero contenida, con predominancia de tonos amigables y tecnológicos. Se definieron tipografías sans-serif altamente legibles y se diseñaron íconos y gráficos complementarios para su uso en diferentes contextos digitales.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">05</div>
-                            <div class="step-content">
-                                <h3>Aplicación Técnica</h3>
-                                <p>El sistema de marca fue pensado para adaptarse con facilidad a íconos de app, encabezados de redes sociales, pantallas responsivas y material promocional digital. Se desarrollaron versiones optimizadas del logotipo y elementos gráficos para diferentes tamaños y resoluciones.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">06</div>
-                            <div class="step-content">
-                                <h3>Manual de Marca</h3>
-                                <p>Se elaboró un documento de identidad visual que incluye pautas claras para el uso correcto de logotipo, colores, tipografías, espaciado y aplicaciones básicas. Esto asegura consistencia en futuras implementaciones del branding.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h2>Resultados</h2>
-                    <p>El nuevo branding de Potts captura la esencia de una marca joven, digital y social. La identidad visual es fresca, intuitiva y adaptable, lista para posicionarse como referente en el mundo de las quinielas digitales. Desde su icono de app hasta su presencia en redes sociales, Potts comunica comunidad, modernidad y confianza.</p>
-                    
-                    <div class="project-gallery">
-                        <h3>Galería del Proyecto</h3>
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <span>Marca</span>
-                                </div>
-                                <p>Primeros bocetos</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <span>Marca</span>
-                                </div>
-                                <p>Construcción del logotipo e ícono de app</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <span>Marca</span>
-                                </div>
-                                <p>Mockups de interfaz y pantallas móviles</p>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <span>Marca</span>
-                                </div>
-                                <p>Aplicaciones en redes sociales y promociones</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial testimonial-disruptive">
-                        <div class="testimonial-bg-shape"></div>
-                        <div class="testimonial-icon-burst">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <blockquote>
-                            <span class="testimonial-quote-text">
-                                Nos encantó cómo lograron representar lo que Potts significa para nosotros: una forma divertida y moderna de reunir a las personas a través del deporte. Supieron equilibrar lo funcional con lo emocional, creando una identidad sólida, memorable y perfectamente adaptable. El diseño que recibimos no solo nos diferencia, sino que conecta al instante con nuestro público
-                        </blockquote>
-                        <div class="testimonial-author-disruptive">
-                            <div>
-                                <p class="author-name">Daniel Pelayo</p>
-                                <p class="author-title">Cofundador | Potts</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-image"
+                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
+                    <img src="../assets/img/branding/potts/potts-logo.jpg" alt="Potts Branding">
                 </div>
-                
-                <div class="project-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Herramientas Utilizadas</h3>
-                        <ul class="tools-list">
-                            <li><i class="ri-figma-line"></i>Affinity Designer</li>
-                            <li><i class="ri-stack-line"></i>Papel</li>
-                            <li><i class="ri-pie-chart-2-line"></i>Pluma</li>
-                            <li><i class="ri-code-s-slash-line"></i>Notas</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Servicios Proporcionados</h3>
-                        <ul class="services-list">
-                            <li>Consultoría de Marca</li>
-                            <li>Desarrollo de Identidad Visual</li>
-                            <li>Diseño de Logotipo e Íconos</li>
-                            <li>Guía de Identidad Visual</li>
-                            <li>Aplicaciones en UI y redes sociales</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Proyectos Relacionados</h3>
-                        <div class="related-projects">
-                            <a href="proyecto-branding-ponce-rosales.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/ponce-mini.jpg" alt="Ponce Rosales - Branding">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Ponce Rosales - Abogados</h4>
-                                    <p>Branding</p>
-                                </div>
-                            </a>
-                            <a href="proyecto-branding-alicet.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/alicet.jpg" alt="Alicet - Branding">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Alicet</h4>
-                                    <p>Branding</p>
-                                </div>
-                            </a>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Potts es una startup mexicana que busca transformar las tradicionales quinielas deportivas
+                            en una experiencia social, accesible y divertida. A través de una aplicación mobile-first,
+                            Potts permite a los usuarios crear y participar en quinielas personalizadas con amigos y
+                            familiares, eliminando la necesidad de hojas de cálculo, chats confusos o sistemas
+                            engorrosos.
+                        </p>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Este proyecto de branding se enfocó en dotar a Potts de una identidad visual moderna, limpia
+                            y flexible, capaz de crecer junto con la marca y adaptarse a diferentes entornos digitales.
+                            La marca debía transmitir dinamismo, cercanía, confianza y sobre todo: comunidad.
+                        </p>
+
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            El reto principal fue construir una identidad fresca y minimalista que se diferenciara
+                            radicalmente de las quinielas tradicionales. Mientras muchas plataformas se enfocan en
+                            estadísticas o diseños técnicos, Potts necesitaba comunicar una propuesta centrada en el
+                            usuario, intuitiva y con fuerte carga emocional.
+                        </p>
+
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
+                            Galería</h3>
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/potts/potts-logo.jpg" alt="Potts Branding 1">
+                            </div>
+                            <!-- Placeholder for demonstration since only 1 image exists -->
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/potts/potts-logo.jpg" alt="Potts Branding 2">
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="sidebar-section cta-section">
-                        <h3>¿Tienes un proyecto similar?</h3>
-                        <p>Estoy disponible para nuevos proyectos. Hablemos sobre cómo puedo ayudarte a crear una experiencia digital excepcional.</p>
-                        <a href="../index.html#contacto" class="btn btn-primary" rel="noopener noreferrer">Contáctame</a>
+
+                    <div>
+                        <div
+                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
+                                <span class="tag">Affinity Designer</span>
+                                <span class="tag">Figma</span>
+                            </div>
+
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
+                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Consultoría de Marca</li>
+                                <li>Identidad Visual</li>
+                                <li>Diseño de Logotipo e Íconos</li>
+                                <li>Guía de Identidad Visual</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="next-project">
-            <div class="container">
-                <div class="next-project-content">
-                    <span>Siguiente Proyecto</span>
-                    <h2>Diseño de Branding - Ponce Rosales</h2>
-                    <a href="proyecto-branding-ponce-rosales.html" class="btn btn-secondary" rel="noopener noreferrer">Ver proyecto <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>GH</span>
-                    <p>Gamaliel Herrera</p>
-                </div>
-                <div class="footer-links">
-                    <a href="../index.html" target="_blank" rel="noopener noreferrer">Inicio</a>
-                    <a href="../index.html#sobre-mi" rel="noopener noreferrer">Sobre mí</a>
-                    <a href="../index.html#habilidades" rel="noopener noreferrer">Habilidades</a>
-                    <a href="../proyectos.html" target="_blank" rel="noopener noreferrer">Proyectos</a>
-                    <a href="../index.html#contacto" rel="noopener noreferrer">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/gamaliel-herrera/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gamaliel Herrera. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="../js/parallax.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función throttle para mejorar el rendimiento
-            function throttle(func, delay) {
-                let lastCall = 0;
-                return function(...args) {
-                    const now = new Date().getTime();
-                    if (now - lastCall < delay) {
-                        return;
-                    }
-                    lastCall = now;
-                    return func(...args);
-                };
-            }
-            
-            // Navegación y scroll con throttling
-            const header = document.querySelector('header');
-            
-            window.addEventListener('scroll', throttle(function() {
-                // Hacer el header sticky cuando se hace scroll
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.add('sticky');
-                    document.body.classList.add('has-sticky-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.remove('sticky');
-                    document.body.classList.remove('has-sticky-header');
-                }
-            }, 100));
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

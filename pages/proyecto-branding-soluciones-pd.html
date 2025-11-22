@@ -1,333 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones Integrales PD - Branding | Gamaliel Herrera</title>
-    <link rel="icon" type="image/png" href="../img/favicon.png">
-    <meta name="description" content="Proyecto de branding para Soluciones Integrales PD, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:title" content="Branding para Soluciones Integrales PD | Gamaliel Herrera">
-    <meta property="og:description" content="Proyecto de branding para Soluciones Integrales PD, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:image" content="../img/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/pages/proyecto-branding-soluciones-pd.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Branding para Soluciones Integrales PD | Gamaliel Herrera">
-    <meta name="twitter:description" content="Proyecto de branding para Soluciones Integrales PD, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta name="twitter:image" content="../img/og-image.png">
-    <link rel="stylesheet" href="../css/styles.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Soluciones PD - Branding | Gama Herrera</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <meta name="description" content="Proyecto de branding para Soluciones Integrales PD, por Gama Herrera.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
-    <div id="parallax-container" class="global-parallax-elements"></div>
-    
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Botón para ir arriba -->
-    <a href="#" id="scroll-to-top" class="scroll-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <header>
-        <nav>
-            <div class="logo">GH</div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link" rel="noopener noreferrer">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link" rel="noopener noreferrer">Sobre mí</a>
-                <a href="../index.html#habilidades" class="nav-link" rel="noopener noreferrer">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active" rel="noopener noreferrer">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link" rel="noopener noreferrer">Contacto</a>
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="../index.html" class="logo">GH</a>
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
+                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
+                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
+                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-moon-line"></i>
             </div>
-            <div class="theme-toggle">
-                <i class="ri-moon-fill"></i>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="project-detail-header">
+        <section class="section" style="padding-top: 160px;">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <span>/</span>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <span>/</span>
-                    <span>Diseño de Branding - Soluciones Integrales PD</span>
+                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                    <a href="../proyectos.html"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
+                        <i class="ri-arrow-left-line"></i> Volver a proyectos
+                    </a>
                 </div>
-                <h1>Diseño de Branding - Soluciones Integrales PD</h1>
-                <div class="project-meta">
-                    <div class="project-meta-item">
-                        <span class="meta-label">Cliente:</span>
-                        <span class="meta-value">Soluciones Integrales PD</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Categoría:</span>
-                        <span class="meta-value">Branding, Mantenimiento</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Fecha:</span>
-                        <span class="meta-value">Mayo 2025</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="project-showcase">
-            <div class="container">
-                <div class="project-showcase-image">
-                    <div class="image-placeholder showcase">
-                        <img src="../img/branding/PD/soluciones pd.jpg" alt="Showcase Soluciones Integrales PD" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h1 class="section-title" style="text-align: left;">Soluciones Integrales PD</h1>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-description">
-                    <h2>Descripción del Proyecto</h2>
-                    <p>Soluciones Integrales PD es una empresa especializada en mantenimiento industrial, sistemas HVAC (climatización) y suministro de materiales eléctricos y ferreteros. Con una visión clara de convertirse en el referente de confianza en Jalisco, la empresa ofrece soluciones integrales para asegurar tanto el buen funcionamiento de operaciones empresariales como el confort en el hogar.
+                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
+                        <span style="font-weight: 600;">Soluciones Integrales PD</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
+                        <span style="font-weight: 600;">Branding, Mantenimiento</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
+                        <span style="font-weight: 600;">Mayo 2025</span>
+                    </div>
+                </div>
 
-                        El objetivo de este proyecto fue construir una identidad visual fuerte, moderna y técnica, que transmita profesionalismo, eficiencia y compromiso. Una marca que genere confianza inmediata tanto en el entorno industrial como residencial.
-                    <h2>El Desafío</h2>
-                    <p>El principal reto consistió en desarrollar una identidad visual clara y diferenciada dentro de un mercado altamente técnico y competitivo. Era fundamental evitar lo genérico o lo visualmente “barato”, y en cambio crear una imagen profesional, confiable y adaptable a múltiples contextos: desde papelería y uniformes, hasta vehículos y redes sociales.</p>
-                    
-                    <div class="project-goals">
-                        <h3>Objetivos del Proyecto</h3>
-                        <ul>
-                            <li>Posicionar a Soluciones Integrales PD como una empresa confiable y técnica</li>
-                            <li>Transmitir profesionalismo, precisión y eficiencia desde lo visual</li>
-                            <li>Crear una marca versátil para su aplicación en entornos industriales y domésticos</li>
-                            <li>Desarrollar una identidad diferenciada de la competencia local</li>
-                            <li>Facilitar la recordación y posicionamiento de la marca a través de elementos visuales sólidos</li>
-                        </ul>
-                    </div>
-                    
-                    <h2>Proceso de Diseño</h2>
-                    <div class="design-process">
-                        <div class="process-step">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h3>Investigación</h3>
-                                <p>Análisis de competidores locales, benchmarks de marcas de mantenimiento y climatización. Estudio de lenguaje visual en sectores técnicos e industriales.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h3>Conceptualización</h3>
-                                <p>El concepto central fue “solidez que responde”, una idea que une fiabilidad con agilidad. Se buscó traducir esa idea en formas, colores y composiciones visuales.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h3>Exploración Visual</h3>
-                                <p>Creación de bocetos basados en estructuras técnicas, herramientas y flujos de aire (HVAC). Desarrollo de propuestas cromáticas enfocadas en la seguridad y la energía (azules, naranjas, grises técnicos).</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h3>Construcción de Identidad</h3>
-                                <p>Diseño de logotipo, símbolo técnico, paleta cromática, tipografía robusta y sistema visual. Preparación de variaciones de logotipo y patrones para uso extendido.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">05</div>
-                            <div class="step-content">
-                                <h3>Pruebas y Ajustes</h3>
-                                <p>Implementación en uniformes, vehículos, cotizaciones, tarjetas, firmas de correo y redes sociales para asegurar su legibilidad y consistencia.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h2>Resultados</h2>
-                    <p>El resultado fue una marca robusta, confiable y visualmente clara. La nueva identidad transmite profesionalismo técnico, con una estética industrial pero accesible. La flexibilidad del sistema gráfico permite que la marca se aplique sin fricción tanto en entornos operativos como comerciales.</p>
-                    
-                    <div class="project-gallery">
-                        <h3>Galería del Proyecto</h3>
-                        <div class="gallery-grid">
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/PD/boceto.jpg" alt="Showcase PD" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/PD/bocetos pd.png" alt="Showcase PD" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/PD/soluciones pd brnad.jpg" alt="Showcase PD" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/PD/bocetos1.jpg" alt="Showcase PD" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial testimonial-disruptive">
-                        <div class="testimonial-bg-shape"></div>
-                        <div class="testimonial-icon-burst">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <blockquote>
-                            <span class="testimonial-quote-text">
-                                La nueva imagen de Soluciones Integrales PD nos da presencia y coherencia en todo lo que hacemos. Ahora nuestros clientes nos identifican con claridad, y sentimos que realmente proyectamos el nivel de servicio que ofrecemos.
-                            </span>
-                        </blockquote>
-                        <div class="testimonial-author-disruptive">
-                            <!-- <img src="img/avatar-carlos.png" alt="Alejandro Ponce" class="testimonial-avatar" loading="lazy"> -->
-                            <div>
-                                <p class="author-name">Moisés Perales</p>
-                                <p class="author-title">Fundador de Soluciones Integrales PD</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-image"
+                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
+                    <img src="../assets/img/branding/PD/soluciones pd.jpg" alt="Soluciones PD Branding">
                 </div>
-                
-                <div class="project-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Herramientas Utilizadas</h3>
-                        <ul class="tools-list">
-                            <li><i class="ri-paint-line"></i>Affinity Designer</li>
-                            <li><i class="ri-image-2-line"></i>Photoshop</li>
-                            <li><i class="ri-pencil-ruler-2-line"></i>Bocetos a mano</li>
-                            <li><i class="ri-computer-line"></i>Diseño Digital</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Servicios Proporcionados</h3>
-                        <ul class="services-list">
-                            <li>Consultoría de Marca</li>
-                            <li>Desarrollo de Identidad Visual</li>
-                            <li>Diseño de Aplicaciones Técnicas (papelería, señalética, vehículos)</li>
-                            <li>Sistema de Colores y Tipografías</li>
-                            <li>Manual de Marca</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Proyectos Relacionados</h3>
-                        <div class="related-projects">
-                            <a href="proyecto-branding-ponce-rosales.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/ponce-mini.jpg" alt="Showcase Ponce Rosales">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Ponce Rosales</h4>
-                                    <p>Branding</p>
-                                </div>
-                            </a>
-                            <a href="proyecto-branding-bocanegra.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/bocanegra.jpg" alt="Showcase Ponce Rosales">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Bocanegra</h4>
-                                    <p>Branding</p>
-                                </div>
-                            </a>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Soluciones Integrales PD es una empresa especializada en mantenimiento industrial, sistemas
+                            HVAC (climatización) y suministro de materiales eléctricos y ferreteros. Con una visión
+                            clara de convertirse en el referente de confianza en Jalisco, la empresa ofrece soluciones
+                            integrales para asegurar tanto el buen funcionamiento de operaciones empresariales como el
+                            confort en el hogar.
+                        </p>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            El objetivo de este proyecto fue construir una identidad visual fuerte, moderna y técnica,
+                            que transmita profesionalismo, eficiencia y compromiso. Una marca que genere confianza
+                            inmediata tanto en el entorno industrial como residencial.
+                        </p>
+
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            El principal reto consistió en desarrollar una identidad visual clara y diferenciada dentro
+                            de un mercado altamente técnico y competitivo. Era fundamental evitar lo genérico o lo
+                            visualmente "barato", y en cambio crear una imagen profesional, confiable y adaptable a
+                            múltiples contextos: desde papelería y uniformes, hasta vehículos y redes sociales.
+                        </p>
+
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
+                            Galería</h3>
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/PD/boceto.jpg" alt="Soluciones PD 1">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/PD/bocetos pd.png" alt="Soluciones PD 2">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/PD/soluciones pd brnad.jpg" alt="Soluciones PD 3">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/PD/bocetos1.jpg" alt="Soluciones PD 4">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/PD/soluciones pd.jpg" alt="Soluciones PD 5">
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="sidebar-section cta-section">
-                        <h3>¿Tienes un proyecto similar?</h3>
-                        <p>Estoy disponible para nuevos proyectos. Hablemos sobre cómo puedo ayudarte a crear una experiencia digital excepcional.</p>
-                        <a href="../index.html#contacto" class="btn btn-primary" rel="noopener noreferrer">Contáctame</a>
+
+                    <div>
+                        <div
+                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
+                                <span class="tag">Affinity Designer</span>
+                                <span class="tag">Photoshop</span>
+                            </div>
+
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
+                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Consultoría de Marca</li>
+                                <li>Identidad Visual</li>
+                                <li>Diseño de Aplicaciones Técnicas</li>
+                                <li>Manual de Marca</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="next-project">
-            <div class="container">
-                <div class="next-project-content">
-                    <span>Siguiente Proyecto</span>
-                    <h2>Diseño Web - Psicóloga Sandra Ruvalcaba</h2>
-                    <a href="proyecto-sandra-ruvalcaba.html" class="btn btn-secondary" rel="noopener noreferrer">Ver proyecto <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>GH</span>
-                    <p>Gamaliel Herrera</p>
-                </div>
-                <div class="footer-links">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <a href="../index.html#sobre-mi" rel="noopener noreferrer">Sobre mí</a>
-                    <a href="../index.html#habilidades" rel="noopener noreferrer">Habilidades</a>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <a href="../index.html#contacto" rel="noopener noreferrer">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/gamaliel-herrera/" class="social-link"><i class="ri-linkedin-fill" rel="noopener noreferrer"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gamaliel Herrera. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="../js/parallax.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función throttle para mejorar el rendimiento
-            function throttle(func, delay) {
-                let lastCall = 0;
-                return function(...args) {
-                    const now = new Date().getTime();
-                    if (now - lastCall < delay) {
-                        return;
-                    }
-                    lastCall = now;
-                    return func(...args);
-                };
-            }
-            
-            // Navegación y scroll con throttling
-            const header = document.querySelector('header');
-            
-            window.addEventListener('scroll', throttle(function() {
-                // Hacer el header sticky cuando se hace scroll
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.add('sticky');
-                    document.body.classList.add('has-sticky-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.remove('sticky');
-                    document.body.classList.remove('has-sticky-header');
-                }
-            }, 100));
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

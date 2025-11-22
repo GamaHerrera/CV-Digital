@@ -1,0 +1,63 @@
+:root {
+    /* Color Palette - Light Mode (High Contrast) */
+    --bg-color: #FFFFFF;
+    --surface-color: #F3F4F6;
+    --primary-color: #000000;
+    /* Brutalist Black */
+    --primary-hover: #333333;
+    --accent-color: #CCFF00;
+    /* Acid Green */
+    --accent-secondary: #6D28D9;
+    /* Electric Purple */
+    --text-primary: #000000;
+    --text-secondary: #4B5563;
+    --text-light: #9CA3AF;
+    --border-color: #000000;
+    /* Hard borders */
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1.5rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 6rem;
+    --spacing-xl: 10rem;
+
+    /* Border Radius */
+    --radius-sm: 0px;
+    /* Sharp edges for brutalist feel */
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+    /* Hard shadow */
+    --shadow-md: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    --shadow-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+
+    /* Transitions */
+    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #050505;
+    --surface-color: #111111;
+    --primary-color: #FFFFFF;
+    --primary-hover: #E5E5E5;
+    --accent-color: #CCFF00;
+    --accent-secondary: #A78BFA;
+    --text-primary: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-light: #6B7280;
+    --border-color: #333333;
+
+    /* Shadows for dark mode (Glows) */
+    --shadow-sm: 0 0 10px rgba(204, 255, 0, 0.1);
+    --shadow-md: 0 0 20px rgba(204, 255, 0, 0.2);
+    --shadow-lg: 0 0 30px rgba(204, 255, 0, 0.3);
+}

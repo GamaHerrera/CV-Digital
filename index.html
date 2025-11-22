@@ -1,375 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gama Herrera | Diseñador UI/UX</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <meta name="description" content="Portafolio de Gama Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
-    <meta property="og:title" content="Gama Herrera | Diseñador UI/UX">
-    <meta property="og:description" content="Portafolio de Gama Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
-    <meta property="og:image" content="img/logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gama Herrera | Diseñador UI/UX">
-    <meta name="twitter:description" content="Portafolio de Gama Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
-    <meta name="twitter:image" content="img/logo.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <meta name="description"
+        content="Portafolio de Gama Herrera, diseñador gráfico y UI/UX especializado en branding, diseño web y experiencias digitales.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
-    <div id="parallax-container" class="global-parallax-elements"></div>
-    
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Botón para ir arriba -->
-    <a href="#" id="scroll-to-top" class="scroll-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <header>
-        <nav>
-            <div class="logo">GH</div>
-            <div class="nav-links">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo">GH</a>
+            <nav class="nav-links">
                 <a href="#inicio" class="nav-link active">Inicio</a>
                 <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="#estudios" class="nav-link">Estudios</a>
+                <a href="#estudios" class="nav-link">Trayectoria</a>
                 <a href="#habilidades" class="nav-link">Habilidades</a>
                 <a href="#proyectos" class="nav-link">Proyectos</a>
-                <a href="#certificaciones" class="nav-link">Certificaciones</a>
-                <a href="#idiomas" class="nav-link">Idiomas</a>
-                <a href="#contacto" class="nav-link">Contacto</a>               
+                <a href="certificaciones.html" class="nav-link">Certificaciones</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-moon-line"></i>
             </div>
-            <div class="theme-toggle">
-                <i class="ri-moon-fill"></i>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Banner de desarrollo -->
-    <div class="dev-banner">
-        <div class="container">
-            <span class="dev-banner-text">🚧 Sitio en desarrollo activo - Si encuentras algún error, por favor repórtalo a <a href="mailto:gama-hg@hotmail.com" class="dev-banner-link">gama-hg@hotmail.com</a> 🚧</span>
-            <button class="dev-banner-close" onclick="this.parentElement.parentElement.style.display='none';">&times;</button>
         </div>
-    </div>
+    </header>
 
     <main>
         <section id="inicio" class="hero">
-            <div class="hero-decorative-circle"></div>
-            <div class="container">
+            <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="hero-text">
-                        <div class="hero-intro">
-                            <span class="greeting">Hola, soy</span>
-                            <h1 class="hero-title">
-                                <span class="name">Gama Herrera</span>
-                                <span class="title-divider"></span>
-                                <span class="profession">Diseñador web (UI/UX) y Branding</span>
-                            </h1>
-                        </div>
-                        
-                        <p class="hero-description">Diseño experiencias digitales que combinan estética minimalista con funcionalidad intuitiva, creando conexiones significativas entre marcas y usuarios.</p>
-                        
-                        <div class="hero-actions">
-                            <a href="#contacto" class="btn btn-gradient">
-                                <span>Contáctame</span>
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                            <a href="#proyectos" class="btn btn-outline">
-                                <span>Ver proyectos</span>
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="hero-social">
-                            <a href="https://www.linkedin.com/in/gamalielherrera" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-                                <i class="ri-linkedin-fill"></i>
-                            </a>
-                            <a href="https://github.com/GamaHerrera" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-                                <i class="ri-github-fill"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Descargar CV">
-                                <i class="ri-file-download-line"></i>
-                            </a>
-                        </div>
+                    <span class="hero-greeting">Hola, soy</span>
+                    <h1 class="hero-title">Gama Herrera</h1>
+                    <h2 class="hero-subtitle">Diseñador UI/UX & Branding</h2>
+                    <p class="hero-description">Diseño experiencias digitales que combinan estética minimalista con
+                        funcionalidad intuitiva, creando conexiones significativas entre marcas y usuarios.</p>
+                    <div class="hero-actions">
+                        <a href="#contacto" class="btn btn-primary">
+                            <span>Contáctame</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <a href="#proyectos" class="btn btn-outline">
+                            <span>Ver proyectos</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
-                    
-                    <div class="hero-visual">
-                                <!-- Aquí iría tu foto de perfil -->
-                                <div class="profile-placeholder">
-                                    <img src="img/proflie2.jpg" 
-                                         alt="Gama Herrera - Diseñador UI/UX"
-                                         loading="lazy"
-                                         width="400"
-                                         height="500"
-                                         style="max-width: 100%; height: auto; display: block;">
-                                </div>
-                            </div>
-
-                        </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img-wrapper">
+                        <img src="assets/img/proflie2.jpg" alt="Gama Herrera">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Frases en Carrusel -->
-        <section class="quote-carousel-section">
-            <div class="quote-carousel-container">
-                <div class="quote-carousel-track">
-                                        <!-- Conjunto de frases -->
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La experiencia de usuario es la clave fundamental para el éxito de cualquier proyecto digital</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">Diseñar pensando en las personas, no solo en las pantallas, es mi filosofía de trabajo</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La verdadera sofisticación en el diseño se encuentra en la simplicidad</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">En el diseño de interacción, menos siempre es más</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La mejor usabilidad es aquella que pasa desapercibida</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">Cada diseño debe tener un propósito claro y una intención definida</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La innovación debe estar siempre centrada en resolver problemas reales</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">Creo experiencias digitales memorables que dejan huella</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <!-- Segundo conjunto de frases (duplicado para el efecto infinito) -->
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La experiencia de usuario es la clave fundamental para el éxito de cualquier proyecto digital</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">Diseñar pensando en las personas, no solo en las pantallas, es mi filosofía de trabajo</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La verdadera sofisticación en el diseño se encuentra en la simplicidad</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">En el diseño de interacción, menos siempre es más</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La mejor usabilidad es aquella que pasa desapercibida</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">Cada diseño debe tener un propósito claro y una intención definida</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">La innovación debe estar siempre centrada en resolver problemas reales</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                                        <div class="quote-carousel-slide">
-                                            <span class="quote-carousel-text">Creo experiencias digitales memorables que dejan huella</span>
-                                            <span class="quote-carousel-divider">•</span>
-                                        </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sobre-mi" class="about">
+        <section id="sobre-mi" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Sobre mí</h2>
-                    <span class="section-divider"></span>
+                    <h2 class="section-title">Sobre mí</h2>
+                    <p class="section-subtitle">Diseñador gráfico especializado en branding y diseño web, apasionado por
+                        crear experiencias digitales memorables.</p>
                 </div>
-                <div class="about-grid">
-                    <div class="about-content full-width">
-                        <div class="about-text">
-                            <p class="lead">Diseñador gráfico especializado en <strong>branding</strong> y <strong>diseño web</strong>, apasionado por crear experiencias digitales memorables que combinan estética y funcionalidad.</p>
-                            
-                            <div class="about-highlights">
-                                <div class="highlight-card">
-                                    <div class="highlight-icon">
-                                        <i class="ri-palette-line"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3>Diseño de Marca</h3>
-                                        <p>Identidades visuales únicas que cuentan historias y conectan emocionalmente con tu audiencia.</p>
-                                    </div>
-                                </div>
 
-                                <div class="highlight-card">
-                                    <div class="highlight-icon">
-                                        <i class="ri-computer-line"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3>Experiencia de Usuario</h3>
-                                        <p>Interfaces intuitivas centradas en las necesidades reales de los usuarios finales.</p>
-                                    </div>
-                                </div>
-
-                                <div class="highlight-card">
-                                    <div class="highlight-icon">
-                                        <i class="ri-code-s-slash-line"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3>Desarrollo Web</h3>
-                                        <p>Implementación de diseños con las últimas tecnologías para un rendimiento óptimo.</p>
-                                    </div>
-                                </div>
-
-                                <div class="highlight-card">
-                                    <div class="highlight-icon">
-                                        <i class="ri-layout-5-line"></i>
-                                    </div>
-                                    <div class="highlight-content">
-                                        <h3>Diseño de Interfaces</h3>
-                                        <p>Creación de interfaces atractivas y funcionales que mejoran la experiencia del usuario.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="about-icon"><i class="ri-palette-line"></i></div>
+                        <h3>Diseño de Marca</h3>
+                        <p>Identidades visuales únicas que cuentan historias y conectan emocionalmente con tu audiencia.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="ri-computer-line"></i></div>
+                        <h3>Experiencia de Usuario</h3>
+                        <p>Interfaces intuitivas centradas en las necesidades reales de los usuarios finales.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="ri-code-s-slash-line"></i></div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Implementación de diseños con las últimas tecnologías para un rendimiento óptimo.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="ri-layout-5-line"></i></div>
+                        <h3>Diseño de Interfaces</h3>
+                        <p>Creación de interfaces atractivas y funcionales que mejoran la experiencia del usuario.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Línea de tiempo horizontal -->
-        <section id="estudios" class="horizontal-timeline">
+
+        <section id="estudios" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Mi Trayectoria</h2>
-                    <span class="section-divider"></span>
+                    <h2 class="section-title">Mi Trayectoria</h2>
+                    <p class="section-subtitle">Un recorrido por mi formación y experiencia profesional.</p>
                 </div>
-                <div class="timeline-container">
-                    <div class="timeline-track">
-                        <!-- Punto de la línea de tiempo - Universidad -->
-                        <div class="timeline-item" data-aos="fade-up">
-                            <div class="timeline-content">
-                                <div class="timeline-date">2014 - 2018</div>
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-header">
-                                    <h3>Licenciatura en Diseño</h3>
-                                    <div class="header-badges">
-                                        <div class="tooltip">LDCG<span class="tooltiptext">Diseño para la Comunicación Gráfica</span></div>
-                                        <div class="university-tooltip tooltip">CUAAD<span class="tooltiptext">Centro Universitario de Arte, Arquitectura y Diseño</span></div>
-                                    </div>
-                                </div>
-                                <p class="timeline-company">
-                                    <span class="university">
-                                        Universidad de Guadalajara
-                                    </span>
-                                </p>
-                                <p class="timeline-description">Formación en diseño visual, comunicación estratégica y desarrollo de soluciones gráficas para medios impresos y digitales.</p>
-                                <div class="freelance-badge">
-                                    <i class="ri-briefcase-4-line"></i>
-                                    <span>Freelance desde 2016</span>
-                                </div>
-                            </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2014 - 2018</div>
+                            <h3>Licenciatura en Diseño</h3>
+                            <p>Universidad de Guadalajara</p>
+                            <p>Formación en diseño visual, comunicación estratégica y desarrollo de soluciones gráficas.
+                            </p>
                         </div>
-                        
-                        <!-- Punto de la línea de tiempo - Emergys -->
-                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                            <div class="timeline-content">
-                                <div class="timeline-date">2018 - Presente</div>
-                                <div class="timeline-dot"></div>
-                                <h3>Diseñador Gráfico UX/UI</h3>
-                                <p class="timeline-company">Emergys México</p>
-                                <p class="timeline-description">
-                                    Desarrollo de interfaces intuitivas, creación de sistemas de identidad visual y optimización de experiencias digitales para diversos clientes.
-                                </p>
-                                <div class="experience-badge">
-                                    <div class="badge-icon">
-                                        <i class="ri-star-smile-line"></i>
-                                    </div>
-                                    <div class="badge-content">
-                                        <span class="badge-years">+7 años</span>
-                                        <span class="badge-text">de experiencia</span>
-                                    </div>
-                                </div>
-                                <div class="freelance-badge">
-                                    <i class="ri-user-heart-line"></i>
-                                    <span>Freelance en paralelo</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2018 - Presente</div>
+                            <h3>Diseñador Gráfico UX/UI</h3>
+                            <p>Emergys México</p>
+                            <p>Desarrollo de interfaces intuitivas, creación de sistemas de identidad visual y
+                                optimización de experiencias digitales.</p>
                         </div>
-                        
-                        <!-- Punto de la línea de tiempo - Google UX -->
-                        <div class="timeline-item featured" data-aos="fade-up" data-aos-delay="200">
-                            <div class="timeline-content">
-                                <div class="timeline-date">2021 - 2022</div>
-                                <div class="timeline-dot"></div>
-                                <h3>Certificación en Diseño UX</h3>
-                                <p class="timeline-company">Google Career Certificates</p>
-                                <p class="timeline-description">Programa integral que cubre investigación de usuarios, arquitectura de información, prototipado y pruebas de usabilidad.</p>
-                                <div class="freelance-badge">
-                                    <i class="ri-rocket-line"></i>
-                                    <span>Impulsando mi carrera freelance</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2021 - 2022</div>
+                            <h3>Certificación en Diseño UX</h3>
+                            <p>Google Career Certificates</p>
+                            <p>Programa integral que cubre investigación de usuarios, arquitectura de información,
+                                prototipado y pruebas de usabilidad.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="habilidades" class="skills">
+        <section id="habilidades" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Habilidades profesionales</h2>
-                    <span class="section-divider"></span>
+                    <h2 class="section-title">Habilidades</h2>
+                    <p class="section-subtitle">Herramientas y tecnologías que domino.</p>
                 </div>
-                <div class="skills-content">
+
+                <div class="skills-grid">
                     <div class="skill-category">
                         <h3>Diseño UI/UX</h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Diseño de interfaces</span>
-                                    <span class="skill-level advanced">Avanzado</span>
-                                </div>
-                                <div class="skill-description">
-                                    Creación de interfaces intuitivas, accesibles y orientadas a conversión para e-commerce y aplicaciones.
-                                </div>
+                                <span>Diseño de interfaces</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Experiencia de usuario</span>
-                                    <span class="skill-level advanced">Avanzado</span>
-                                </div>
-                                <div class="skill-description">
-                                    Investigación, pruebas de usabilidad y optimización de flujos para mejorar la interacción y retención.
-                                </div>
+                                <span>Experiencia de usuario</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Prototipado</span>
-                                    <span class="skill-level intermediate">Intermedio</span>
-                                </div>
-                                <div class="skill-description">
-                                    Desarrollo de wireframes y prototipos interactivos para validar conceptos antes del desarrollo.
-                                </div>
+                                <span>Prototipado</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                         </div>
                     </div>
@@ -377,31 +178,16 @@
                         <h3>Herramientas</h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Affinity Designer</span>
-                                    <span class="skill-level advanced">Avanzado</span>
-                                </div>
-                                <div class="skill-description">
-                                    Prototipado visual, diseño técnico y documentación para equipos de desarrollo.
-                                </div>
+                                <span>Affinity Designer</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Figma</span>
-                                    <span class="skill-level intermediate">Intermedio</span>
-                                </div>
-                                <div class="skill-description">
-                                    Diseño colaborativo, creación de sistemas escalables y componentes reutilizables.
-                                </div>
+                                <span>Figma</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Photoshop</span>
-                                    <span class="skill-level intermediate">Intermedio</span>
-                                </div>
-                                <div class="skill-description">
-                                    Edición y retoque de imágenes orientadas a interfaces digitales y recursos visuales.
-                                </div>
+                                <span>Photoshop</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                         </div>
                     </div>
@@ -409,30 +195,33 @@
                         <h3>Desarrollo</h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>HTML/CSS</span>
-                                    <span class="skill-level advanced">Avanzado</span>
-                                </div>
-                                <div class="skill-description">
-                                    Implementación de interfaces responsivas con enfoque mobile-first y precisión visual.
+                                <span>HTML/CSS</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>WordPress</span>
-                                    <span class="skill-level advanced">Avanzado</span>
-                                </div>
-                                <div class="skill-description">
-                                    Desarrollo de sitios web y tiendas online con WordPress, personalización de plantillas y plugins, y optimización para motores de búsqueda.
-                                </div>
+                                <span>WordPress</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Habilidades Blandas</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>Comunicación efectiva</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-info">
-                                    <span>Frameworks UI</span>
-                                    <span class="skill-level basic">Básico</span>
-                                </div>
-                                <div class="skill-description">
-                                    Uso de bibliotecas como Bootstrap y Tailwind para maquetación ágil y consistente.
-                                </div>
+                                <span>Trabajo en equipo</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
+                            </div>
+                            <div class="skill-item">
+                                <span>Resolución de problemas</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
+                            </div>
+                            <div class="skill-item">
+                                <span>Adaptabilidad</span>
+                                <i class="ri-check-line" style="color: var(--primary-color)"></i>
                             </div>
                         </div>
                     </div>
@@ -440,470 +229,111 @@
             </div>
         </section>
 
-        <section id="cita-ux" class="quote-section">
-            <div class="container">
-                <div class="quote-content">
-                    <div class="quote-text">
-                        <blockquote>
-                            "El diseño no es solo sobre hacer que las cosas se vean bonitas, sino sobre hacer que las cosas funcionen bien."
-                        </blockquote>
-                        <cite>- Dieter Rams</cite>
-                    </div>
-                    <div class="author-image">
-                        <div class="author-photo-frame">
-                            <img src="img/Rams_Portrait_Big.jpg.foto.rmedium.webp" alt="Dieter Rams" class="author-photo" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="habilidades-blandas" class="soft-skills">
+        <section id="proyectos" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Habilidades blandas</h2>
-                    <p>El equilibrio entre creatividad, comunicación efectiva y trabajo en equipo es clave para llevar cada proyecto a buen término, brindando soluciones innovadoras y de calidad.</p>
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <p class="section-subtitle">Una selección de mis trabajos más recientes.</p>
                 </div>
-                
-                <div class="soft-skills-container">
-                    <!-- Habilidad blanda 1 -->
-                    <div class="soft-skills-category">
-                        <h3>🗣️ Comunicación & Relaciones</h3>
-                        <div class="skills-group">
-                            <span class="skill-word">Comunicación efectiva</span>
-                            <span class="skill-word">Trabajo en equipo</span>
-                            <span class="skill-word">Empatía</span>
-                            <span class="skill-word">Liderazgo</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Habilidad blanda 2 -->
-                    <div class="soft-skills-category">
-                        <h3>🧠 Pensamiento & Resolución</h3>
-                        <div class="skills-group">
-                            <span class="skill-word">Pensamiento crítico</span>
-                            <span class="skill-word">Resolución de problemas</span>
-                            <span class="skill-word">Creatividad</span>
-                            <span class="skill-word">Adaptabilidad</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Habilidad blanda 3 -->
-                    <div class="soft-skills-category">
-                        <h3>🕒 Gestión personal</h3>
-                        <div class="skills-group">
-                            <span class="skill-word">Organización</span>
-                            <span class="skill-word">Gestión del tiempo</span>
-                            <span class="skill-word">Atención al detalle</span>
-                            <span class="skill-word">Proactividad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="proyectos" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Proyectos destacados</h2>
-                    <span class="section-divider"></span>
-                </div>
-                <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="ui">UI Design</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="branding">Branding</button>
-                </div>
                 <div class="projects-grid">
-                    <div class="project-card" data-category="branding">
+                    <!-- Project 1 -->
+                    <div class="project-card">
                         <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="img/branding/potts/potts.jpg" alt="Potts - Branding">
-                            </div>
+                            <img src="assets/img/branding/potts/potts.jpg" alt="Potts">
                         </div>
                         <div class="project-info">
                             <h3>Potts - App de quinielas</h3>
-                            <p>Diseño de branding para la app Potts, una plataforma de apuestas deportivas</p>
                             <div class="project-tags">
-                                <span>Branding</span>
-                                <span>Mobile</span>
-                                <span>Sports</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Mobile</span>
                             </div>
-                            <a href="pages/proyecto-branding-potts.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-branding-potts.html" class="project-link">Ver detalles <i
+                                    class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
-                    <div class="project-card" data-category="branding">
+                    <!-- Project 2 -->
+                    <div class="project-card">
                         <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="img/branding/ponce/4-min.jpg" alt="Ponce Rosales - Branding">
-                            </div>
+                            <img src="assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales">
                         </div>
                         <div class="project-info">
-                            <h3>Ponce Rosales - Abogados</h3>
-                            <p>Diseño de branding para la empresa Ponce Rosales, un despacho de abogados</p>
+                            <h3>Ponce Rosales</h3>
                             <div class="project-tags">
-                                <span>Branding</span>
-                                <span>Law Firm</span>
-                                <span>Identidad Visual</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Identidad</span>
                             </div>
-                            <a href="pages/proyecto-branding-ponce-rosales.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-branding-ponce-rosales.html" class="project-link">Ver detalles <i
+                                    class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
-                    <div class="project-card" data-category="web ui">
+                    <!-- Project 3 -->
+                    <div class="project-card">
                         <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="img/web/sandra/sandi-web7.jpeg" alt="Vista móvil" loading="lazy">
-                            </div>
+                            <img src="assets/img/web/sandra/sandi-web7.jpeg" alt="Sandra Ruvalcaba">
                         </div>
                         <div class="project-info">
-                            <h3>Sandra Ruvalcaba Psicología</h3>
-                            <p>Diseño web para la psicóloga Sandra Ruvalcaba, llevar su agenda y sus citas</p>
+                            <h3>Sandra Ruvalcaba</h3>
                             <div class="project-tags">
-                                <span>UI Design</span>
-                                <span>Dashboard</span>
-                                <span>Web</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">UI</span>
                             </div>
-                            <a href="pages/proyecto-sandra-ruvalcaba.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-sandra-ruvalcaba.html" class="project-link">Ver detalles <i
+                                    class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
-                    <div class="project-card" data-category="web ui">
+                    <!-- Project 4 -->
+                    <div class="project-card">
                         <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="img/web/urrea/urrea (5).jpeg" alt="UREEA Colombia - E-Commerce">
-                            </div>
+                            <img src="assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia">
                         </div>
                         <div class="project-info">
-                            <h3>E-Commerce URREA Colombia</h3>
-                            <p>Diseño de interfaz para comercio electrónico</p>
+                            <h3>URREA Colombia</h3>
                             <div class="project-tags">
-                                <span>E-Commerce</span>
-                                <span>Web</span>
-                                <span>UI Design</span>
+                                <span class="tag">E-Commerce</span>
+                                <span class="tag">Web</span>
                             </div>
-                            <a href="pages/proyecto-e-commerce-urrea-colombia.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-e-commerce-urrea-colombia.html" class="project-link">Ver detalles <i
+                                    class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
-                    <div class="project-card" data-category="branding">
-                        <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="img/branding/bocanegra/bocanegra-min.jpg" alt="Bocanegra - Branding">
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Bocanegra - Restaurante</h3>
-                            <p>Diseño de branding para el restaurante Bocanegra</p>
-                            <div class="project-tags">
-                                <span>Branding</span>
-                                <span>Restaurant</span>
-                                <span>Identidad Visual</span>
-                            </div>
-                            <a href="pages/proyecto-branding-bocanegra.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-card" data-category="branding">
-                        <div class="project-image">
-                            <div class="image-placeholder">
-                                <img src="img/branding/alicet/ALICET-min.jpg" alt="Alicet - Branding">
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Alicet - Artesanía & Macetas</h3>
-                            <p>Diseño de branding para el negocio Alicet, una casa de arte y macetas</p>
-                            <div class="project-tags">
-                                <span>Branding</span>
-                                <span>Artesanía & Macetas</span>
-                                <span>Identidad Visual</span>
-                            </div>
-                            <a href="pages/proyecto-branding-alicet.html" class="project-link">Ver detalles <i class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
-                    <div style="width: 100%; display: flex; justify-content: center; margin: 4rem 0; padding: 0 2rem; box-sizing: border-box;">
-                        <div style="text-align: center;">
-                            <a href="proyectos.html" style="
-                                display: inline-flex;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 0.8rem;
-                                padding: 1.2rem 2.5rem;
-                                background: var(--primary-color);
-                                color: white;
-                                border: none;
-                                border-radius: 50px;
-                                font-size: 1.6rem;
-                                font-weight: 600;
-                                text-decoration: none;
-                                cursor: pointer;
-                                transition: all 0.3s ease;
-                                box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
-                                position: relative;
-                                overflow: hidden;
-                                width: auto;
-                                max-width: 100%;
-                            ">
-                                <span>Ver todos los proyectos</span>
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-lg);">
+                    <a href="proyectos.html" class="btn btn-primary">Ver todos los proyectos <i
+                            class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
         </section>
 
-        <section id="certificaciones" class="certifications">
-            <div class="container">
+        <section id="contacto" class="section">
+            <div class="container contact-container">
                 <div class="section-header">
-                    <h2>Mis Certificaciones</h2>
-                    <p>Formación continua y acreditaciones profesionales</p>
+                    <h2 class="section-title">Contáctame</h2>
+                    <p class="section-subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
                 </div>
-                
-                <div class="certifications-container">
-                    <!-- Certificación 1 -->
-                    <div class="certification-card" data-aos="fade-up">
-                        <div class="certification-logo">
-                            <img src="img/google-wordmarks-2x.webp" alt="Google UX Design" loading="lazy">
-                        </div>
-                        <div class="certification-content">
-                            <h3>Google UX Design Professional Certificate</h3>
-                            <p class="certification-issuer">Google & Coursera</p>
-                            <p class="certification-date">Diciembre 2021</p>
-                            <p class="certification-description">Certificación profesional en diseño de experiencia de usuario, abarcando investigación, wireframing, prototipos y testing.</p>
-                            <a href="https://coursera.org/share/4ca316840f7024b6cef22b28f054faef" class="btn-credential" rel="noopener noreferrer">
-                                <span>Ver credencial</span>
-                                <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificación 2 -->
-                    <div class="certification-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="certification-logo">
-                            <img src="img/google-wordmarks-2x.webp" alt="Accelerate Knowledge Exchange with Agentspace" loading="lazy">
-                        </div>
-                        <div class="certification-content">
-                            <h3>Accelerate Knowledge Exchange with Agentspace</h3>
-                            <p class="certification-issuer">Google</p>
-                            <p class="certification-date">Febrero 2025</p>
-                            <p class="certification-description">Implementación y configuración de Google Agentspace para optimizar el intercambio de conocimiento y la automatización de tareas empresariales.</p>
-                            <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14133194?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" class="btn-credential" rel="noopener noreferrer">
-                                <span>Ver credencial</span>
-                                <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificación 3 -->
-                    <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="certification-logo">
-                            <img src="img/google-wordmarks-2x.webp" alt="Deploy Agentspace" loading="lazy">
-                        </div>
-                        <div class="certification-content">
-                            <h3>Deploy Agentspace</h3>
-                            <p class="certification-issuer">Google</p>
-                            <p class="certification-date">Febrero 2025</p>
-                            <p class="certification-description">Insignia de habilidad en despliegue de Google Agentspace, incluyendo configuración de almacenes de datos y acciones.</p>
-                            <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14147877?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" class="btn-credential" rel="noopener noreferrer">
-                                <span>Ver credencial</span>
-                                <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="view-all-certifications">
-                        <a href="certificaciones.html" class="btn-view-all">
-                            <span>Ver todas mis certificaciones</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </a>
+                <div class="contact-card">
+                    <i class="ri-mail-send-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    <a href="mailto:gama-hg@hotmail.com" class="contact-email">gama-hg@hotmail.com</a>
+                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                        <a href="https://www.linkedin.com/in/gamalielherrera" target="_blank" class="btn btn-outline"><i
+                                class="ri-linkedin-fill"></i> LinkedIn</a>
+                        <a href="https://github.com/GamaHerrera" target="_blank" class="btn btn-outline"><i
+                                class="ri-github-fill"></i> GitHub</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="idiomas" class="languages">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Idiomas</h2>
-                    <p>Conectando en múltiples lenguajes</p>
-                </div>
-                
-                <div class="languages-container">
-                    <!-- Idioma 1 -->
-                    <div class="language-card" data-aos="fade-up">
-                        <div class="language-flag">
-                            <img src="img/flag-mexico.svg" alt="Español">
-                        </div>
-                        <div class="language-info">
-                            <h3>Español</h3>
-                            <div class="language-level">
-                                <span class="level-label">Nativo</span>
-                                <div class="level-bar">
-                                    <div class="level-fill" style="width: 100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Idioma 2 -->
-                    <div class="language-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="language-flag">
-                            <img src="img/flag-usa.svg" alt="Inglés">
-                        </div>
-                        <div class="language-info">
-                            <h3>Inglés</h3>
-                            <div class="language-level">
-                                <span class="level-label" data-level="B1">Intermedio</span>
-                                <div class="level-bar">
-                                    <div class="level-fill" style="width: 50%"></div>
-                                </div>
-                            </div>
-                            <div class="studying-badge">
-                                <i class="ri-book-line"></i> Estudiando actualmente
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Próximos idiomas -->
-                    <div class="language-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="language-flag">
-                            <div class="coming-soon-flag">
-                                <i class="ri-add-circle-line"></i>
-                            </div>
-                        </div>
-                        <div class="language-info">
-                            <h3>Próximos idiomas</h3>
-                            <p>Estoy planeando aprender más idiomas próximamente</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Contáctame</h2>
-                    <span class="section-divider"></span>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>¿Tienes un proyecto en mente?</h3>
-                        <p>Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales. ¡Contáctame por correo o LinkedIn!</p>
-                    </div>
-                    <div class="contact-cards redesigned">
-    <div class="contact-card">
-        <i class="ri-mail-line"></i>
-        <h4>Email</h4>
-        <p>gama-hg@hotmail.com</p>
-        <button class="btn-contact" onclick="location.href='mailto:gama-hg@hotmail.com'">Enviar correo</button>
-    </div>
-    <div class="contact-card">
-        <i class="ri-linkedin-fill"></i>
-        <h4>LinkedIn</h4>
-        <p>/gamalielherrera</p>
-        <a class="btn-contact" href="https://www.linkedin.com/in/gamaliel-herrera" target="_blank" rel="noopener noreferrer">Ver perfil</a>
-    </div>
-    <div class="contact-card">
-        <i class="ri-file-download-line"></i>
-        <h4>Currículum</h4>
-        <p>Descarga mi CV en PDF</p>
-        <a class="btn-contact" href="cv-gamaliel-herrera.pdf" download>Descargar CV</a>
-    </div>
-    <div class="contact-card">
-        <i class="ri-github-fill"></i>
-        <h4>GitHub</h4>
-        <p>Mis proyectos de código</p>
-        <a class="btn-contact" href="https://github.com/GamaHerrera" target="_blank" rel="noopener noreferrer">Ver perfil</a>
-    </div>
-</div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>GH</span>
-                    <p>Gama Herrera</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobre-mi">Sobre mí</a>
-                    <a href="#estudios">Estudios</a>
-                    <a href="#habilidades">Habilidades</a>
-                    <a href="#habilidades-blandas">Habilidades blandas</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#certificaciones">Certificaciones</a>
-                    <a href="#idiomas">Idiomas</a>
-                    <a href="#contacto">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/gamalielherrera" class="social-link" rel="noopener noreferrer" aria-label="LinkedIn de Gama Herrera"><i class="ri-linkedin-fill"></i></a>
-                    <a href="https://github.com/GamaHerrera" class="social-link" rel="noopener noreferrer" aria-label="GitHub de Gama Herrera"><i class="ri-github-fill"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="js/parallax.js" defer></script>
-    <script src="js/main.js" defer></script>
-    <script src="js/profession-slider.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función throttle para mejorar el rendimiento
-            function throttle(func, delay) {
-                let lastCall = 0;
-                return function(...args) {
-                    const now = new Date().getTime();
-                    if (now - lastCall < delay) {
-                        return;
-                    }
-                    lastCall = now;
-                    return func(...args);
-                };
-            }
-            
-            // Navegación y scroll
-            const header = document.querySelector('header');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('section');
-            
-            // Usar throttle para el evento de scroll
-            window.addEventListener('scroll', throttle(function() {
-                // Hacer el header sticky cuando se hace scroll
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.add('sticky');
-                    document.body.classList.add('has-sticky-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.remove('sticky');
-                    document.body.classList.remove('has-sticky-header');
-                }
-                
-                // Actualizar navegación activa según la sección visible
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (window.scrollY >= sectionTop - 200) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            }, 100));
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

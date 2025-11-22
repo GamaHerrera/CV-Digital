@@ -1,344 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rediseño de App Financiera | Gamaliel Herrera</title>
-    <link rel="icon" type="image/png" href="../img/favicon.png">
-    <meta name="description" content="Proyecto de branding para Potts por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:title" content="Branding para Potts | Gamaliel Herrera">
-    <meta property="og:description" content="Proyecto de branding para Potts por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:image" content="../img/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/pages/proyecto-branding-potts.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Branding para Potts | Gamaliel Herrera">
-    <meta name="twitter:description" content="Proyecto de branding para Potts por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta name="twitter:image" content="../img/og-image.png">
-    <link rel="stylesheet" href="../css/styles.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Sandra Ruvalcaba - Diseño Web | Gama Herrera</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <meta name="description" content="Proyecto de diseño web para la psicóloga Sandra Ruvalcaba, por Gama Herrera.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
-    <div id="parallax-container" class="global-parallax-elements"></div>
-    
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Botón para ir arriba -->
-    <a href="#" id="scroll-to-top" class="scroll-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <header>
-        <nav>
-            <div class="logo">GH</div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link" rel="noopener noreferrer">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link" rel="noopener noreferrer">Sobre mí</a>
-                <a href="../index.html#habilidades" class="nav-link" rel="noopener noreferrer">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active" rel="noopener noreferrer">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link" rel="noopener noreferrer">Contacto</a>
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css?v=2">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="../index.html" class="logo">GH</a>
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
+                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
+                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
+                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-moon-line"></i>
             </div>
-            <div class="theme-toggle">
-                <i class="ri-moon-fill"></i>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="project-detail-header">
+        <section class="section" style="padding-top: 160px;">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <span>/</span>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <span>/</span>
-                    <span>Diseño Web - Psicóloga Sandra Ruvalcaba</span>
+                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                    <a href="../proyectos.html"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
+                        <i class="ri-arrow-left-line"></i> Volver a proyectos
+                    </a>
                 </div>
-                <h1>Diseño Web - Psicóloga Sandra Ruvalcaba</h1>
-                <div class="project-meta">
-                    <div class="project-meta-item">
-                        <span class="meta-label">Cliente:</span>
-                        <span class="meta-value">Psicóloga Sandra Ruvalcaba</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Categoría:</span>
-                        <span class="meta-value">Web, Dashboard</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Fecha:</span>
-                        <span class="meta-value">Julio 2024</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="project-showcase">
-            <div class="container">
-                <div class="project-showcase-image">
-                    <div class="image-placeholder showcase">
-                        <img src="../img/web/sandra/sandi-web7.jpeg" alt="Página de inicio" loading="lazy">
+                <h1 class="section-title" style="text-align: left;">Psicóloga Sandra Ruvalcaba</h1>
+
+                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
+                        <span style="font-weight: 600;">Sandra Ruvalcaba</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
+                        <span style="font-weight: 600;">Web, Dashboard</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
+                        <span style="font-weight: 600;">Julio 2024</span>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-description">
-                    <h2>Descripción del Proyecto</h2>
-                    <p>Sandra Ruvalcaba es una psicóloga clínica ubicada en Guadalajara, Jalisco, especializada en el tratamiento individual, parejas y orientación educativa con enfoque clínico. Su enfoque profesional es cercano, empático y centrado en resultados terapéuticos concretos. Este proyecto de diseño web tuvo como objetivo crear una presencia digital que reflejara su profesionalismo, calidez humana y claridad en la comunicación de sus servicios.
+                <div class="project-image"
+                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
+                    <img src="../assets/img/web/sandra/sandi-web7.jpeg" alt="Sandra Ruvalcaba Web">
+                </div>
 
-                    El sitio debía transmitir confianza, accesibilidad y credibilidad desde el primer contacto, con un diseño limpio y ordenado que facilitara la navegación tanto para padres de familia como para pacientes jóvenes.</p>
-                    
-                    <h2>El Desafío</h2>
-                    <p>En un sector donde la confianza lo es todo, y la mayoría de los sitios de psicología suelen ser genéricos o visualmente impersonales, el principal reto fue crear un espacio web que comunicara no solo los servicios de Sandra, sino su personalidad profesional: cercana, ética, especializada y con experiencia.
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Sandra Ruvalcaba es una psicóloga clínica ubicada en Guadalajara, Jalisco, especializada en
+                            el tratamiento individual, parejas y orientación educativa con enfoque clínico. Su enfoque
+                            profesional es cercano, empático y centrado en resultados terapéuticos concretos. Este
+                            proyecto de diseño web tuvo como objetivo crear una presencia digital que reflejara su
+                            profesionalismo, calidez humana y claridad en la comunicación de sus servicios.
+                        </p>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            El sitio debía transmitir confianza, accesibilidad y credibilidad desde el primer contacto,
+                            con un diseño limpio y ordenado que facilitara la navegación tanto para padres de familia
+                            como para pacientes jóvenes.
+                        </p>
 
-                    Era fundamental equilibrar estética y funcionalidad para que cualquier persona —sin importar su nivel digital— pudiera navegar fácilmente, encontrar la información necesaria y establecer contacto sin fricciones. Además, el sitio debía ser totalmente responsive, preparado para escalar en caso de ofrecer agendamiento en línea en el futuro.</p>
-                    
-                    <div class="project-goals">
-                        <h3>Objetivos del Proyecto</h3>
-                        <ul>
-                            <li>Generar confianza desde la primera impresión digital</li>
-                            <li>Comunicar de forma clara y accesible los servicios ofrecidos</li>
-                            <li>Crear una experiencia de usuario cálida, intuitiva y ordenada</li>
-                            <li>Optimizar el sitio para dispositivos móviles</li>
-                            <li>Proyectar profesionalismo sin perder cercanía</li>
-                        </ul>
-                    </div>
-                    
-                    <h2>Proceso de Diseño</h2>
-                    <div class="design-process">
-                        <div class="process-step">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h3>Briefing Estratégico</h3>
-                                <p>Se realizó una sesión inicial con la psicóloga para entender su enfoque terapéutico, las necesidades de sus pacientes y los objetivos de comunicación de su marca personal.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h3>Investigación y Benchmarking</h3>
-                                <p>Se analizaron sitios web de psicólogos locales y referentes internacionales, identificando oportunidades para diferenciarse visual y funcionalmente.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h3>Arquitectura y Contenido</h3>
-                                <p>Se estructuró la información para facilitar una navegación clara y fluida, segmentando los servicios de forma comprensible para cada tipo de paciente.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h3>Diseño Visual</h3>
-                                <p>El diseño fue pensado para transmitir calidez y profesionalismo: paleta de colores suaves, tipografía legible, fotografías humanas y una interfaz limpia.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">05</div>
-                            <div class="step-content">
-                                <h3>Desarrollo Web</h3>
-                                <p>Se implementó el sitio en WordPress con una plantilla personalizada, cuidando cada detalle para asegurar una experiencia responsive, rápida y segura.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">06</div>
-                            <div class="step-content">
-                                <h3>Optimización y Lanzamiento</h3>
-                                <p>Se hicieron pruebas en distintos dispositivos, se configuraron plugins de seguridad y rendimiento, y se realizó la entrega con manual básico de uso para el cliente.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h2>Resultados</h2>
-                    <p>El nuevo sitio web de Sandra Ruvalcaba proyecta una imagen profesional, confiable y humana. Su nueva presencia digital la ha ayudado a mejorar su posicionamiento en búsquedas locales, facilitar el contacto con pacientes potenciales y transmitir la esencia de su práctica terapéutica con claridad y calidez.</p>
-                    
-                    <div class="project-gallery">
-                        <h3>Galería del Proyecto</h3>
-                        <div class="gallery-grid">
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            En un sector donde la confianza lo es todo, y la mayoría de los sitios de psicología suelen
+                            ser genéricos o visualmente impersonales, el principal reto fue crear un espacio web que
+                            comunicara no solo los servicios de Sandra, sino su personalidad profesional: cercana,
+                            ética, especializada y con experiencia.
+                        </p>
+
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
+                            Galería</h3>
+                        <div class="project-gallery">
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/web/sandra/sandi-web3-min.jpeg" alt="Prototipo de la página web" loading="lazy">
-                                </div>
-                                <p>Prototipo de la página web</p>
+                                <img src="../assets/img/web/sandra/sandi-web3-min.jpeg" alt="Sandra Ruvalcaba 1">
                             </div>
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/web/sandra/sandi-web4-min.jpeg" alt="Página de inicio" loading="lazy">
-                                </div>
-                                <p>Página de inicio</p>
+                                <img src="../assets/img/web/sandra/sandi-web4-min.jpeg" alt="Sandra Ruvalcaba 2">
                             </div>
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/web/sandra/sandi-web1-min.jpeg" alt="Vista móvil" loading="lazy">
-                                </div>
-                                <p>Vista móvil</p>
+                                <img src="../assets/img/web/sandra/sandi-web1-min.jpeg" alt="Sandra Ruvalcaba 3">
                             </div>
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/web/sandra/sandi-web2-min.jpeg" alt="Página de servicios" loading="lazy">
-                                </div>
-                                <p>Página de servicios</p>
+                                <img src="../assets/img/web/sandra/sandi-web2-min.jpeg" alt="Sandra Ruvalcaba 4">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/web/sandra/sandi-web7.jpeg" alt="Sandra Ruvalcaba 5">
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="testimonial testimonial-disruptive">
-                        <div class="testimonial-bg-shape"></div>
-                        <div class="testimonial-icon-burst">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <blockquote>
-                            <span class="testimonial-quote-text">
-                                Trabajar en mi sitio web fue un proceso muy especial. Lograron traducir mi enfoque terapéutico en un espacio digital que se siente cálido, profesional y accesible. Me ayudaron a estructurar mi mensaje con claridad y a conectar de forma más efectiva con quienes buscan apoyo psicológico. Ahora, mis pacientes me encuentran fácilmente, y desde el primer clic ya perciben la confianza que intento transmitir en consulta. ¡Estoy feliz con el resultado!.
-                            </span>
-                        </blockquote>
-                        <div class="testimonial-author-disruptive">
-                            <div>
-                                <p class="author-name">Sandra Ruvalcaba</p>
-                                <p class="author-title">Psicóloga</p>
+
+                    <div>
+                        <div
+                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
+                                <span class="tag">WordPress</span>
+                                <span class="tag">Affinity Designer</span>
                             </div>
+
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
+                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Diseño Web</li>
+                                <li>Arquitectura de Contenidos</li>
+                                <li>Diseño UI/UX</li>
+                                <li>Optimización Responsive</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                
-                <div class="project-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Herramientas Utilizadas</h3>
-                        <ul class="tools-list">
-                            <li><i class="ri-wordpress-line"></i> WordPress</li>
-                            <li><i class="ri-palette-line"></i> Affinity Designer</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Servicios Proporcionados</h3>
-                        <ul class="services-list">
-                            <li>Diseño Web</li>
-                            <li>Arquitectura de Contenidos</li>
-                            <li>Diseño UI/UX</li>
-                            <li>Optimización Responsive</li>
-                            <li>Capacitación básica en administración del sitio</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Proyectos Relacionados</h3>
-                        <div class="related-projects">
-                            <a href="proyecto-dashboard.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <span>UI</span>
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Dashboard Analítico</h4>
-                                    <p>UI Design</p>
-                                </div>
-                            </a>
-                            <a href="proyecto-ecommerce.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <span>WEB</span>
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>E-commerce de Moda</h4>
-                                    <p>Web Design</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="sidebar-section cta-section">
-                        <h3>¿Tienes un proyecto similar?</h3>
-                        <p>Estoy disponible para nuevos proyectos. Hablemos sobre cómo puedo ayudarte a crear una experiencia digital excepcional.</p>
-                        <a href="../index.html#contacto" class="btn btn-primary" rel="noopener noreferrer">Contáctame</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="next-project">
-            <div class="container">
-                <div class="next-project-content">
-                    <span>Siguiente Proyecto</span>
-                    <h2>Ponce Rosales - Abogados</h2>
-                    <a href="proyecto-branding-ponce-rosales.html" class="btn btn-secondary">Ver proyecto <i class="ri-arrow-right-line" rel="noopener noreferrer"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>GH</span>
-                    <p>Gamaliel Herrera</p>
-                </div>
-                <div class="footer-links">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <a href="../index.html#sobre-mi" rel="noopener noreferrer">Sobre mí</a>
-                    <a href="../index.html#habilidades" rel="noopener noreferrer">Habilidades</a>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <a href="../index.html#contacto" rel="noopener noreferrer">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/gamaliel-herrera/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gamaliel Herrera. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="../js/parallax.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función throttle para mejorar el rendimiento
-            function throttle(func, delay) {
-                let lastCall = 0;
-                return function(...args) {
-                    const now = new Date().getTime();
-                    if (now - lastCall < delay) {
-                        return;
-                    }
-                    lastCall = now;
-                    return func(...args);
-                };
-            }
-            
-            // Navegación y scroll con throttling
-            const header = document.querySelector('header');
-            
-            window.addEventListener('scroll', throttle(function() {
-                // Hacer el header sticky cuando se hace scroll
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.add('sticky');
-                    document.body.classList.add('has-sticky-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.remove('sticky');
-                    document.body.classList.remove('has-sticky-header');
-                }
-            }, 100));
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

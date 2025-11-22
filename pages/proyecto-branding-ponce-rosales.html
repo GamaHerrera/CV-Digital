@@ -1,346 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponce Rosales - Consultores Legales | Gamaliel Herrera</title>
-    <link rel="icon" type="image/png" href="../img/favicon.png">
-    <meta name="description" content="Proyecto de branding para Ponce Rosales, despacho de abogados, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:title" content="Branding para Ponce Rosales - Consultores Legales | Gamaliel Herrera">
-    <meta property="og:description" content="Proyecto de branding para Ponce Rosales, despacho de abogados, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta property="og:image" content="../img/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/pages/proyecto-branding-ponce-rosales.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Branding para Ponce Rosales - Consultores Legales | Gamaliel Herrera">
-    <meta name="twitter:description" content="Proyecto de branding para Ponce Rosales, despacho de abogados, por Gamaliel Herrera. Identidad visual, packaging y comunicación visual.">
-    <meta name="twitter:image" content="../img/og-image.png">
-    <link rel="stylesheet" href="../css/styles.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Ponce Rosales - Branding | Gama Herrera</title>
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <meta name="description" content="Proyecto de branding para Ponce Rosales, despacho de abogados, por Gama Herrera.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Contenedor para elementos parallax (se creará dinámicamente con JavaScript) -->
-    <div id="parallax-container" class="global-parallax-elements"></div>
-    
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Botón para ir arriba -->
-    <a href="#" id="scroll-to-top" class="scroll-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    <header>
-        <nav>
-            <div class="logo">GH</div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link" rel="noopener noreferrer">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link" rel="noopener noreferrer">Sobre mí</a>
-                <a href="../index.html#habilidades" class="nav-link" rel="noopener noreferrer">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active" rel="noopener noreferrer">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link" rel="noopener noreferrer">Contacto</a>
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css?v=2">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <a href="../index.html" class="logo">GH</a>
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
+                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
+                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
+                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-moon-line"></i>
             </div>
-            <div class="theme-toggle">
-                <i class="ri-moon-fill"></i>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ri-menu-line"></i>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <section class="project-detail-header">
+        <section class="section" style="padding-top: 160px;">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <span>/</span>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <span>/</span>
-                    <span>Diseño de Branding - Ponce Rosales - Consultores Legales</span>
+                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                    <a href="../proyectos.html"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
+                        <i class="ri-arrow-left-line"></i> Volver a proyectos
+                    </a>
                 </div>
-                <h1>Diseño de Branding - Ponce Rosales</h1>
-                <div class="project-meta">
-                    <div class="project-meta-item">
-                        <span class="meta-label">Cliente:</span>
-                        <span class="meta-value">Ponce Rosales - Consultores Legales</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Categoría:</span>
-                        <span class="meta-value">Branding, Law Firm</span>
-                    </div>
-                    <div class="project-meta-item">
-                        <span class="meta-label">Fecha:</span>
-                        <span class="meta-value">Octubre 2024</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="project-showcase">
-            <div class="container">
-                <div class="project-showcase-image">
-                    <div class="image-placeholder showcase">
-                        <img src="../img/branding/ponce/4-min.jpg" alt="Showcase Ponce Rosales">
+                <h1 class="section-title" style="text-align: left;">Ponce Rosales - Consultores Legales</h1>
+
+                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
+                        <span style="font-weight: 600;">Ponce Rosales</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
+                        <span style="font-weight: 600;">Branding, Law Firm</span>
+                    </div>
+                    <div>
+                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
+                        <span style="font-weight: 600;">Octubre 2024</span>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="project-content">
-            <div class="container">
-                <div class="project-description">
-                    <h2>Descripción del Proyecto</h2>
-                    <p>Ponce Rosales – Consultores Legales es una firma jurídica con base en Jalisco, especializada en brindar soluciones legales integrales para empresarios y trabajadores. Con una filosofía centrada en la honestidad, el conocimiento multidisciplinario y los resultados tangibles, la firma se posiciona como un aliado estratégico que no sólo defiende, sino que genera valor, conecta negocios y construye relaciones sólidas a largo plazo.
+                <div class="project-image"
+                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
+                    <img src="../assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales Branding">
+                </div>
 
-                        Este proyecto de branding busca posicionar a Ponce Rosales como una firma de alto nivel, con una imagen que transmita exclusividad, experiencia, confianza y una propuesta diferente a lo que tradicionalmente representa un despacho legal. Una marca elegante, sobria y moderna que inspire seguridad desde la primera impresión</p>
-                    
-                    <h2>El Desafío</h2>
-                    <p>En un entorno donde la imagen de los abogados se ha desgastado y la confianza del cliente muchas veces se ve comprometida por promesas vacías y soluciones genéricas, Ponce Rosales se enfrenta al reto de posicionarse como una firma legal distinta: moderna, ética y profundamente estratégica.
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
+                    <div>
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Ponce Rosales – Consultores Legales es una firma jurídica con base en Jalisco, especializada
+                            en brindar soluciones legales integrales para empresarios y trabajadores. Con una filosofía
+                            centrada en la honestidad, el conocimiento multidisciplinario y los resultados tangibles, la
+                            firma se posiciona como un aliado estratégico que no sólo defiende, sino que genera valor,
+                            conecta negocios y construye relaciones sólidas a largo plazo.
+                        </p>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            Este proyecto de branding busca posicionar a Ponce Rosales como una firma de alto nivel, con
+                            una imagen que transmita exclusividad, experiencia, confianza y una propuesta diferente a lo
+                            que tradicionalmente representa un despacho legal.
+                        </p>
 
-                        El desafío principal fue crear una identidad visual que rompiera con los estereotipos tradicionales del sector jurídico —balanzas, diosas de la justicia, martillos— sin perder el respeto, la autoridad ni la seriedad que exige la profesión. Una marca capaz de reflejar experiencia, resultados y exclusividad, pero también cercanía, honestidad y soluciones reales para empresarios que buscan algo más que un abogado: un verdadero socio legal.
-                        
-                        La marca debía funcionar en todos los frentes: desde un membrete hasta un espectacular, desde un pin en el traje hasta un documento jurídico. Por lo tanto, el reto visual era doble: diseñar con lujo, pero también con practicidad. Crear impacto, pero también confianza.</p>
-                    
-                    <div class="project-goals">
-                        <h3>Objetivos del Proyecto</h3>
-                        <ul>
-                            <li>Posicionamiento distintivo en el mercado legal</li>
-                            <li>Fortalecer la confianza del cliente</li>
-                            <li>Generar reconocimiento visual inmediato</li>
-                            <li>Preparar la marca para su expansión</li>
-                            <li>Alinear la imagen con la promesa de valor</li>
-                        </ul>
-                    </div>
-                    
-                    <h2>Proceso de Diseño</h2>
-                    <div class="design-process">
-                        <div class="process-step">
-                            <div class="step-number">01</div>
-                            <div class="step-content">
-                                <h3>Briefing Estratégico</h3>
-                                <p>Se inició con una reunión detallada con el cliente para comprender a fondo la esencia del despacho, su visión a largo plazo, su propuesta de valor y los elementos diferenciadores que lo posicionan por encima de la competencia. Se exploraron referencias, limitaciones técnicas y aspiraciones visuales que servirían como base creativa.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">02</div>
-                            <div class="step-content">
-                                <h3>Investigación y Análisis</h3>
-                                <p>Se llevó a cabo una auditoría visual de la competencia directa e indirecta, así como de despachos líderes a nivel nacional e internacional. El análisis incluyó estilos visuales, tono de comunicación, sistemas de identidad y uso de marca. Este paso permitió definir un territorio visual único, relevante y propio para la firma..</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">03</div>
-                            <div class="step-content">
-                                <h3>Conceptualización</h3>
-                                <p>A partir de la información recolectada, se definieron varias rutas conceptuales que reflejan el carácter exclusivo, sofisticado y estratégico de Ponce Rosales. Se descartaron los símbolos cliché del mundo legal (balanzas, mazos, columnas) para apostar por una estética diferenciadora que transmita profesionalismo sin recurrir a recursos visuales obvios.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">04</div>
-                            <div class="step-content">
-                                <h3>Desarrollo de Identidad</h3>
-                                <p>Se construyó un logotipo sólido, elegante y versátil, acompañado de una paleta cromática cálida y sobria que comunica lujo, confianza y autoridad. Se seleccionaron tipografías legibles con rasgos distintivos que aportan personalidad a la marca y se diseñaron elementos complementarios para aplicaciones diversas: papelería, formatos legales, redes sociales y materiales promocionales.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">05</div>
-                            <div class="step-content">
-                                <h3>Optimización Técnica</h3>
-                                <p>El sistema gráfico fue optimizado para adaptarse a medios digitales, impresiones en formatos legales (oficio y carta), impresoras comerciales y posibles aplicaciones a gran escala. Se plantearon soluciones de reproducción a dos y tres tintas para facilitar su implementación sin perder sofisticación.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="step-number">06</div>
-                            <div class="step-content">
-                                <h3>Entrega y Documentación</h3>
-                                <p>Finalmente, se elaboró un Manual de Identidad Visual detallado que estandariza el uso de la marca en todos los canales y garantiza su consistencia visual en el tiempo. Se incluyen especificaciones técnicas, ejemplos de aplicación y lineamientos claros para mantener la integridad de la marca en todos los puntos de contacto.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h2>Resultados</h2>
-                    <p>El nuevo sistema de identidad visual para Ponce Rosales – Consultores Legales refleja con precisión el carácter de la firma: profesional, confiable y exclusivo. El resultado es una marca sólida y sofisticada que proyecta autoridad sin recurrir a los lugares comunes del gremio legal.</p>
-                    
-                    <div class="project-gallery">
-                        <h3>Galería del Proyecto</h3>
-                        <div class="gallery-grid">
+                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
+                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                            En un entorno donde la imagen de los abogados se ha desgastado, Ponce Rosales se enfrenta al
+                            reto de posicionarse como una firma legal distinta: moderna, ética y profundamente
+                            estratégica. El desafío principal fue crear una identidad visual que rompiera con los
+                            estereotipos tradicionales del sector jurídico —balanzas, diosas de la justicia, martillos—
+                            sin perder el respeto, la autoridad ni la seriedad que exige la profesión.
+                        </p>
+
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
+                            Galería</h3>
+                        <div class="project-gallery">
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/ponce/2.jpg" alt="Showcase Ponce Rosales" loading="lazy">
-                                </div>
-                                <p>Primero bocetos</p>
+                                <img src="../assets/img/branding/ponce/2.jpg" alt="Ponce Rosales 1">
                             </div>
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/ponce/6-min.jpg" alt="Showcase Ponce Rosales" loading="lazy">
-                                </div>
-                                <p>Aplicaciones de marca</p>
+                                <img src="../assets/img/branding/ponce/6-min.jpg" alt="Ponce Rosales 2">
                             </div>
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/ponce/5-min.jpg" alt="Showcase Ponce Rosales" loading="lazy">
-                                </div>
-                                <p>Papelería</p>
+                                <img src="../assets/img/branding/ponce/5-min.jpg" alt="Ponce Rosales 3">
                             </div>
                             <div class="gallery-item">
-                                <div class="image-placeholder">
-                                    <img src="../img/branding/ponce/7.png" alt="Showcase Ponce Rosales" loading="lazy">
-                                </div>
-                                <p>Creacion del isotipo</p>
+                                <img src="../assets/img/branding/ponce/7.png" alt="Ponce Rosales 4">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales 5">
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="testimonial testimonial-disruptive">
-                        <div class="testimonial-bg-shape"></div>
-                        <div class="testimonial-icon-burst">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <blockquote>
-                            <span class="testimonial-quote-text">
-                                Trabajar en la construcción de nuestra identidad de marca fue una experiencia reveladora. Lograron capturar la esencia de lo que somos como firma: honestos, estratégicos y completamente enfocados en los resultados. Más allá del diseño, lo que más valoramos fue la profundidad con la que entendieron nuestra visión, la precisión con la que tradujeron nuestras ideas en una imagen sólida y diferenciadora. Hoy, nuestra marca transmite confianza, exclusividad y autoridad legal desde el primer vistazo.
-                            </span>
-                        </blockquote>
-                        <div class="testimonial-author-disruptive">
-                            <!-- <img src="img/avatar-carlos.png" alt="Alejandro Ponce" class="testimonial-avatar" loading="lazy"> -->
-                            <div>
-                                <p class="author-name">Alejandro Ponce</p>
-                                <p class="author-title">Socio Fundador | Ponce Rosales – Consultores Legales</p>
+
+                    <div>
+                        <div
+                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
+                                <span class="tag">Affinity Designer</span>
+                                <span class="tag">Branding</span>
                             </div>
+
+                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
+                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
+                                <li>Consultoría de Marca</li>
+                                <li>Identidad Visual</li>
+                                <li>Papelería</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                
-                <div class="project-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Herramientas Utilizadas</h3>
-                        <ul class="tools-list">
-                            <li><i class="ri-palette-line"></i> Affinity Designer</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Servicios Proporcionados</h3>
-                        <ul class="services-list">
-                            <li>Consultoría de Marca</li>
-                            <li>Desarrollo de Identidad Visual</li>
-                            <li>Manual de Identidad Corporativa</li>
-                            <li>Papelería Institucional</li>
-                            <li>Aplicaciones de Marca</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar-section">
-                        <h3>Proyectos Relacionados</h3>
-                        <div class="related-projects">
-                            <a href="proyecto-dashboard.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/branding/ponce/4-min.jpg" alt="Showcase Ponce Rosales">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>Dashboard Analítico</h4>
-                                    <p>UI Design</p>
-                                </div>
-                            </a>
-                            <a href="proyecto-ecommerce.html" class="related-project" rel="noopener noreferrer">
-                                <div class="related-image">
-                                    <div class="image-placeholder small">
-                                        <img src="../img/branding/ponce/4-min.jpg" alt="Showcase Ponce Rosales">
-                                    </div>
-                                </div>
-                                <div class="related-info">
-                                    <h4>E-commerce de Moda</h4>
-                                    <p>Web Design</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="sidebar-section cta-section">
-                        <h3>¿Tienes un proyecto similar?</h3>
-                        <p>Estoy disponible para nuevos proyectos. Hablemos sobre cómo puedo ayudarte a crear una experiencia digital excepcional.</p>
-                        <a href="../index.html#contacto" class="btn btn-primary" rel="noopener noreferrer">Contáctame</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="next-project">
-            <div class="container">
-                <div class="next-project-content">
-                    <span>Siguiente Proyecto</span>
-                    <h2>Diseño Web - Psicóloga Sandra Ruvalcaba</h2>
-                    <a href="proyecto-sandra-ruvalcaba.html" class="btn btn-secondary" rel="noopener noreferrer">Ver proyecto <i class="ri-arrow-right-line"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>GH</span>
-                    <p>Gamaliel Herrera</p>
-                </div>
-                <div class="footer-links">
-                    <a href="../index.html" rel="noopener noreferrer">Inicio</a>
-                    <a href="../index.html#sobre-mi" rel="noopener noreferrer">Sobre mí</a>
-                    <a href="../index.html#habilidades" rel="noopener noreferrer">Habilidades</a>
-                    <a href="../proyectos.html" rel="noopener noreferrer">Proyectos</a>
-                    <a href="../index.html#contacto" rel="noopener noreferrer">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/gamaliel-herrera/" class="social-link"><i class="ri-linkedin-fill" rel="noopener noreferrer"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gamaliel Herrera. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="../js/parallax.js"></script>
-    <script src="../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función throttle para mejorar el rendimiento
-            function throttle(func, delay) {
-                let lastCall = 0;
-                return function(...args) {
-                    const now = new Date().getTime();
-                    if (now - lastCall < delay) {
-                        return;
-                    }
-                    lastCall = now;
-                    return func(...args);
-                };
-            }
-            
-            // Navegación y scroll con throttling
-            const header = document.querySelector('header');
-            
-            window.addEventListener('scroll', throttle(function() {
-                // Hacer el header sticky cuando se hace scroll
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                    header.classList.add('sticky');
-                    document.body.classList.add('has-sticky-header');
-                } else {
-                    header.classList.remove('scrolled');
-                    header.classList.remove('sticky');
-                    document.body.classList.remove('has-sticky-header');
-                }
-            }, 100));
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
