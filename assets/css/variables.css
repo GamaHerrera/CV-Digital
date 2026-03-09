@@ -1,19 +1,26 @@
 :root {
-    /* Color Palette - Light Mode (High Contrast) */
-    --bg-color: #FFFFFF;
-    --surface-color: #F3F4F6;
-    --primary-color: #000000;
-    /* Brutalist Black */
-    --primary-hover: #333333;
+    /* Color Palette - Light Mode (High Contrast but softer) */
+    --bg-color: #FAFAFA;
+    --surface-color: #FFFFFF;
+    --primary-color: #0A0A0A;
+    --primary-hover: #262626;
+
+    /* Modern AI Accents */
     --accent-color: #CCFF00;
-    /* Acid Green */
-    --accent-secondary: #6D28D9;
-    /* Electric Purple */
-    --text-primary: #000000;
-    --text-secondary: #4B5563;
-    --text-light: #9CA3AF;
-    --border-color: #000000;
-    /* Hard borders */
+    /* Keeping Acid Green, but we might use gradients */
+    --accent-secondary: #8B5CF6;
+    /* Vibrant Purple */
+    --accent-tertiary: #3B82F6;
+    /* Electric Blue */
+
+    --text-primary: #171717;
+    --text-secondary: #525252;
+    --text-light: #A3A3A3;
+
+    --border-color: rgba(0, 0, 0, 0.08);
+    /* Soft borders for glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
 
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
@@ -26,22 +33,25 @@
     --spacing-lg: 6rem;
     --spacing-xl: 10rem;
 
-    /* Border Radius */
-    --radius-sm: 0px;
-    /* Sharp edges for brutalist feel */
-    --radius-md: 4px;
-    --radius-lg: 8px;
+    /* Border Radius (Softer for modern AI look) */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
     --radius-full: 9999px;
 
-    /* Shadows */
-    --shadow-sm: 2px 2px 0px 0px rgba(0, 0, 0, 1);
-    /* Hard shadow */
-    --shadow-md: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-    --shadow-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    /* Shadows (Soft, layered glows instead of brutalist hard shadows) */
+    --shadow-sm: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px -20px rgba(0, 0, 0, 0.15);
+
+    /* Glows */
+    --glow-primary: 0 0 20px rgba(204, 255, 0, 0.3);
+    --glow-secondary: 0 0 20px rgba(139, 92, 246, 0.3);
 
     /* Transitions */
-    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-normal: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 800ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] {
@@ -49,15 +59,21 @@
     --surface-color: #111111;
     --primary-color: #FFFFFF;
     --primary-hover: #E5E5E5;
-    --accent-color: #CCFF00;
-    --accent-secondary: #A78BFA;
-    --text-primary: #FFFFFF;
-    --text-secondary: #9CA3AF;
-    --text-light: #6B7280;
-    --border-color: #333333;
 
-    /* Shadows for dark mode (Glows) */
-    --shadow-sm: 0 0 10px rgba(204, 255, 0, 0.1);
-    --shadow-md: 0 0 20px rgba(204, 255, 0, 0.2);
-    --shadow-lg: 0 0 30px rgba(204, 255, 0, 0.3);
+    --text-primary: #F5F5F5;
+    --text-secondary: #A3A3A3;
+    --text-light: #525252;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(5, 5, 5, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
+
+    /* Deep, ethereal shadows for dark mode */
+    --shadow-sm: 0 4px 20px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 10px 40px 0 rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 20px 60px 0 rgba(0, 0, 0, 0.8);
+
+    /* Vibrant glows against dark background */
+    --glow-primary: 0 0 30px rgba(204, 255, 0, 0.15);
+    --glow-secondary: 0 0 30px rgba(139, 92, 246, 0.2);
 }

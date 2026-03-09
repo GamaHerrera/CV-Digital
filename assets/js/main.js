@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    // Scroll Animations
+    // Scroll Animations (Enhanced)
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -163,11 +163,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, {
         root: null,
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
     });
 
     revealElements.forEach(element => {
         revealObserver.observe(element);
+    });
+
+    // Mouse Tracking Glow Effect for Cards (Modern AI aesthetic)
+    const cards = document.querySelectorAll('.about-card, .project-card, .skill-item, .contact-card');
+
+    document.addEventListener('mousemove', (e) => {
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Set CSS variables for the mouse position to be used in hover effects if desired
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
     });
 });
