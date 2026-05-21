@@ -1,148 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potts - Branding | Gama Herrera</title>
+    <title>Potts — Branding para App de Quinielas | Gama Herrera</title>
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
-    <meta name="description" content="Proyecto de branding para Potts, app de quinielas, por Gama Herrera.">
-
-    <!-- Fonts -->
+    <meta name="description" content="Cómo construí desde cero la identidad de Potts, una startup de quinielas deportivas que necesitaba diferenciarse en un mercado saturado.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/main.css?v=2">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/gallery.css">
 </head>
-
 <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="header">
         <div class="container nav">
-            <a href="../index.html" class="logo">GH</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
-                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            <a href="../index.html" class="logo">Gama Herrera</a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="../index.html#proyectos" class="nav-link active">Portafolio</a>
+                <a href="../index.html#servicios" class="nav-link">Servicios</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre Mí</a>
+                <a href="../certificaciones.html" class="nav-link">Credenciales</a>
+                <a href="../index.html#contacto" class="btn nav-cta">Contrátame</a>
             </nav>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="ri-moon-line"></i>
-            </div>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
-                <i class="ri-menu-line"></i>
-            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
         </div>
     </header>
-
     <main>
-        <section class="section" style="padding-top: 160px;">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
-                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                    <a href="../proyectos.html"
-                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
-                        <i class="ri-arrow-left-line"></i> Volver a proyectos
-                    </a>
-                </div>
+                <a href="../index.html#proyectos" class="back-link"><i class="ri-arrow-left-line"></i> Volver al Portafolio</a>
 
-                <h1 class="section-title" style="text-align: left;">Potts - App de Quinielas</h1>
+                <h1 class="section-title reveal" style="margin-bottom: var(--spacing-md);">Potts<br><em style="font-style:italic; color:var(--text-secondary);">Identidad para app de quinielas</em></h1>
 
-                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                <div class="project-detail-header reveal">
                     <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
-                        <span style="font-weight: 600;">Potts</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
-                        <span style="font-weight: 600;">Branding, Tecnología</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
-                        <span style="font-weight: 600;">Abril 2025</span>
-                    </div>
-                </div>
-
-                <div class="project-image"
-                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
-                    <img src="../assets/img/branding/potts/potts.jpg" alt="Potts Branding">
-                </div>
-
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
-                    <div>
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            Potts es una startup mexicana que busca transformar las tradicionales quinielas deportivas
-                            en una experiencia social, accesible y divertida. A través de una aplicación mobile-first,
-                            Potts permite a los usuarios crear y participar en quinielas personalizadas con amigos y
-                            familiares, eliminando la necesidad de hojas de cálculo, chats confusos o sistemas
-                            engorrosos.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El proyecto en dos líneas</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:var(--spacing-md); font-size:0.95rem;">
+                            Potts quería modernizar las quinielas tradicionales. Me pidieron construir una marca que se sintiera fresca, confiable y hecha para compartir entre amigos, sin caer en los clichés del mundo deportivo.
                         </p>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            Este proyecto de branding se enfocó en dotar a Potts de una identidad visual moderna, limpia
-                            y flexible, capaz de crecer junto con la marca y adaptarse a diferentes entornos digitales.
-                            La marca debía transmitir dinamismo, cercanía, confianza y sobre todo: comunidad.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El problema concreto</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; font-size:0.95rem;">
+                            La mayoría de las plataformas de quinielas son visualmente pesadas, llenas de elementos genéricos de deporte (trofeos, balones, colores chillantes). Potts necesitaba lo contrario: una identidad limpia, social y digital-first que generara confianza desde el primer vistazo y fuera fácil de recordar.
                         </p>
-
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            El reto principal fue construir una identidad fresca y minimalista que se diferenciara
-                            radicalmente de las quinielas tradicionales. Mientras muchas plataformas se enfocan en
-                            estadísticas o diseños técnicos, Potts necesitaba comunicar una propuesta centrada en el
-                            usuario, intuitiva y con fuerte carga emocional.
-                        </p>
-
-                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
-                            Galería</h3>
-                        <div class="project-gallery">
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/potts/potts.jpg" alt="Potts Branding 1">
-                            </div>
-                            <!-- Placeholder for demonstration since only 1 image exists -->
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/potts/potts.jpg" alt="Potts Branding 2">
+                    </div>
+                    <div class="project-detail-meta" style="background-color:var(--text-primary); padding:var(--spacing-md); color:var(--text-inverse);">
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Cliente</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">Potts</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Categoría</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">Branding · Tecnología</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Año</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">2025</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Herramientas</span>
+                            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">Affinity Designer</span>
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">Figma</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <div
-                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
-                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
-                                <span class="tag">Affinity Designer</span>
-                                <span class="tag">Figma</span>
-                            </div>
-
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
-                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
-                                <li>Consultoría de Marca</li>
-                                <li>Identidad Visual</li>
-                                <li>Diseño de Logotipo e Íconos</li>
-                                <li>Guía de Identidad Visual</li>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Lo que entregué</span>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem;">
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Logotipo e icono de app</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Paleta de color y tipografía</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Guía de identidad visual</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Proceso y decisiones clave</h2>
+                    <p class="case-study-text">
+                        Analicé los competidores directos y detecté que todos usaban el mismo lenguaje visual: colores saturados, tipografías deportivas y mucho ruido gráfico. La oportunidad era clara: ocupar el espacio de lo minimalista y lo social.
+                    </p>
+                    <ul style="margin-top: 1rem; color:var(--text-secondary); line-height:1.9; font-size:1rem; padding-left:1.2rem; max-width:720px;">
+                        <li>Opté por una paleta reducida y moderna para que el sistema de diseño escale bien en pantallas pequeñas.</li>
+                        <li>El logotipo combina una forma geométrica simple (fácil de recordar) con un nombre corto y pronunciable en cualquier idioma.</li>
+                        <li>Descartamos propuestas con ilustraciones deportivas porque añadían complejidad sin añadir valor de marca.</li>
+                    </ul>
+                </div>
+
+                <div style="overflow:hidden; margin-top:var(--spacing-lg); margin-bottom:var(--spacing-lg);">
+                    <img src="../assets/img/branding/potts/potts.jpg" alt="Potts — Identidad de marca final" style="width:100%; height:520px; object-fit:cover; filter:grayscale(10%); transition:filter 0.8s ease; display:block;" loading="lazy">
+                </div>
+
+                <p class="section-number reveal" style="margin-bottom:var(--spacing-sm);">Galería</p>
+                <div class="project-gallery reveal">
+                    <div class="gallery-item"><img src="../assets/img/branding/potts/potts.jpg" alt="Potts identidad de marca" loading="lazy"></div>
+                </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Impacto y resultados</h2>
+                    <p class="case-study-text">
+                        <em>Este proyecto está en desarrollo. Los indicadores de adopción de marca serán añadidos una vez que la app lance públicamente.</em>
+                    </p>
+                </div>
+
+                <div class="case-study-block reveal">
+                    <h2 class="case-study-title">Lo que aprendí</h2>
+                    <p class="case-study-text">
+                        En proyectos de startup, el cliente muchas veces no sabe exactamente qué quiere hasta que ve lo que <em>no</em> quiere. Aprendí a mostrar extremos opuestos desde el inicio para acotar rápido la dirección correcta, sin gastar energía en iteraciones innecesarias.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo">GH</span>
+            <p>© 2025 Gama Herrera — Diseñador UI/UX Senior.</p>
+            <nav class="footer-links"><a href="../index.html#proyectos">Portafolio</a><a href="../index.html#servicios">Servicios</a><a href="../index.html#sobre-mi">Sobre Mí</a><a href="../certificaciones.html">Credenciales</a></nav>
         </div>
     </footer>
-
     <script src="../assets/js/main.js"></script>
 </body>
-
 </html>

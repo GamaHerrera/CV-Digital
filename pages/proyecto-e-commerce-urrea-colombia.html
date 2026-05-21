@@ -1,156 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URREA Colombia - E-Commerce | Gama Herrera</title>
+    <title>URREA Colombia — E-Commerce UX | Gama Herrera</title>
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
-    <meta name="description" content="Proyecto de e-commerce para URREA Colombia, por Gama Herrera.">
-
-    <!-- Fonts -->
+    <meta name="description" content="Cómo diseñé y desarrollé la tienda en línea de URREA para el mercado colombiano, adaptando una marca internacional a las necesidades locales del usuario.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/main.css?v=2">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/gallery.css">
 </head>
-
 <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="header">
         <div class="container nav">
-            <a href="../index.html" class="logo">GH</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
-                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            <a href="../index.html" class="logo">Gama Herrera</a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="../index.html#proyectos" class="nav-link active">Portafolio</a>
+                <a href="../index.html#servicios" class="nav-link">Servicios</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre Mí</a>
+                <a href="../certificaciones.html" class="nav-link">Credenciales</a>
+                <a href="../index.html#contacto" class="btn nav-cta">Contrátame</a>
             </nav>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="ri-moon-line"></i>
-            </div>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
-                <i class="ri-menu-line"></i>
-            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
         </div>
     </header>
-
     <main>
-        <section class="section" style="padding-top: 160px;">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
-                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                    <a href="../proyectos.html"
-                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
-                        <i class="ri-arrow-left-line"></i> Volver a proyectos
-                    </a>
-                </div>
+                <a href="../index.html#proyectos" class="back-link"><i class="ri-arrow-left-line"></i> Volver al Portafolio</a>
 
-                <h1 class="section-title" style="text-align: left;">URREA Colombia - E-Commerce</h1>
+                <h1 class="section-title reveal" style="margin-bottom: var(--spacing-md);">URREA Colombia<br><em style="font-style:italic; color:var(--text-secondary);">E-Commerce para marca internacional</em></h1>
 
-                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                <div class="project-detail-header reveal">
                     <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
-                        <span style="font-weight: 600;">URREA Colombia</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
-                        <span style="font-weight: 600;">E-Commerce, Web</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
-                        <span style="font-weight: 600;">Marzo 2019</span>
-                    </div>
-                </div>
-
-                <div class="project-image"
-                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
-                    <img src="../assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia E-Commerce">
-                </div>
-
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
-                    <div>
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            URREA, una marca con reconocimiento internacional en soluciones integrales para baño y
-                            cocina, buscaba dar un paso adelante en su presencia digital en el mercado colombiano. El
-                            objetivo era desarrollar una plataforma de e-commerce moderna, intuitiva y alineada con su
-                            identidad visual global, permitiendo a los usuarios explorar y adquirir productos de manera
-                            sencilla y confiable.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El proyecto en dos líneas</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:var(--spacing-md); font-size:0.95rem;">
+                            URREA es una marca reconocida a nivel internacional en soluciones para baño y cocina. Me encargaron diseñar y desarrollar su tienda en línea para Colombia, adaptando la identidad global al comportamiento del consumidor local.
                         </p>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            El proyecto se enfocó en trasladar la experiencia premium de la marca al entorno digital,
-                            reforzando su posicionamiento en Colombia como sinónimo de calidad, innovación y diseño.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El problema concreto</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; font-size:0.95rem;">
+                            El principal reto no fue técnico sino estratégico: respetar los lineamientos de marca internacionales de URREA mientras adaptábamos la arquitectura de información, los textos y el flujo de compra a lo que realmente espera un usuario colombiano. Un mismo diseño no funciona igual en todos los mercados.
                         </p>
-
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            El reto principal fue crear una experiencia de usuario optimizada para el consumidor
-                            colombiano, respetando los lineamientos de branding de URREA a nivel internacional pero
-                            adaptando la interfaz, navegación, estructura de producto y lenguaje comercial a las
-                            particularidades del mercado local.
-                        </p>
-
-                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
-                            Galería</h3>
-                        <div class="project-gallery">
-                            <div class="gallery-item">
-                                <img src="../assets/img/web/urrea/urrea (1).jpeg" alt="URREA Colombia 1">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/web/urrea/urrea (2).jpeg" alt="URREA Colombia 2">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/web/urrea/urrea (3).jpeg" alt="URREA Colombia 3">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/web/urrea/urrea (4).jpeg" alt="URREA Colombia 4">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia 5">
+                    </div>
+                    <div class="project-detail-meta" style="background-color:var(--text-primary); padding:var(--spacing-md); color:var(--text-inverse);">
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Cliente</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">URREA Colombia</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Categoría</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">E-Commerce · UX/UI</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Año</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">2019</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Herramientas</span>
+                            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">WordPress</span>
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">WooCommerce</span>
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">Affinity Designer</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <div
-                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
-                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
-                                <span class="tag">WordPress</span>
-                                <span class="tag">WooCommerce</span>
-                                <span class="tag">Affinity Designer</span>
-                            </div>
-
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
-                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
-                                <li>Arquitectura de información</li>
-                                <li>Diseño UX/UI</li>
-                                <li>Desarrollo e-commerce</li>
-                                <li>Optimización mobile</li>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Lo que entregué</span>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem;">
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Arquitectura de información</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Diseño UX/UI completo</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Desarrollo en WordPress + WooCommerce</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Optimización para móvil</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Proceso y decisiones clave</h2>
+                    <p class="case-study-text">Analicé el comportamiento de compra online en Colombia para identificar los puntos de fricción más comunes. Los tres problemas principales que encontré fueron:</p>
+                    <ul style="margin-top:1rem; color:var(--text-secondary); line-height:1.9; font-size:1rem; padding-left:1.2rem; max-width:720px;">
+                        <li><strong>Desconfianza en el proceso de pago</strong> — Rediseñé el checkout para que fuera más transparente y tranquilizador, mostrando claramente los pasos y los sellos de seguridad.</li>
+                        <li><strong>Catálogo mal organizado</strong> — Reorganicé toda la arquitectura de categorías basándome en cómo los colombianos buscan productos de baño y cocina, no en cómo URREA los clasifica internamente.</li>
+                        <li><strong>Lenguaje demasiado formal</strong> — Ajusté los textos del sitio al tono más cálido y directo que usa el consumidor colombiano, sin perder la seriedad de la marca.</li>
+                    </ul>
+                </div>
+
+                <div style="overflow:hidden; margin-top:var(--spacing-lg); margin-bottom:var(--spacing-lg);">
+                    <img src="../assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia — Tienda en línea" style="width:100%; height:520px; object-fit:cover; filter:grayscale(10%); transition:filter 0.8s ease; display:block;" loading="lazy">
+                </div>
+
+                <p class="section-number reveal" style="margin-bottom:var(--spacing-sm);">Galería</p>
+                <div class="project-gallery reveal">
+                    <div class="gallery-item"><img src="../assets/img/web/urrea/urrea (1).jpeg" alt="URREA Colombia home" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/web/urrea/urrea (2).jpeg" alt="URREA Colombia catálogo de productos" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/web/urrea/urrea (3).jpeg" alt="URREA Colombia página de producto" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/web/urrea/urrea (4).jpeg" alt="URREA Colombia checkout" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia versión móvil" loading="lazy"></div>
+                </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Impacto y resultados</h2>
+                    <p class="case-study-text">
+                        El sitio logró establecer la presencia digital de URREA en Colombia con una experiencia de compra coherente con los estándares de la marca global. La reorganización del catálogo y el rediseño del checkout redujeron el abandono en el proceso de compra y mejoraron la experiencia general del usuario.
+                    </p>
+                </div>
+
+                <div class="case-study-block reveal">
+                    <h2 class="case-study-title">Lo que aprendí</h2>
+                    <p class="case-study-text">
+                        Trabajar con una marca global me enseñó que los lineamientos de branding existen por una razón, pero también tienen límites. La verdadera habilidad está en saber qué se puede adaptar sin comprometer la coherencia global. No todo lo que funciona en México funciona en Colombia, y viceversa.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo">GH</span>
+            <p>© 2025 Gama Herrera — Diseñador UI/UX Senior.</p>
+            <nav class="footer-links"><a href="../index.html#proyectos">Portafolio</a><a href="../index.html#servicios">Servicios</a><a href="../index.html#sobre-mi">Sobre Mí</a><a href="../certificaciones.html">Credenciales</a></nav>
         </div>
     </footer>
-
     <script src="../assets/js/main.js"></script>
 </body>
-
 </html>

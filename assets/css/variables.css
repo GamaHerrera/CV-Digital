@@ -1,79 +1,62 @@
 :root {
-    /* Color Palette - Light Mode (High Contrast but softer) */
-    --bg-color: #FAFAFA;
+    /* === COLOR PALETTE — Warm Editorial Light === */
+    --bg-color: #E8E6E1;
+    --bg-alt: #F2F0EB;
     --surface-color: #FFFFFF;
-    --primary-color: #0A0A0A;
-    --primary-hover: #262626;
+    --surface-alt: #DDDBD6;
 
-    /* Modern AI Accents */
-    --accent-color: #CCFF00;
-    /* Keeping Acid Green, but we might use gradients */
-    --accent-secondary: #8B5CF6;
-    /* Vibrant Purple */
-    --accent-tertiary: #3B82F6;
-    /* Electric Blue */
+    /* Text */
+    --text-primary: #0D0D0D;
+    --text-secondary: #5A5A5A;
+    --text-light: #9A9A9A;
+    --text-inverse: #E8E6E1;
 
-    --text-primary: #171717;
-    --text-secondary: #525252;
-    --text-light: #A3A3A3;
+    /* Accent (minimal, single warm ink tone) */
+    --accent-color: #0D0D0D;
+    --accent-warm: #C9A96E;      /* Gold accent for subtle highlights */
+    --accent-red: #C44536;       /* Occasional editorial red */
 
-    --border-color: rgba(0, 0, 0, 0.08);
-    /* Soft borders for glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.5);
+    /* Borders & Dividers */
+    --border-color: rgba(13, 13, 13, 0.12);
+    --border-strong: rgba(13, 13, 13, 0.3);
 
-    /* Typography */
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* Transparent surfaces */
+    --glass-bg: rgba(232, 230, 225, 0.85);
+    --glass-border: rgba(13, 13, 13, 0.08);
 
-    /* Spacing */
+    /* === TYPOGRAPHY === */
+    --font-display: 'Playfair Display', Georgia, serif;   /* Editorial titles */
+    --font-body: 'Inter', system-ui, sans-serif;          /* Clean body text */
+
+    /* === SPACING === */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1.5rem;
     --spacing-md: 3rem;
     --spacing-lg: 6rem;
     --spacing-xl: 10rem;
+    --spacing-2xl: 14rem;
 
-    /* Border Radius (Softer for modern AI look) */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
+    /* === BORDER RADIUS === */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
     --radius-full: 9999px;
 
-    /* Shadows (Soft, layered glows instead of brutalist hard shadows) */
-    --shadow-sm: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 20px 40px -20px rgba(0, 0, 0, 0.15);
+    /* === SHADOWS (subtle, warm) === */
+    --shadow-sm: 0 2px 12px rgba(13, 13, 13, 0.06);
+    --shadow-md: 0 8px 32px rgba(13, 13, 13, 0.10);
+    --shadow-lg: 0 20px 60px rgba(13, 13, 13, 0.15);
 
-    /* Glows */
-    --glow-primary: 0 0 20px rgba(204, 255, 0, 0.3);
-    --glow-secondary: 0 0 20px rgba(139, 92, 246, 0.3);
+    /* === TRANSITIONS === */
+    --transition-fast: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-normal: 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-editorial: 700ms cubic-bezier(0.76, 0, 0.24, 1);
 
-    /* Transitions */
-    --transition-fast: 300ms cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-normal: 500ms cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-slow: 800ms cubic-bezier(0.16, 1, 0.3, 1);
-}
+    /* === CURSOR === */
+    --cursor-size: 10px;
+    --cursor-follower-size: 36px;
 
-[data-theme="dark"] {
-    --bg-color: #050505;
-    --surface-color: #111111;
-    --primary-color: #FFFFFF;
-    --primary-hover: #E5E5E5;
-
-    --text-primary: #F5F5F5;
-    --text-secondary: #A3A3A3;
-    --text-light: #525252;
-
-    --border-color: rgba(255, 255, 255, 0.08);
-    --glass-bg: rgba(5, 5, 5, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.05);
-
-    /* Deep, ethereal shadows for dark mode */
-    --shadow-sm: 0 4px 20px 0 rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 10px 40px 0 rgba(0, 0, 0, 0.6);
-    --shadow-lg: 0 20px 60px 0 rgba(0, 0, 0, 0.8);
-
-    /* Vibrant glows against dark background */
-    --glow-primary: 0 0 30px rgba(204, 255, 0, 0.15);
-    --glow-secondary: 0 0 30px rgba(139, 92, 246, 0.2);
+    /* === MARQUEE SPEED === */
+    --marquee-duration: 28s;
 }

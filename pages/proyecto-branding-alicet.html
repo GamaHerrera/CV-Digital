@@ -1,155 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alicet - Branding | Gama Herrera</title>
+    <title>Alicet — Branding para Negocio Artesanal | Gama Herrera</title>
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
-    <meta name="description" content="Proyecto de branding para Alicet, restaurante, por Gama Herrera.">
-
-    <!-- Fonts -->
+    <meta name="description" content="Cómo construí una identidad minimalista y botánica para Alicet, una marca de macetas y artesanías hechas a mano.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/gallery.css">
 </head>
-
 <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="header">
         <div class="container nav">
-            <a href="../index.html" class="logo">GH</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
-                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            <a href="../index.html" class="logo">Gama Herrera</a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="../index.html#proyectos" class="nav-link active">Portafolio</a>
+                <a href="../index.html#servicios" class="nav-link">Servicios</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre Mí</a>
+                <a href="../certificaciones.html" class="nav-link">Credenciales</a>
+                <a href="../index.html#contacto" class="btn nav-cta">Contrátame</a>
             </nav>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="ri-moon-line"></i>
-            </div>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
-                <i class="ri-menu-line"></i>
-            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
         </div>
     </header>
-
     <main>
-        <section class="section" style="padding-top: 160px;">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
-                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                    <a href="../proyectos.html"
-                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
-                        <i class="ri-arrow-left-line"></i> Volver a proyectos
-                    </a>
-                </div>
+                <a href="../index.html#proyectos" class="back-link"><i class="ri-arrow-left-line"></i> Volver al Portafolio</a>
 
-                <h1 class="section-title" style="text-align: left;">Alicet - Artesanía & Macetas</h1>
+                <h1 class="section-title reveal" style="margin-bottom: var(--spacing-md);">Alicet<br><em style="font-style:italic; color:var(--text-secondary);">Identidad para negocio artesanal</em></h1>
 
-                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                <div class="project-detail-header reveal">
                     <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
-                        <span style="font-weight: 600;">Alicet</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
-                        <span style="font-weight: 600;">Branding</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
-                        <span style="font-weight: 600;">Marzo 2019</span>
-                    </div>
-                </div>
-
-                <div class="project-image"
-                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
-                    <img src="../assets/img/branding/alicet/ALICET-min.jpg" alt="Alicet Branding">
-                </div>
-
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
-                    <div>
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            Alicet es una marca dedicada a la creación de productos artesanales hechos a mano, con
-                            especialidad en macetas decorativas, objetos de cerámica y elementos para el hogar. Nacida
-                            de la pasión por el detalle, la naturaleza y lo hecho con alma, Alicet busca conectar con
-                            personas que valoran lo auténtico, lo simple y lo estéticamente armonioso.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El proyecto en dos líneas</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:var(--spacing-md); font-size:0.95rem;">
+                            Alicet es un negocio de macetas decorativas y objetos de cerámica hechos a mano. Querían una marca que reflejara el cuidado y la sensibilidad de su trabajo, pero que se viera moderna y funcionara bien en redes sociales.
                         </p>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            Este proyecto de branding tiene como objetivo construir una identidad que comunique el valor
-                            de lo artesanal y lo humano, sin perder modernidad ni limpieza visual. Alicet debía
-                            posicionarse como una marca cercana, creativa y que respira tranquilidad.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El problema concreto</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; font-size:0.95rem;">
+                            El mercado artesanal suele dividirse en dos extremos: lo muy artístico y desorganizado, o lo industrializado y frío. Alicet necesitaba ocupar el punto medio: una estética limpia y minimalista que dejara al producto ser el protagonista.
                         </p>
-
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            El reto consistió en desarrollar una marca que reflejara sensibilidad artesanal sin parecer
-                            amateur. Se buscaba evitar lo sobrecargado o lo “hippie” y en cambio apostar por una
-                            estética minimalista, femenina y con inspiración botánica, que permita destacar la belleza
-                            del producto sin competir con él.
-                        </p>
-
-                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
-                            Galería</h3>
-                        <div class="project-gallery">
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/alicet/ALICET-min.png" alt="Alicet 1">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/alicet/business card mkockup_2-min.jpg" alt="Alicet 2">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/alicet/ALICET-min.jpg" alt="Alicet 3">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/alicet/business card mockup_2-min.jpg" alt="Alicet 4">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/alicet/Captura de pantalla 2025-05-21 123405-min.png"
-                                    alt="Alicet 5">
+                    </div>
+                    <div class="project-detail-meta" style="background-color:var(--text-primary); padding:var(--spacing-md); color:var(--text-inverse);">
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Cliente</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">Alicet</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Categoría</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">Branding · Artesanía</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Año</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">2019</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Herramientas</span>
+                            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">Affinity Designer</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <div
-                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
-                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
-                                <span class="tag">Affinity Designer</span>
-                                <span class="tag">Branding</span>
-                            </div>
-
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
-                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
-                                <li>Consultoría de Marca</li>
-                                <li>Identidad Visual</li>
-                                <li>Papelería</li>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Lo que entregué</span>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem;">
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Consultoría de marca</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Identidad visual y logotipo</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Sistema de papelería</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Proceso y decisiones clave</h2>
+                    <p class="case-study-text">Empecé por definir quién es el cliente ideal de Alicet: mujeres de 25-40 años que compran en Instagram, valoran lo hecho a mano y tienen buen gusto por la decoración del hogar. Con ese perfil en mente, tomé tres decisiones de diseño:</p>
+                    <ul style="margin-top:1rem; color:var(--text-secondary); line-height:1.9; font-size:1rem; padding-left:1.2rem; max-width:720px;">
+                        <li><strong>Paleta natural y cálida</strong> — beige, verde salvia y terracota; colores que ya existen en el producto y en el estilo de vida de la compradora.</li>
+                        <li><strong>Tipografía femenina y editorial</strong> — serif elegante para el logotipo, sans-serif limpia para el resto.</li>
+                        <li>Incluimos pequeños detalles de textura botánica para evocar la naturaleza sin que la marca pareciera un jardín.</li>
+                    </ul>
+                </div>
+
+                <div style="overflow:hidden; margin-top:var(--spacing-lg); margin-bottom:var(--spacing-lg);">
+                    <img src="../assets/img/branding/alicet/ALICET-min.jpg" alt="Alicet — Identidad de marca final" style="width:100%; height:520px; object-fit:cover; filter:grayscale(10%); transition:filter 0.8s ease; display:block;" loading="lazy">
+                </div>
+
+                <p class="section-number reveal" style="margin-bottom:var(--spacing-sm);">Galería</p>
+                <div class="project-gallery reveal">
+                    <div class="gallery-item"><img src="../assets/img/branding/alicet/ALICET-min.png" alt="Alicet logotipo" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/alicet/business card mkockup_2-min.jpg" alt="Alicet tarjeta de presentación" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/alicet/ALICET-min.jpg" alt="Alicet mockup etiqueta" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/alicet/business card mockup_2-min.jpg" alt="Alicet papelería" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/alicet/Captura de pantalla 2025-05-21 123405-min.png" alt="Alicet aplicación digital" loading="lazy"></div>
+                </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Impacto y resultados</h2>
+                    <p class="case-study-text">
+                        Con la nueva identidad, Alicet logró presentarse de forma más profesional en Instagram y en ferias locales, lo que se tradujo en mayor percepción de valor y una clientela más dispuesta a pagar el precio justo por productos artesanales de calidad.
+                    </p>
+                </div>
+
+                <div class="case-study-block reveal">
+                    <h2 class="case-study-title">Lo que aprendí</h2>
+                    <p class="case-study-text">
+                        Trabajar con negocios pequeños me enseñó a ser muy eficiente: cada decisión de diseño tiene que justificarse con el presupuesto limitado que tienen. Aprendí a priorizar los elementos de mayor impacto visual y a descartar lo que suena bonito pero no aporta nada concreto.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo">GH</span>
+            <p>© 2025 Gama Herrera — Diseñador UI/UX Senior.</p>
+            <nav class="footer-links"><a href="../index.html#proyectos">Portafolio</a><a href="../index.html#servicios">Servicios</a><a href="../index.html#sobre-mi">Sobre Mí</a><a href="../certificaciones.html">Credenciales</a></nav>
         </div>
     </footer>
-
     <script src="../assets/js/main.js"></script>
 </body>
-
 </html>

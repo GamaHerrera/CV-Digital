@@ -1,156 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponce Rosales - Branding | Gama Herrera</title>
+    <title>Ponce Rosales — Branding para Despacho Legal | Gama Herrera</title>
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
-    <meta name="description" content="Proyecto de branding para Ponce Rosales, despacho de abogados, por Gama Herrera.">
-
-    <!-- Fonts -->
+    <meta name="description" content="Cómo diseñé una identidad corporativa moderna para Ponce Rosales, un despacho de abogados que quería romper con los clichés del sector legal.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/main.css?v=2">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/gallery.css">
 </head>
-
 <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="header">
         <div class="container nav">
-            <a href="../index.html" class="logo">GH</a>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Inicio</a>
-                <a href="../index.html#sobre-mi" class="nav-link">Sobre mí</a>
-                <a href="../index.html#estudios" class="nav-link">Trayectoria</a>
-                <a href="../index.html#habilidades" class="nav-link">Habilidades</a>
-                <a href="../proyectos.html" class="nav-link active">Proyectos</a>
-                <a href="../index.html#contacto" class="nav-link">Contacto</a>
+            <a href="../index.html" class="logo">Gama Herrera</a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="../index.html#proyectos" class="nav-link active">Portafolio</a>
+                <a href="../index.html#servicios" class="nav-link">Servicios</a>
+                <a href="../index.html#sobre-mi" class="nav-link">Sobre Mí</a>
+                <a href="../certificaciones.html" class="nav-link">Credenciales</a>
+                <a href="../index.html#contacto" class="btn nav-cta">Contrátame</a>
             </nav>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="ri-moon-line"></i>
-            </div>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
-                <i class="ri-menu-line"></i>
-            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú"><i class="ri-menu-line"></i></button>
         </div>
     </header>
-
     <main>
-        <section class="section" style="padding-top: 160px;">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
-                <div style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                    <a href="../proyectos.html"
-                        style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
-                        <i class="ri-arrow-left-line"></i> Volver a proyectos
-                    </a>
-                </div>
+                <a href="../index.html#proyectos" class="back-link"><i class="ri-arrow-left-line"></i> Volver al Portafolio</a>
 
-                <h1 class="section-title" style="text-align: left;">Ponce Rosales - Consultores Legales</h1>
+                <h1 class="section-title reveal" style="margin-bottom: var(--spacing-md);">Ponce Rosales<br><em style="font-style:italic; color:var(--text-secondary);">Identidad para despacho legal</em></h1>
 
-                <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); flex-wrap: wrap;">
+                <div class="project-detail-header reveal">
                     <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Cliente</span>
-                        <span style="font-weight: 600;">Ponce Rosales</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Categoría</span>
-                        <span style="font-weight: 600;">Branding, Law Firm</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 0.9rem; color: var(--text-secondary);">Fecha</span>
-                        <span style="font-weight: 600;">Octubre 2024</span>
-                    </div>
-                </div>
-
-                <div class="project-image"
-                    style="height: auto; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--spacing-lg);">
-                    <img src="../assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales Branding">
-                </div>
-
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-lg);">
-                    <div>
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">Descripción</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            Ponce Rosales – Consultores Legales es una firma jurídica con base en Jalisco, especializada
-                            en brindar soluciones legales integrales para empresarios y trabajadores. Con una filosofía
-                            centrada en la honestidad, el conocimiento multidisciplinario y los resultados tangibles, la
-                            firma se posiciona como un aliado estratégico que no sólo defiende, sino que genera valor,
-                            conecta negocios y construye relaciones sólidas a largo plazo.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El proyecto en dos líneas</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:var(--spacing-md); font-size:0.95rem;">
+                            Ponce Rosales es un despacho jurídico en Jalisco especializado en derecho empresarial y laboral. Querían una imagen profesional que transmitiera experiencia y autoridad, pero sin verse como todos los demás abogados.
                         </p>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            Este proyecto de branding busca posicionar a Ponce Rosales como una firma de alto nivel, con
-                            una imagen que transmita exclusividad, experiencia, confianza y una propuesta diferente a lo
-                            que tradicionalmente representa un despacho legal.
+                        <h2 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:var(--spacing-sm); letter-spacing:-0.02em;">El problema concreto</h2>
+                        <p style="color:var(--text-secondary); line-height:1.8; font-size:0.95rem;">
+                            El sector legal en México está plagado de marcas anticuadas: balanzas de la justicia, colores navales y tipografías serif pesadas. Ponce Rosales quería diferenciarse. El reto fue construir una identidad que proyectara autoridad <em>sin</em> parecer otro despacho más del montón.
                         </p>
-
-                        <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-sm);">El Desafío</h2>
-                        <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
-                            En un entorno donde la imagen de los abogados se ha desgastado, Ponce Rosales se enfrenta al
-                            reto de posicionarse como una firma legal distinta: moderna, ética y profundamente
-                            estratégica. El desafío principal fue crear una identidad visual que rompiera con los
-                            estereotipos tradicionales del sector jurídico —balanzas, diosas de la justicia, martillos—
-                            sin perder el respeto, la autoridad ni la seriedad que exige la profesión.
-                        </p>
-
-                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm); text-transform: uppercase;">
-                            Galería</h3>
-                        <div class="project-gallery">
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/ponce/2.jpg" alt="Ponce Rosales 1">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/ponce/6-min.jpg" alt="Ponce Rosales 2">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/ponce/5-min.jpg" alt="Ponce Rosales 3">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/ponce/7.png" alt="Ponce Rosales 4">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales 5">
+                    </div>
+                    <div class="project-detail-meta" style="background-color:var(--text-primary); padding:var(--spacing-md); color:var(--text-inverse);">
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Cliente</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">Ponce Rosales</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Categoría</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">Branding · Despacho Legal</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5);">Año</span>
+                            <span class="project-meta-value" style="color:var(--text-inverse);">2024</span>
+                        </div>
+                        <div class="project-meta-item" style="margin-bottom:var(--spacing-sm); padding-bottom:var(--spacing-sm); border-bottom:1px solid rgba(232,230,225,0.1);">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Herramientas</span>
+                            <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                                <span style="font-size:0.7rem; padding:0.25rem 0.6rem; border:1px solid rgba(232,230,225,0.2); color:rgba(232,230,225,0.7); letter-spacing:0.08em;">Affinity Designer</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <div
-                            style="background-color: var(--surface-color); padding: var(--spacing-md); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Herramientas</h3>
-                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-md);">
-                                <span class="tag">Affinity Designer</span>
-                                <span class="tag">Branding</span>
-                            </div>
-
-                            <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-sm);">Servicios</h3>
-                            <ul style="list-style: disc; padding-left: 1.2rem; color: var(--text-secondary);">
-                                <li>Consultoría de Marca</li>
-                                <li>Identidad Visual</li>
-                                <li>Papelería</li>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label" style="color:rgba(232,230,225,0.5); display:block; margin-bottom:0.6rem;">Lo que entregué</span>
+                            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem;">
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Consultoría de marca</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Identidad visual completa</li>
+                                <li style="font-size:0.85rem; color:rgba(232,230,225,0.8);">• Sistema de papelería</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Proceso y decisiones clave</h2>
+                    <p class="case-study-text">Empecé con una auditoría de los 10 despachos más reconocidos en Jalisco. El patrón era claro: todos usaban azul marino, serif antiguo y símbolos de justicia. Mi estrategia fue apuntar al espacio opuesto.</p>
+                    <ul style="margin-top:1rem; color:var(--text-secondary); line-height:1.9; font-size:1rem; padding-left:1.2rem; max-width:720px;">
+                        <li>Elegí una paleta oscura y premium (casi negra con un acento dorado) que transmite exclusividad sin exagerar.</li>
+                        <li>La tipografía combina una serif moderna (elegante, sin ser anticuada) con una sans-serif limpia para textos secundarios.</li>
+                        <li>Descartamos el uso de figuras legales icónicas porque reforzaban exactamente el estereotipo que queríamos evitar.</li>
+                    </ul>
+                </div>
+
+                <div style="overflow:hidden; margin-top:var(--spacing-lg); margin-bottom:var(--spacing-lg);">
+                    <img src="../assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales — Identidad visual final" style="width:100%; height:520px; object-fit:cover; filter:grayscale(10%); transition:filter 0.8s ease; display:block;" loading="lazy">
+                </div>
+
+                <p class="section-number reveal" style="margin-bottom:var(--spacing-sm);">Galería</p>
+                <div class="project-gallery reveal">
+                    <div class="gallery-item"><img src="../assets/img/branding/ponce/2.jpg" alt="Ponce Rosales logotipo" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/ponce/6-min.jpg" alt="Ponce Rosales papelería" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/ponce/5-min.jpg" alt="Ponce Rosales aplicaciones" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/ponce/7.png" alt="Ponce Rosales tarjetas de presentación" loading="lazy"></div>
+                    <div class="gallery-item"><img src="../assets/img/branding/ponce/4-min.jpg" alt="Ponce Rosales mockup" loading="lazy"></div>
+                </div>
+
+                <div class="case-study-block reveal" style="margin-top: var(--spacing-xl);">
+                    <h2 class="case-study-title">Impacto y resultados</h2>
+                    <p class="case-study-text">
+                        El cliente reportó que sus clientes potenciales comenzaron a percibirlo como una firma "de otro nivel" desde el primer contacto. La nueva identidad les permitió elevar sus tarifas y atraer un perfil de cliente más cercano al segmento empresarial que buscaban.
+                    </p>
+                </div>
+
+                <div class="case-study-block reveal">
+                    <h2 class="case-study-title">Lo que aprendí</h2>
+                    <p class="case-study-text">
+                        En sectores muy tradicionales, el mayor reto no es el diseño en sí, sino convencer al cliente de que diferenciarse no es arriesgado, es necesario. Este proyecto me enseñó a respaldar cada decisión visual con argumentos estratégicos concretos.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo">GH</span>
+            <p>© 2025 Gama Herrera — Diseñador UI/UX Senior.</p>
+            <nav class="footer-links"><a href="../index.html#proyectos">Portafolio</a><a href="../index.html#servicios">Servicios</a><a href="../index.html#sobre-mi">Sobre Mí</a><a href="../certificaciones.html">Credenciales</a></nav>
         </div>
     </footer>
-
     <script src="../assets/js/main.js"></script>
 </body>
-
 </html>

@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificaciones | Gama Herrera</title>
+    <title>Credenciales | Gama Herrera</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png">
-    <meta name="description" content="Certificaciones y formación profesional de Gama Herrera.">
+    <meta name="description" content="Certificaciones y formación profesional de Gama Herrera, Senior UI/UX Designer.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -23,37 +22,37 @@
 </head>
 
 <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <header class="header">
         <div class="container nav">
-            <a href="index.html" class="logo">GH</a>
-            <nav class="nav-links">
+            <a href="index.html" class="logo">Gama Herrera</a>
+            <nav class="nav-links" aria-label="Navegación principal">
                 <a href="index.html" class="nav-link">Inicio</a>
-                <a href="index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="index.html#sobre-mi" class="nav-link">Perfil</a>
                 <a href="index.html#estudios" class="nav-link">Trayectoria</a>
-                <a href="index.html#habilidades" class="nav-link">Habilidades</a>
                 <a href="proyectos.html" class="nav-link">Proyectos</a>
-                <a href="certificaciones.html" class="nav-link active">Certificaciones</a>
-                <a href="index.html#contacto" class="nav-link">Contacto</a>
+                <a href="certificaciones.html" class="nav-link active">Credenciales</a>
+                <a href="index.html#contacto" class="btn nav-cta">Colaboremos</a>
             </nav>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="ri-moon-line"></i>
-            </div>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
                 <i class="ri-menu-line"></i>
-            </div>
+            </button>
         </div>
     </header>
 
     <main>
-        <section class="section" style="padding-top: 160px;">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
                 <div class="section-header">
-                    <h1 class="section-title">Mis Certificaciones</h1>
-                    <p class="section-subtitle">Formación continua y acreditaciones profesionales</p>
+                    <span class="section-number reveal">Credenciales</span>
+                    <h1 class="section-title reveal">Formación continua &amp;<br><em style="font-style:italic; color:var(--text-secondary);">certificaciones</em></h1>
+                    <p class="section-subtitle reveal delay-100">Acreditaciones profesionales que respaldan mi expertise en diseño, tecnología e innovación.</p>
                 </div>
 
-                <div class="filter-container"
-                    style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <div class="filter-container reveal delay-200">
                     <button class="filter-btn active" data-filter="all">Todas</button>
                     <button class="filter-btn" data-filter="ux">UX/UI</button>
                     <button class="filter-btn" data-filter="web">Web</button>
@@ -61,196 +60,119 @@
                     <button class="filter-btn" data-filter="other">Otras</button>
                 </div>
 
-                <div class="certifications-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="certifications-grid reveal">
                     <!-- Certificación 1 -->
-                    <div class="certification-card project-card" data-category="ux"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google UX Design"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="ux">
+                        <div class="certification-logo">
+                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Google UX Design Professional
-                                Certificate</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Google &
-                                Coursera</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Diciembre
-                                2021</p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Formación integral en diseño
-                                de experiencia de usuario: investigación, creación de wireframes, prototipos y diseño
-                                centrado en el usuario.</p>
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/XULQ9X95PBG2"
-                                target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Google UX Design Professional Certificate</h3>
+                        <span class="cert-issuer">Google &amp; Coursera</span>
+                        <span class="cert-date">Diciembre 2021</span>
+                        <p class="cert-desc">Formación integral en diseño de experiencia de usuario: investigación, wireframes, prototipos y diseño centrado en el usuario.</p>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/XULQ9X95PBG2"
+                            target="_blank" rel="noopener noreferrer" class="cert-link">
+                            Ver credencial <i class="ri-external-link-line"></i>
+                        </a>
                     </div>
 
                     <!-- Certificación 2 -->
-                    <div class="certification-card project-card" data-category="other"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/logo.png" alt="Fundamentos de Scrum"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="other">
+                        <div class="certification-logo">
+                            <img src="assets/img/logo.png" alt="Alaimo Labs" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Fundamentos de Scrum</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Alaimo
-                                Labs</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Mayo 2023
-                            </p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Conocimientos básicos del
-                                marco ágil Scrum: roles, eventos y artefactos para la gestión efectiva de proyectos.</p>
-                            <a href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3Aa030a528-2771-330a-b7a3-8e8d88cf5bc2"
-                                target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Fundamentos de Scrum</h3>
+                        <span class="cert-issuer">Alaimo Labs</span>
+                        <span class="cert-date">Mayo 2023</span>
+                        <p class="cert-desc">Conocimientos básicos del marco ágil Scrum: roles, eventos y artefactos para la gestión efectiva de proyectos.</p>
+                        <a href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3Aa030a528-2771-330a-b7a3-8e8d88cf5bc2"
+                            target="_blank" rel="noopener noreferrer" class="cert-link">
+                            Ver credencial <i class="ri-external-link-line"></i>
+                        </a>
                     </div>
 
                     <!-- Certificación 3 -->
-                    <div class="certification-card project-card" data-category="web"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google Activate"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="web">
+                        <div class="certification-logo">
+                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google Activate" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Introducción al Desarrollo Web: HTML
-                                y CSS II</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Google
-                                Activate</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Enero 2022
-                            </p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Fundamentos intermedios de
-                                desarrollo web con HTML y CSS: estructuras semánticas, estilos responsivos y buenas
-                                prácticas.</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Introducción al Desarrollo Web: HTML y CSS II</h3>
+                        <span class="cert-issuer">Google Activate</span>
+                        <span class="cert-date">Enero 2022</span>
+                        <p class="cert-desc">Fundamentos intermedios de desarrollo web con HTML y CSS: estructuras semánticas, estilos responsivos y buenas prácticas.</p>
+                        <span class="cert-link" style="opacity:0.4; cursor:default;">Credencial privada</span>
                     </div>
 
                     <!-- Certificación 4 -->
-                    <div class="certification-card project-card" data-category="other"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/Busuu_Logo.png" alt="Busuu" style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="other">
+                        <div class="certification-logo">
+                            <img src="assets/img/Busuu_Logo.png" alt="Busuu" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Certificado de nivel A1 - Inglés</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Busuu</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Diciembre
-                                2021</p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Dominio básico del idioma
-                                inglés: comprensión y uso de expresiones cotidianas y comunicación simple.</p>
-                            <a href="https://api.busuu.com/anon/certificates/e822eb38f962607bbc898a49db688140?utm_source=CRM&utm_group=ENG&utm_medium=CERTIFICATE_LEVEL&utm_campaign=CERTIFICATE_LEVEL"
-                                target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Certificado de Nivel A1 — Inglés</h3>
+                        <span class="cert-issuer">Busuu</span>
+                        <span class="cert-date">Diciembre 2021</span>
+                        <p class="cert-desc">Dominio básico del idioma inglés: comprensión y uso de expresiones cotidianas y comunicación simple.</p>
+                        <a href="https://api.busuu.com/anon/certificates/e822eb38f962607bbc898a49db688140"
+                            target="_blank" rel="noopener noreferrer" class="cert-link">
+                            Ver credencial <i class="ri-external-link-line"></i>
+                        </a>
                     </div>
 
                     <!-- Certificación 5 -->
-                    <div class="certification-card project-card" data-category="web"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/udemy-logo-png_seeklogo-492419.png" alt="Udemy"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="web">
+                        <div class="certification-logo">
+                            <img src="assets/img/udemy-logo-png_seeklogo-492419.png" alt="Udemy" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Wordpress</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Udemy</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Agosto 2018
-                            </p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Aprendizaje completo de
-                                WordPress: instalación, personalización de temas, plugins y creación de sitios web.</p>
-                            <a href="https://www.udemy.com/certificate/UC-F3NV662V/" target="_blank"
-                                rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>WordPress</h3>
+                        <span class="cert-issuer">Udemy</span>
+                        <span class="cert-date">Agosto 2018</span>
+                        <p class="cert-desc">Aprendizaje completo de WordPress: instalación, personalización de temas, plugins y creación de sitios web.</p>
+                        <a href="https://www.udemy.com/certificate/UC-F3NV662V/"
+                            target="_blank" rel="noopener noreferrer" class="cert-link">
+                            Ver credencial <i class="ri-external-link-line"></i>
+                        </a>
                     </div>
 
                     <!-- Certificación 6 -->
-                    <div class="certification-card project-card" data-category="ai"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="ai">
+                        <div class="certification-logo">
+                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Building Conversational Experiences
-                                with Dialogflow</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Google</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Agosto 2019
-                            </p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Diseño y desarrollo de
-                                asistentes virtuales usando Dialogflow.</p>
-                            <a href="#" target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Building Conversational Experiences with Dialogflow</h3>
+                        <span class="cert-issuer">Google</span>
+                        <span class="cert-date">Agosto 2019</span>
+                        <p class="cert-desc">Diseño y desarrollo de asistentes virtuales usando Dialogflow de Google Cloud.</p>
+                        <span class="cert-link" style="opacity:0.4; cursor:default;">Credencial privada</span>
                     </div>
 
                     <!-- Certificación 7 -->
-                    <div class="certification-card project-card" data-category="ai"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="ai">
+                        <div class="certification-logo">
+                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Accelerate Knowledge Exchange with
-                                Agentspace</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Google</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Febrero
-                                2025</p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Implementación y
-                                configuración de Google Agentspace para optimizar el intercambio de conocimiento.</p>
-                            <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14133194?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
-                                target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Accelerate Knowledge Exchange with Agentspace</h3>
+                        <span class="cert-issuer">Google Cloud</span>
+                        <span class="cert-date">Febrero 2025</span>
+                        <p class="cert-desc">Implementación y configuración de Google Agentspace para optimizar el intercambio de conocimiento organizacional.</p>
+                        <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14133194"
+                            target="_blank" rel="noopener noreferrer" class="cert-link">
+                            Ver credencial <i class="ri-external-link-line"></i>
+                        </a>
                     </div>
 
                     <!-- Certificación 8 -->
-                    <div class="certification-card project-card" data-category="ai"
-                        style="display: flex; flex-direction: column; padding: 2rem;">
-                        <div class="certification-logo"
-                            style="height: 60px; margin-bottom: 1.5rem; display: flex; align-items: center;">
-                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google"
-                                style="max-height: 100%; max-width: 100%;">
+                    <div class="certification-card" data-category="ai">
+                        <div class="certification-logo">
+                            <img src="assets/img/google-wordmarks-2x.webp" alt="Google" loading="lazy">
                         </div>
-                        <div class="certification-content">
-                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Deploy Agentspace</h3>
-                            <p style="color: var(--primary-color); font-weight: 500; margin-bottom: 0.25rem;">Google</p>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Febrero
-                                2025</p>
-                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Insignia de habilidad en
-                                despliegue de Google Agentspace.</p>
-                            <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14147877?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
-                                target="_blank" rel="noopener noreferrer"
-                                style="color: var(--primary-color); font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                Ver credencial <i class="ri-external-link-line"></i>
-                            </a>
-                        </div>
+                        <h3>Deploy Agentspace</h3>
+                        <span class="cert-issuer">Google Cloud</span>
+                        <span class="cert-date">Febrero 2025</span>
+                        <p class="cert-desc">Insignia de habilidad en despliegue y configuración avanzada de Google Agentspace.</p>
+                        <a href="https://partner.cloudskillsboost.google/public_profiles/0b00875e-61a2-432b-a884-2514e6704a1f/badges/14147877"
+                            target="_blank" rel="noopener noreferrer" class="cert-link">
+                            Ver credencial <i class="ri-external-link-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -258,8 +180,14 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo">GH</span>
+            <p>© 2025 Gama Herrera — Senior UI/UX Designer.</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="proyectos.html">Proyectos</a>
+                <a href="certificaciones.html">Credenciales</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
         </div>
     </footer>
 

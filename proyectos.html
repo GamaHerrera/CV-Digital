@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos | Gama Herrera</title>
     <link rel="icon" type="image/png" href="assets/img/logo.png">
-    <meta name="description" content="Proyectos de diseño gráfico, branding y UI/UX de Gama Herrera.">
+    <meta name="description" content="Proyectos de diseño gráfico, branding y UI/UX de Gama Herrera, Senior Designer.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -23,142 +22,185 @@
 </head>
 
 <body>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <header class="header">
         <div class="container nav">
-            <a href="index.html" class="logo">GH</a>
-            <nav class="nav-links">
+            <a href="index.html" class="logo">Gama Herrera</a>
+            <nav class="nav-links" aria-label="Navegación principal">
                 <a href="index.html" class="nav-link">Inicio</a>
-                <a href="index.html#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="index.html#sobre-mi" class="nav-link">Perfil</a>
                 <a href="index.html#estudios" class="nav-link">Trayectoria</a>
-                <a href="index.html#habilidades" class="nav-link">Habilidades</a>
                 <a href="proyectos.html" class="nav-link active">Proyectos</a>
-                <a href="index.html#contacto" class="nav-link">Contacto</a>
+                <a href="certificaciones.html" class="nav-link">Credenciales</a>
+                <a href="index.html#contacto" class="btn nav-cta">Colaboremos</a>
             </nav>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="ri-moon-line"></i>
-            </div>
-            <div class="mobile-menu-btn" id="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
                 <i class="ri-menu-line"></i>
-            </div>
+            </button>
         </div>
     </header>
 
     <main>
-        <section class="section" style="padding-top: 160px;">
+        <section class="section" style="padding-top: 140px;">
             <div class="container">
                 <div class="section-header">
-                    <h1 class="section-title">Todos mis proyectos</h1>
-                    <p class="section-subtitle">Una colección completa de mi trabajo en diseño y desarrollo.</p>
+                    <span class="section-number reveal">Portafolio</span>
+                    <h1 class="section-title reveal">Todos mis<br><em style="font-style:italic; color:var(--text-secondary);">proyectos</em></h1>
+                    <p class="section-subtitle reveal delay-100">Una colección completa de mi trabajo en branding, UX/UI y diseño web.</p>
                 </div>
 
-                <div class="filter-container"
-                    style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <div class="filter-container reveal delay-200">
                     <button class="filter-btn active" data-filter="all">Todos</button>
                     <button class="filter-btn" data-filter="branding">Branding</button>
                     <button class="filter-btn" data-filter="web">Web Design</button>
                     <button class="filter-btn" data-filter="ui">UI/UX</button>
                 </div>
+            </div>
 
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card" data-category="branding">
-                        <div class="project-image">
-                            <img src="assets/img/branding/PD/soluciones pd.jpg" alt="Soluciones Integrales PD">
-                        </div>
-                        <div class="project-info">
+            <div class="projects-grid reveal">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="branding">
+                    <div class="project-image">
+                        <img src="assets/img/branding/PD/soluciones pd.jpg" alt="Soluciones Integrales PD" loading="lazy">
+                        <div class="project-overlay">
                             <h3>Soluciones Integrales PD</h3>
-                            <p>Diseño de branding para una empresa especializada en mantenimiento industrial</p>
                             <div class="project-tags">
                                 <span class="tag">Branding</span>
                                 <span class="tag">Industrial</span>
                             </div>
-                            <a href="pages/proyecto-branding-soluciones-pd.html" class="project-link">Ver detalles <i
-                                    class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-branding-soluciones-pd.html" class="project-link">
+                                Ver detalles <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card" data-category="web ui">
-                        <div class="project-image">
-                            <img src="assets/img/web/sandra/sandi-web7.jpeg" alt="Sandra Ruvalcaba">
+                    <div class="project-info">
+                        <h3>Soluciones Integrales PD</h3>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Industrial</span>
                         </div>
-                        <div class="project-info">
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web ui">
+                    <div class="project-image">
+                        <img src="assets/img/web/sandra/sandi-web7.jpeg" alt="Sandra Ruvalcaba" loading="lazy">
+                        <div class="project-overlay">
                             <h3>Sandra Ruvalcaba</h3>
-                            <p>Diseño web para la psicóloga Sandra Ruvalcaba</p>
                             <div class="project-tags">
                                 <span class="tag">Web Design</span>
                                 <span class="tag">UI</span>
                             </div>
-                            <a href="pages/proyecto-sandra-ruvalcaba.html" class="project-link">Ver detalles <i
-                                    class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-sandra-ruvalcaba.html" class="project-link">
+                                Ver detalles <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card" data-category="web ui">
-                        <div class="project-image">
-                            <img src="assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia">
+                    <div class="project-info">
+                        <h3>Sandra Ruvalcaba</h3>
+                        <div class="project-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">UI</span>
                         </div>
-                        <div class="project-info">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web ui">
+                    <div class="project-image">
+                        <img src="assets/img/web/urrea/urrea (5).jpeg" alt="URREA Colombia" loading="lazy">
+                        <div class="project-overlay">
                             <h3>URREA Colombia</h3>
-                            <p>Diseño de interfaz para comercio electrónico</p>
                             <div class="project-tags">
                                 <span class="tag">E-Commerce</span>
                                 <span class="tag">Web</span>
                             </div>
-                            <a href="pages/proyecto-e-commerce-urrea-colombia.html" class="project-link">Ver detalles <i
-                                    class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-e-commerce-urrea-colombia.html" class="project-link">
+                                Ver detalles <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card" data-category="branding ui">
-                        <div class="project-image">
-                            <img src="assets/img/branding/potts/potts.jpg" alt="Potts">
+                    <div class="project-info">
+                        <h3>URREA Colombia</h3>
+                        <div class="project-tags">
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">Web</span>
                         </div>
-                        <div class="project-info">
-                            <h3>Potts - App de quinielas</h3>
-                            <p>Diseño de branding para plataforma de apuestas deportivas</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="branding ui">
+                    <div class="project-image">
+                        <img src="assets/img/branding/potts/potts.jpg" alt="Potts" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Potts — App de quinielas</h3>
                             <div class="project-tags">
                                 <span class="tag">Branding</span>
                                 <span class="tag">Mobile</span>
                             </div>
-                            <a href="pages/proyecto-branding-potts.html" class="project-link">Ver detalles <i
-                                    class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-branding-potts.html" class="project-link">
+                                Ver detalles <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Project 5 -->
-                    <div class="project-card" data-category="branding">
-                        <div class="project-image">
-                            <img src="assets/img/branding/bocanegra/bocanegra-min.jpg" alt="Bocanegra">
+                    <div class="project-info">
+                        <h3>Potts — App de quinielas</h3>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Mobile</span>
                         </div>
-                        <div class="project-info">
-                            <h3>Bocanegra - Restaurante</h3>
-                            <p>Diseño de branding para restaurante</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="branding">
+                    <div class="project-image">
+                        <img src="assets/img/branding/bocanegra/bocanegra-min.jpg" alt="Bocanegra" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Bocanegra</h3>
                             <div class="project-tags">
                                 <span class="tag">Branding</span>
                                 <span class="tag">Restaurant</span>
                             </div>
-                            <a href="pages/proyecto-branding-bocanegra.html" class="project-link">Ver detalles <i
-                                    class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-branding-bocanegra.html" class="project-link">
+                                Ver detalles <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card" data-category="branding">
-                        <div class="project-image">
-                            <img src="assets/img/branding/alicet/ALICET-min.jpg" alt="Alicet">
+                    <div class="project-info">
+                        <h3>Bocanegra — Restaurante</h3>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Restaurant</span>
                         </div>
-                        <div class="project-info">
-                            <h3>Alicet - Artesanía & Macetas</h3>
-                            <p>Diseño de branding para casa de arte y macetas</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="branding">
+                    <div class="project-image">
+                        <img src="assets/img/branding/alicet/ALICET-min.jpg" alt="Alicet" loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Alicet</h3>
                             <div class="project-tags">
                                 <span class="tag">Branding</span>
                                 <span class="tag">Artesanía</span>
                             </div>
-                            <a href="pages/proyecto-branding-alicet.html" class="project-link">Ver detalles <i
-                                    class="ri-arrow-right-line"></i></a>
+                            <a href="pages/proyecto-branding-alicet.html" class="project-link">
+                                Ver detalles <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Alicet — Artesanía &amp; Macetas</h3>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Artesanía</span>
                         </div>
                     </div>
                 </div>
@@ -167,8 +209,14 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gama Herrera. Todos los derechos reservados.</p>
+        <div class="container footer-inner">
+            <span class="footer-logo">GH</span>
+            <p>© 2025 Gama Herrera — Senior UI/UX Designer.</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="proyectos.html">Proyectos</a>
+                <a href="certificaciones.html">Credenciales</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
         </div>
     </footer>
 
