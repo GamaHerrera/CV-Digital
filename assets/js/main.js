@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ============================================================
+       0. LENIS SMOOTH SCROLL INIT
+       ============================================================ */
+    let lenis;
+    if (typeof Lenis !== 'undefined') {
+        lenis = new Lenis({
+            autoRaf: true,
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+    }
+
+    /* ============================================================
        1. CUSTOM CURSOR
        ============================================================ */
     const cursor = document.querySelector('.cursor');
@@ -192,8 +204,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!targetEl) return;
             e.preventDefault();
             const offset = 80;
-            const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
-            window.scrollTo({ top, behavior: 'smooth' });
+            
+            if (lenis) {
+                lenis.scrollTo(targetEl, { offset: -offset });
+            } else {
+                const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
         });
     });
 
