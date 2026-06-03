@@ -315,4 +315,31 @@ document.addEventListener('DOMContentLoaded', () => {
         marqueeTrack.innerHTML = originalContent + originalContent;
     }
 
+    /* ============================================================
+       12. STATUS TOAST NOTIFICATION
+       ============================================================ */
+    const statusToast = document.getElementById('status-toast');
+    const statusToastClose = document.getElementById('status-toast-close');
+    
+    if (statusToast) {
+        // Show after 2 seconds
+        setTimeout(() => {
+            statusToast.classList.add('show');
+        }, 2000);
+
+        // Hide on close click
+        if (statusToastClose) {
+            statusToastClose.addEventListener('click', () => {
+                statusToast.classList.remove('show');
+            });
+        }
+        
+        // Auto-hide after 12 seconds
+        setTimeout(() => {
+            if (statusToast.classList.contains('show')) {
+                statusToast.classList.remove('show');
+            }
+        }, 12000);
+    }
+
 });

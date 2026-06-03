@@ -52,7 +52,7 @@ Este sitio es estático y puede desplegarse en servicios como GitHub Pages, Netl
 
 ## Contacto
 
-- **Email:** gama-hg@hotmail.com
+- **Email:** hola@gamaherrera.com
 - **LinkedIn:** https://www.linkedin.com/in/gamaliel-herrera/
 - **GitHub:** https://github.com/GamaHerrera
 
