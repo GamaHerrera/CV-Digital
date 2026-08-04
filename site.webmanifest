@@ -1,0 +1,21 @@
+{
+  "name": "Gama Herrera — Senior UI/UX & Brand Designer",
+  "short_name": "Gama Herrera",
+  "description": "Portafolio profesional de Gama Herrera, Senior UI/UX & Brand Designer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#0a0a0c",
+  "icons": [
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
