@@ -15,6 +15,7 @@
     --accent-color: #0D0D0D;
     --accent-warm: #C9A96E;      /* Gold accent for subtle highlights */
     --accent-red: #C44536;       /* Occasional editorial red */
+    --accent-blue: #0D47A1;      /* gh brand blue — identity accent */
 
     /* Borders & Dividers */
     --border-color: rgba(13, 13, 13, 0.12);

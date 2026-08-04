@@ -114,7 +114,7 @@ img {
     top: 0;
     left: 0;
     height: 2px;
-    background-color: var(--text-primary);
+    background: linear-gradient(to right, var(--accent-blue), #1565C0);
     width: 0%;
     z-index: 10001;
     transition: width 0.1s linear;
@@ -165,9 +165,10 @@ html.lenis body {
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--text-light);
+    color: var(--accent-blue);
     margin-bottom: var(--spacing-sm);
     display: block;
+    opacity: 0.75;
 }
 
 .section-header {
@@ -178,6 +179,12 @@ html.lenis body {
     font-size: clamp(2.8rem, 5vw, 4.5rem);
     line-height: 1.05;
     letter-spacing: -0.03em;
+}
+
+/* gh brand blue accent on the italic part of section titles */
+.section-title em {
+    color: var(--accent-blue) !important;
+    font-style: italic;
 }
 
 .section-subtitle {
@@ -328,6 +335,21 @@ hr.divider {
     color: var(--text-primary);
     letter-spacing: -0.04em;
     line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+    /* The brand is blue — keep as-is, it looks great on the warm bg */
+    transition: opacity var(--transition-fast), filter var(--transition-fast);
+    filter: none;
+}
+
+.logo-img:hover {
+    opacity: 0.8;
 }
 
 .nav-links {
@@ -352,7 +374,7 @@ hr.divider {
     left: 0;
     width: 0;
     height: 1px;
-    background-color: var(--text-primary);
+    background-color: var(--accent-blue);
     transition: width var(--transition-normal);
 }
 
@@ -656,7 +678,7 @@ hr.divider {
     bottom: 0.04em;
     width: 100%;
     height: 2px;
-    background-color: var(--accent-warm);
+    background: linear-gradient(to right, var(--accent-blue), #1976D2);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -848,7 +870,7 @@ hr.divider {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--accent-warm);
+    background-color: var(--accent-blue);
     display: inline-block;
     animation: pulse-dot 2s ease-in-out infinite;
     flex-shrink: 0;
@@ -1099,7 +1121,7 @@ hr.divider {
 
 .marquee-item .sep {
     font-size: 1.2rem;
-    color: var(--accent-warm);
+    color: var(--accent-blue);
     line-height: 1;
 }
 
@@ -1133,7 +1155,8 @@ hr.divider {
 
 .about-lead em {
     font-style: italic;
-    color: var(--text-secondary);
+    color: var(--accent-blue);
+    opacity: 0.85;
 }
 
 .about-body {
@@ -1237,8 +1260,8 @@ hr.divider {
 }
 
 .timeline-item:hover .timeline-dot {
-    background-color: var(--accent-warm);
-    border-color: var(--accent-warm);
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
 }
 
 .timeline-date {
@@ -1501,16 +1524,17 @@ hr.divider {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--accent-warm);
+    color: var(--text-inverse);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     margin-top: auto;
-    transition: gap var(--transition-fast);
+    transition: gap var(--transition-fast), color var(--transition-fast);
 }
 
 .project-link:hover {
     gap: 1rem;
+    color: rgba(232, 230, 225, 0.7);
 }
 
 /* Project card bottom label (visible by default) */
@@ -1671,6 +1695,22 @@ hr.divider {
     font-weight: 700;
     color: var(--text-inverse);
     letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+    /* Invert to white since footer background is dark (#0D0D0D) */
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity var(--transition-fast);
+}
+
+.footer-logo-img:hover {
+    opacity: 1;
 }
 
 .footer p {

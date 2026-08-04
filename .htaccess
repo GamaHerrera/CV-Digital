@@ -1,0 +1,46 @@
+# ============================================================
+#  Gama Herrera Portfolio — URL Rewrite & Clean URLs
+#  gamaherrera.com
+# ============================================================
+
+Options -Indexes
+RewriteEngine On
+
+# ── Demo redirects ── (Clean URLs for project demos)
+# Usage: gamaherrera.com/demo/nebu → pages/Nebu/index.html
+
+RewriteRule ^demo/nebu/?$           pages/Nebu/index.html   [R=301,L]
+RewriteRule ^demo/reticula/?$       pages/proyecto-reticula-creativa.html  [R=301,L]
+
+# ── Remove .html extension from project case study pages ──
+# gamaherrera.com/proyecto/nebu → pages/proyecto-nebu.html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^proyecto/nebu/?$                   pages/proyecto-nebu.html               [R=301,L]
+RewriteRule ^proyecto/reticula/?$               pages/proyecto-reticula-creativa.html  [R=301,L]
+RewriteRule ^proyecto/potts/?$                  pages/proyecto-branding-potts.html     [R=301,L]
+RewriteRule ^proyecto/ponce-rosales/?$          pages/proyecto-branding-ponce-rosales.html [R=301,L]
+RewriteRule ^proyecto/sandra-ruvalcaba/?$       pages/proyecto-sandra-ruvalcaba.html   [R=301,L]
+RewriteRule ^proyecto/urrea-colombia/?$         pages/proyecto-e-commerce-urrea-colombia.html [R=301,L]
+RewriteRule ^proyecto/alicet/?$                 pages/proyecto-branding-alicet.html    [R=301,L]
+RewriteRule ^proyecto/bocanegra/?$              pages/proyecto-branding-bocanegra.html [R=301,L]
+RewriteRule ^proyecto/soluciones-pd/?$          pages/proyecto-branding-soluciones-pd.html [R=301,L]
+
+# ── Security headers ──
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── Cache static assets ──
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png  "access plus 1 year"
+    ExpiresByType text/css   "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
