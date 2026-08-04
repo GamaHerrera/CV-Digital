@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ─── SEO ─────────────────────────────────────────────── -->
+  <title>Nishino | Japan Dining en Zapopan</title>
+  <meta name="description" content="Nishino Japan Dining — Experiencia gastronómica japonesa premium en Zapopan, Jalisco. Nigiris, Sashimis, Omakase y más. Reserva tu mesa vía WhatsApp. Av. Naciones Unidas 7880, Lírica Towers." />
+  <meta name="keywords" content="restaurante japonés Zapopan, sushi Zapopan, Japan Dining, Nishino, omakase Guadalajara, nigiri, sashimi, reservas WhatsApp" />
+  <meta name="author" content="Nishino Japan Dining" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nishino.mx/" />
+
+  <!-- ─── Open Graph / Social ─────────────────────────────── -->
+  <meta property="og:type"        content="restaurant" />
+  <meta property="og:title"       content="Nishino | Japan Dining en Zapopan" />
+  <meta property="og:description" content="Experiencia gastronómica japonesa premium. Nigiris, Sashimis, Rollos y Omakase en Zapopan, Jalisco." />
+  <meta property="og:image"       content="images/hero.webp" />
+  <meta property="og:url"         content="https://nishino.mx/" />
+  <meta property="og:locale"      content="es_MX" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- ─── Favicon ─────────────────────────────────────────── -->
+  <link rel="icon" type="image/webp" href="images/logo.webp" />
+
+  <!-- ─── Google Fonts ─────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+  <!-- ─── Site Stylesheet ──────────────────────────────────── -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ─── Schema.org JSON-LD (Restaurante & Local SEO) ─────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Restaurant", "FoodEstablishment", "LocalBusiness"],
+    "name": "Nishino Japan Dining",
+    "alternateName": "Nishino",
+    "image": [
+      "https://nishino.mx/images/hero.webp",
+      "https://nishino.mx/images/chef.webp",
+      "https://nishino.mx/images/dish-chutoro.webp",
+      "https://nishino.mx/images/dish-salmon.webp",
+      "https://nishino.mx/images/dish-kakifurai.webp"
+    ],
+    "description": "Restaurante de alta cocina japonesa contemporánea en Zapopan, Jalisco. Especialistas en nigiris de autor, cortes finos de sashimi, baos artesanales y exclusivas experiencias omakase.",
+    "url": "https://nishino.mx",
+    "telephone": "+523321576971",
+    "priceRange": "$$",
+    "servesCuisine": ["Japanese", "Sushi", "Omakase", "Asian"],
+    "currenciesAccepted": "MXN",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, Visa, Mastercard, American Express",
+    "acceptsReservations": "True",
+    "menu": "https://nishino.mx/#menu",
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "Carta Gastronómica Nishino",
+      "url": "https://nishino.mx/#menu",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Nigiris",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Chu-Toro Nigiri",
+              "description": "Atún de ventresca media, textura mantequillosa, sabor profundo y delicado.",
+              "offers": {
+                "@type": "Offer",
+                "price": "185",
+                "priceCurrency": "MXN"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Salmón Canadiense Nigiri",
+              "description": "Salmón atlántico importado, corte preciso sobre arroz de sushi temperado.",
+              "offers": {
+                "@type": "Offer",
+                "price": "120",
+                "priceCurrency": "MXN"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Sashimis & Omakase",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Omakase Sashimi",
+              "description": "Selección del chef con 10 piezas de lo mejor del mercado del día.",
+              "offers": {
+                "@type": "Offer",
+                "price": "680",
+                "priceCurrency": "MXN"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Naciones Unidas 7880 Local 1, Lírica Towers",
+      "addressLocality": "Zapopan",
+      "addressRegion": "Jalisco",
+      "postalCode": "45116",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 20.7088,
+      "longitude": -103.3919
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "13:30",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "19:00",
+        "closes": "22:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "13:00",
+        "closes": "20:00"
+      }
+    ],
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino",
+        "inLanguage": "es-MX",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+          "http://schema.org/IOSPlatform",
+          "http://schema.org/AndroidPlatform"
+        ]
+      },
+      "result": {
+        "@type": "FoodEstablishmentReservation",
+        "name": "Reserva de Mesa en Nishino Japan Dining"
+      }
+    },
+    "sameAs": [
+      "https://www.instagram.com/nishino.mx"
+    ],
+    "hasMap": "https://maps.google.com/?q=Av.+Naciones+Unidas+7880+Local+1+Zapopan+Jalisco"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       PRELOADER (UX Edge Case)
+  ════════════════════════════════════════════════════════ -->
+  <div id="preloader" class="preloader" aria-hidden="true" role="status" aria-label="Cargando experiencia Nishino">
+    <div class="preloader-inner">
+      <div class="preloader-brand">
+        <div class="preloader-emblem">
+          <div class="preloader-ring"></div>
+          <div class="preloader-ring-pulse"></div>
+          <picture>
+            <source srcset="images/logo.webp" type="image/webp" />
+            <img src="images/logo.jpg" alt="Nishino Logo" class="preloader-logo-img" width="46" height="46" />
+          </picture>
+        </div>
+        <div class="preloader-text">
+          <span class="preloader-title">NISHINO</span>
+          <span class="preloader-tagline">JAPAN DINING · ZAPOPAN</span>
+        </div>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <a href="#hero" class="nav-logo" aria-label="Nishino Japan Dining — Inicio">
+      <picture>
+        <source srcset="images/logo.webp" type="image/webp" />
+        <img src="images/logo.jpg" alt="Nishino Japan Dining logo" width="38" height="38" />
+      </picture>
+      <span class="nav-logo-text">Nishino</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#filosofia">Filosofía</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li>
+        <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-cta"
+           id="nav-reservar-btn"
+           aria-label="Reservar mesa por WhatsApp">
+          Reservar Mesa
+        </a>
+      </li>
+    </ul>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile full-screen menu -->
+  <div id="mobile-menu" class="nav-mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <a href="#menu"       id="mobile-menu-link">Menú</a>
+    <div class="nav-mobile-divider" aria-hidden="true"></div>
+    <a href="#filosofia"  id="mobile-filosofia-link">Filosofía</a>
+    <div class="nav-mobile-divider" aria-hidden="true"></div>
+    <a href="#ubicacion"  id="mobile-ubicacion-link">Ubicación</a>
+    <div class="nav-mobile-divider" aria-hidden="true"></div>
+    <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+       target="_blank" rel="noopener noreferrer"
+       id="mobile-reservar-btn"
+       style="color: #9D6270;">
+       Reservar Mesa
+    </a>
+  </div>
+
+  <main>
+    <!-- ════════════════════════════════════════════════════════
+          HERO
+    ════════════════════════════════════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <picture>
+          <source srcset="images/hero.webp" type="image/webp" />
+          <img src="images/hero.jpg"
+               alt="Chef de Nishino preparando sushi con precisión"
+               fetchpriority="high"
+               loading="eager"
+               decoding="async"
+               width="1024"
+               height="1024" />
+        </picture>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <span class="label hero-label reveal">Japan Dining · Zapopan</span>
+        <h1 class="hero-title reveal reveal-delay-1" id="hero-title">
+          Nishi<em>no</em>
+        </h1>
+        <p class="hero-tagline reveal reveal-delay-2">
+          "Practicar, repetir y cuidar."
+        </p>
+        <div class="hero-cta-group reveal reveal-delay-3">
+          <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-primary"
+             id="hero-reservar-btn"
+             aria-label="Reserva tu experiencia en Nishino vía WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512" aria-hidden="true">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+            Reserva tu Experiencia
+          </a>
+          <a href="#menu" class="btn-secondary" id="hero-menu-btn" aria-label="Ver el menú de Nishino">
+            Ver Menú
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Descubrir</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         MENÚ GASTRONÓMICO
+    ════════════════════════════════════════════════════════ -->
+    <section id="menu" class="section" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="label reveal">Gastronomía</span>
+          <h2 class="heading-lg reveal reveal-delay-1" id="menu-title">Nuestra Carta</h2>
+          <p class="reveal reveal-delay-2" style="color:var(--color-text-secondary);font-size:0.9rem;margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">
+            Ingredientes seleccionados. Técnica precisa. Cada platillo, una expresión de la filosofía japonesa.
+          </p>
+          <div class="section-divider"></div>
+        </header>
+
+        <!-- Tabs Navigation -->
+        <nav class="menu-tabs reveal" role="tablist" aria-label="Categorías del menú">
+          <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="tab-nigiris"   id="tab-btn-nigiris"   data-tab="nigiris">Nigiris</button>
+          <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-sashimis"  id="tab-btn-sashimis"  data-tab="sashimis">Sashimis</button>
+          <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-rollos"    id="tab-btn-rollos"    data-tab="rollos">Rollos</button>
+          <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-baos"      id="tab-btn-baos"      data-tab="baos">Baos</button>
+          <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-bebidas"   id="tab-btn-bebidas"   data-tab="bebidas">Bebidas</button>
+        </nav>
+
+        <!-- Tab: Nigiris -->
+        <div id="tab-nigiris" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-nigiris">
+          <div class="menu-grid">
+
+            <article class="menu-item reveal">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-chutoro.webp" type="image/webp" />
+                  <img src="images/dish-chutoro.jpg" alt="Chu-Toro Nigiri — atún graso" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Chu-Toro</h3>
+                <p class="menu-item-desc">Atún de ventresca media, textura mantequillosa, sabor profundo y delicado.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$185</span>
+                  <span class="menu-item-tag">Especial</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-1">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-salmon.webp" type="image/webp" />
+                  <img src="images/dish-salmon.jpg" alt="Salmón Canadiense Nigiri" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Salmón Canadiense</h3>
+                <p class="menu-item-desc">Salmón atlántico importado, corte preciso sobre arroz de sushi temperado.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$120</span>
+                  <span class="menu-item-tag">Popular</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-2">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-kakifurai.webp" type="image/webp" />
+                  <img src="images/dish-kakifurai.jpg" alt="Kakifurai — ostión empanizado" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Hamachi</h3>
+                <p class="menu-item-desc">Pargo amarillo japonés, textura firme y sabor limpio. Clásico de temporada.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$145</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-3">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-chutoro.webp" type="image/webp" />
+                  <img src="images/dish-chutoro.jpg" alt="Pulpo nigiri" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Tako</h3>
+                <p class="menu-item-desc">Pulpo brevemente cocido, tierno y con notas de mar. Servido con toque de lima.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$130</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-salmon.webp" type="image/webp" />
+                  <img src="images/dish-salmon.jpg" alt="Ebi nigiri — camarón" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Ebi</h3>
+                <p class="menu-item-desc">Camarón tigre cocido en mariposa, dulce y elegante sobre arroz vinagrado.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$110</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-1">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-kakifurai.webp" type="image/webp" />
+                  <img src="images/dish-kakifurai.jpg" alt="Hotate nigiri — callo de hacha" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Hotate</h3>
+                <p class="menu-item-desc">Callo de hacha fresco, sabor suave y dulce. Servido con ralladura de yuzu.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$165</span>
+                  <span class="menu-item-tag">Premium</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Tab: Sashimis -->
+        <div id="tab-sashimis" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-sashimis">
+          <div class="menu-grid">
+
+            <article class="menu-item reveal">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-salmon.webp" type="image/webp" />
+                  <img src="images/dish-salmon.jpg" alt="Sashimi de salmón canadiense" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Salmón Canadiense</h3>
+                <p class="menu-item-desc">5 cortes de salmón atlántico. Servido con jengibre encurtido y wasabi artesanal.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$235</span>
+                  <span class="menu-item-tag">Popular</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-1">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-chutoro.webp" type="image/webp" />
+                  <img src="images/dish-chutoro.jpg" alt="Sashimi de atún" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Maguro</h3>
+                <p class="menu-item-desc">Atún rojo de primera, corte limpio y profundo. 5 piezas seleccionadas.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$280</span>
+                  <span class="menu-item-tag">Especial</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-2">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-kakifurai.webp" type="image/webp" />
+                  <img src="images/dish-kakifurai.jpg" alt="Sashimi mixto omakase" loading="lazy" width="400" height="300" decoding="async" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Omakase Sashimi</h3>
+                <p class="menu-item-desc">Selección del chef — 10 piezas de lo mejor del mercado del día.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$680</span>
+                  <span class="menu-item-tag">Chef's Choice</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Tab: Rollos -->
+        <div id="tab-rollos" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-rollos">
+          <div class="menu-grid">
+
+            <article class="menu-item reveal">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-chutoro.webp" type="image/webp" />
+                  <img src="images/dish-chutoro.jpg" alt="Rollo de salmón y aguacate" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Salmón Aguacate</h3>
+                <p class="menu-item-desc">8 piezas. Salmón, aguacate mexicano, pepino. Terminado con semillas de sésamo tostado.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$195</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-1">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-salmon.webp" type="image/webp" />
+                  <img src="images/dish-salmon.jpg" alt="Dragon Roll" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Dragon Roll</h3>
+                <p class="menu-item-desc">Langostino tempura, aguacate en escamas, salsa de anguila y sriracha japonesa.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$265</span>
+                  <span class="menu-item-tag">Signature</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-2">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-kakifurai.webp" type="image/webp" />
+                  <img src="images/dish-kakifurai.jpg" alt="Rollo Nishino especial" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Rollo Nishino</h3>
+                <p class="menu-item-desc">Receta exclusiva de la casa. Ingredientes premium, técnica y equilibrio perfecto.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$310</span>
+                  <span class="menu-item-tag">Exclusivo</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Tab: Baos -->
+        <div id="tab-baos" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-baos">
+          <div class="menu-grid">
+
+            <article class="menu-item reveal">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-kakifurai.webp" type="image/webp" />
+                  <img src="images/dish-kakifurai.jpg" alt="Kakifurai Bao — ostión empanizado" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Kakifurai</h3>
+                <p class="menu-item-desc">Bao al vapor relleno de ostión japonés empanizado, mayonesa de ponzu y repollo fino.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$145</span>
+                  <span class="menu-item-tag">Favorito</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-1">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-chutoro.webp" type="image/webp" />
+                  <img src="images/dish-chutoro.jpg" alt="Bao de salmón teriyaki" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Salmón Teriyaki</h3>
+                <p class="menu-item-desc">Bao esponjoso con salmón glaseado en teriyaki casero, pepino y cebollín.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$130</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal reveal-delay-2">
+              <div class="menu-item-img">
+                <picture>
+                  <source srcset="images/dish-salmon.webp" type="image/webp" />
+                  <img src="images/dish-salmon.jpg" alt="Bao de cerdo chashu" loading="lazy" decoding="async" width="400" height="300" />
+                </picture>
+              </div>
+              <div class="menu-item-body">
+                <h3 class="menu-item-name">Chashu Pork</h3>
+                <p class="menu-item-desc">Bao clásico con panceta de cerdo confitada al miso, huevo de codorniz y salsa tare.</p>
+                <div class="menu-item-footer">
+                  <span class="menu-item-price">$135</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Tab: Bebidas -->
+        <div id="tab-bebidas" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-bebidas">
+          <div style="max-width:640px;margin:0 auto;">
+            <div class="menu-list">
+
+              <div class="menu-list-item reveal">
+                <div>
+                  <div class="menu-list-name">Sake Junmai</div>
+                  <div class="menu-list-desc">Sake artesanal puro, sin alcohol añadido. Servido frío.</div>
+                </div>
+                <span class="menu-list-price">$95</span>
+              </div>
+
+              <div class="menu-list-item reveal reveal-delay-1">
+                <div>
+                  <div class="menu-list-name">Sake Nigori</div>
+                  <div class="menu-list-desc">Sake sin filtrar, cremoso y dulce con notas de arroz.</div>
+                </div>
+                <span class="menu-list-price">$110</span>
+              </div>
+
+              <div class="menu-list-item reveal reveal-delay-2">
+                <div>
+                  <div class="menu-list-name">Yuzu Spritz</div>
+                  <div class="menu-list-desc">Cítrico yuzu, agua mineral, toque de jengibre. Sin alcohol.</div>
+                </div>
+                <span class="menu-list-price">$75</span>
+              </div>
+
+              <div class="menu-list-item reveal">
+                <div>
+                  <div class="menu-list-name">Matcha Latte</div>
+                  <div class="menu-list-desc">Matcha ceremonial de primera calidad con leche de avena.</div>
+                </div>
+                <span class="menu-list-price">$80</span>
+              </div>
+
+              <div class="menu-list-item reveal reveal-delay-1">
+                <div>
+                  <div class="menu-list-name">Agua de Jamaica</div>
+                  <div class="menu-list-desc">Infusión natural, poco dulce, servida con hielo y menta.</div>
+                </div>
+                <span class="menu-list-price">$55</span>
+              </div>
+
+              <div class="menu-list-item reveal reveal-delay-2">
+                <div>
+                  <div class="menu-list-name">Cerveza Sapporo</div>
+                  <div class="menu-list-desc">Cerveza japonesa importada. 355ml.</div>
+                </div>
+                <span class="menu-list-price">$95</span>
+              </div>
+
+              <div class="menu-list-item reveal">
+                <div>
+                  <div class="menu-list-name">Té Verde Sencha</div>
+                  <div class="menu-list-desc">Infusión tradicional japonesa. Caliente o frío.</div>
+                </div>
+                <span class="menu-list-price">$50</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         FILOSOFÍA / EL CHEF
+    ════════════════════════════════════════════════════════ -->
+    <section id="filosofia" class="section" aria-labelledby="filosofia-title">
+      <div class="container">
+        <div class="filosofia-grid">
+
+          <div class="filosofia-image">
+            <picture>
+              <source srcset="images/chef.webp" type="image/webp" />
+              <img src="images/chef.jpg"
+                   class="chef-image"
+                   alt="Chef de Nishino preparando nigiri con precisión"
+                   loading="lazy"
+                   decoding="async"
+                   width="600"
+                   height="750" />
+            </picture>
+            <div class="filosofia-image-accent" aria-hidden="true"></div>
+          </div>
+
+          <div class="filosofia-content">
+            <span class="label">Japan Dining · Filosofía</span>
+            <h2 class="heading-lg" id="filosofia-title">
+              El arte de<br /><em style="font-style:italic;color:var(--color-accent-light);">la repetición</em>
+            </h2>
+
+            <div class="filosofia-quote">
+              <p>"Practicar, repetir y cuidar."</p>
+            </div>
+
+            <p class="filosofia-body">
+              En Nishino creemos que la excelencia no es un accidente — es el resultado de la disciplina
+              silenciosa y el respeto absoluto por cada ingrediente. Nuestra cocina no busca impresionar
+              con complejidad; busca emocionarte con precisión.
+            </p>
+            <p class="filosofia-body">
+              Cada corte, cada temperatura, cada presentación es el resultado de años de práctica y de
+              una filosofía heredada de las cocinas más respetadas de Japón, traída a Zapopan con orgullo
+              y pasión genuina.
+            </p>
+
+            <div class="filosofia-stats">
+              <div class="stat stats-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Ingredientes frescos</span>
+              </div>
+              <div class="stat stats-item">
+                <span class="stat-value">+5</span>
+                <span class="stat-label">Años de experiencia</span>
+              </div>
+              <div class="stat stats-item">
+                <span class="stat-value">Omakase</span>
+                <span class="stat-label">Experiencia del chef</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-primary mt-lg"
+               id="filosofia-reservar-btn"
+               style="display:inline-flex;"
+               aria-label="Reservar experiencia omakase en Nishino">
+              Reservar Experiencia Omakase
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════
+         UBICACIÓN & HORARIOS
+    ════════════════════════════════════════════════════════ -->
+    <section id="ubicacion" class="section" aria-labelledby="ubicacion-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="label reveal">Visítanos</span>
+          <h2 class="heading-lg reveal reveal-delay-1" id="ubicacion-title">Dónde Encontrarnos</h2>
+          <div class="section-divider"></div>
+        </header>
+
+        <div class="ubicacion-grid">
+
+          <!-- Horarios y dirección -->
+          <div class="hours-block">
+
+            <div class="hours-group reveal">
+              <h3>Martes — Sábado</h3>
+              <div class="hours-row">
+                <span class="hours-day">Comida</span>
+                <span class="hours-time">1:30 pm — 5:00 pm</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Cena</span>
+                <span class="hours-time">7:00 pm — 10:30 pm</span>
+              </div>
+            </div>
+
+            <div class="hours-group reveal reveal-delay-1">
+              <h3>Domingo</h3>
+              <div class="hours-row">
+                <span class="hours-day">Comida</span>
+                <span class="hours-time">1:00 pm — 8:00 pm</span>
+              </div>
+            </div>
+
+            <div class="hours-group reveal reveal-delay-2">
+              <h3>Lunes</h3>
+              <div class="hours-row">
+                <span class="hours-day">Cerrado</span>
+                <span class="hours-closed">Día de descanso</span>
+              </div>
+            </div>
+
+            <div class="address-block reveal reveal-delay-2">
+              <strong>Nishino Japan Dining</strong>
+              <p>
+                Av. Naciones Unidas 7880 Local 1<br />
+                Lírica Towers, Zapopan, Jalisco<br />
+                C.P. 45116, México
+              </p>
+            </div>
+
+            <!-- Phone & Instagram -->
+            <div class="reveal reveal-delay-3" style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="tel:+523321576971"
+                 class="btn-secondary"
+                 id="phone-link"
+                 style="font-size:0.75rem;"
+                 aria-label="Llamar a Nishino">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+                </svg>
+                33 2157 6971
+              </a>
+              <a href="https://www.instagram.com/nishino.mx"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn-secondary"
+                 id="instagram-link"
+                 style="font-size:0.75rem;"
+                 aria-label="Instagram de Nishino">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+                @nishino.mx
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Interactive Map -->
+          <div class="map-block reveal reveal-delay-2" id="map-interactive-container">
+            <div class="map-visual-wrapper">
+              <picture>
+                <source srcset="images/map-dark.webp" type="image/webp" />
+                <img
+                  src="images/map-dark.png"
+                  alt="Mapa interactivo de ubicación de Nishino Japan Dining en Zapopan"
+                  class="map-visual-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                />
+              </picture>
+              <div class="map-overlay-vignette"></div>
+
+              <!-- Animated Pin Marker -->
+              <div class="map-pulse-marker">
+                <div class="pulse-ring"></div>
+                <div class="pulse-dot"></div>
+                <div class="pulse-tag">
+                  <span class="pulse-tag-icon">📍</span>
+                  <span class="pulse-tag-text">Nishino · Lírica Towers</span>
+                </div>
+              </div>
+
+              <!-- Map Quick Actions Bar -->
+              <div class="map-actions-bar">
+                <div class="map-actions-info">
+                  <span class="map-actions-title">Nishino Japan Dining</span>
+                  <span class="map-actions-sub">Av. Naciones Unidas 7880, Zapopan</span>
+                </div>
+                <div class="map-actions-btns">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=20.7088,-103.3919"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary map-btn-nav"
+                    id="open-google-maps-btn"
+                    aria-label="Abrir indicaciones en Google Maps"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    Google Maps
+                  </a>
+                  <a
+                    href="https://waze.com/ul?ll=20.7088,-103.3919&navigate=yes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-secondary map-btn-nav"
+                    id="open-waze-btn"
+                    aria-label="Abrir navegación en Waze"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-7 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zm3.5 5c-2.33 0-4.31-1.46-5.12-3.5h10.24c-.81 2.04-2.79 3.5-5.12 3.5z"/>
+                    </svg>
+                    Waze
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-logo">
+          <picture>
+            <source srcset="images/logo.webp" type="image/webp" />
+            <img src="images/logo.jpg" alt="Nishino Japan Dining" width="52" height="52" />
+          </picture>
+          <div class="footer-logo-name">Nishino</div>
+          <div class="footer-tagline">"Practicar, repetir y cuidar."</div>
+        </div>
+
+        <nav class="footer-links" aria-label="Links del pie de página">
+          <a href="#menu"       id="footer-menu-link">Menú</a>
+          <a href="#filosofia"  id="footer-filosofia-link">Filosofía</a>
+          <a href="#ubicacion"  id="footer-ubicacion-link">Ubicación</a>
+          <a href="tel:+523321576971" id="footer-phone-link">33 2157 6971</a>
+          <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+             target="_blank" rel="noopener noreferrer"
+             id="footer-whatsapp-link">
+            Reservar
+          </a>
+        </nav>
+
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/nishino.mx"
+             target="_blank" rel="noopener noreferrer"
+             id="footer-instagram-link"
+             aria-label="Instagram @nishino.mx">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+             target="_blank" rel="noopener noreferrer"
+             id="footer-whatsapp-icon-link"
+             aria-label="WhatsApp Nishino">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" aria-hidden="true">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Nishino Japan Dining ·</p>
+          <p>Zapopan, Jalisco, México ·</p>
+          <p>Todos los derechos reservados</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+       MOBILE STICKY CTA BAR
+  ════════════════════════════════════════════════════════ -->
+  <div class="mobile-cta-bar hidden" id="mobile-cta-bar" role="complementary" aria-label="Acciones rápidas">
+    <a href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-primary"
+       id="mobile-cta-reservar"
+       aria-label="Reservar mesa por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 448 512" aria-hidden="true">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+      </svg>
+      Reservar Mesa
+    </a>
+    <a href="#menu" class="btn-secondary" id="mobile-cta-menu" aria-label="Ver el menú">
+      Menú
+    </a>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON (FAB)
+  ════════════════════════════════════════════════════════ -->
+  <a id="whatsapp-fab"
+     href="https://wa.me/523321576971?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Nishino"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Reservar mesa por WhatsApp"
+     title="Reservar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
+
+  <!-- ─── Lenis Smooth Scroll ────────────────────────────── -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+
+  <!-- ─── GSAP & ScrollTrigger ───────────────────────────── -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- ─── Site Script ───────────────────────────────────── -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
