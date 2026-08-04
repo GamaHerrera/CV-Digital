@@ -3067,3 +3067,36 @@ hr.divider {
         right: -1.5rem;
     }
 }
+
+/* Badge / Banner "Próximamente" para Lab */
+.lab-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+.lab-badge--coming-soon {
+    background-color: rgba(212, 160, 23, 0.12);
+    color: var(--accent-warm);
+    border: 1px solid rgba(212, 160, 23, 0.3);
+}
+
+.lab-item:hover .lab-badge--coming-soon {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--accent-warm);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.lab-tag--coming-soon {
+    background-color: rgba(212, 160, 23, 0.08);
+    color: var(--accent-warm);
+    border-color: rgba(212, 160, 23, 0.25);
+}
