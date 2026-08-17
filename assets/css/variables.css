@@ -8,7 +8,7 @@
     /* Text */
     --text-primary: #0D0D0D;
     --text-secondary: #5A5A5A;
-    --text-light: #9A9A9A;
+    --text-light: #737373;
     --text-inverse: #E8E6E1;
 
     /* Accent (minimal, single warm ink tone) */
@@ -27,7 +27,7 @@
 
     /* === TYPOGRAPHY === */
     --font-display: 'Playfair Display', Georgia, serif;   /* Editorial titles */
-    --font-body: 'Inter', system-ui, sans-serif;          /* Clean body text */
+    --font-body: 'Manrope', system-ui, sans-serif;        /* Clean, geometric body text */
 
     /* === SPACING === */
     --spacing-xs: 0.5rem;
@@ -60,4 +60,39 @@
 
     /* === MARQUEE SPEED === */
     --marquee-duration: 28s;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* === COLOR PALETTE — Warm Editorial Dark === */
+        --bg-color: #1A1A18;
+        --bg-alt: #121211;
+        --surface-color: #242421;
+        --surface-alt: #2D2D2A;
+
+        /* Text */
+        --text-primary: #F0EFEB;
+        --text-secondary: #A3A3A0;
+        --text-light: #808080;
+        --text-inverse: #0D0D0D;
+
+        /* Accent (minimal, single warm ink tone) */
+        --accent-color: #F0EFEB;
+        --accent-warm: #D4B67D;      /* Slightly brighter gold for contrast */
+        --accent-red: #E05342;       /* Brighter red */
+        --accent-blue: #4A90E2;      /* Brighter gh brand blue */
+
+        /* Borders & Dividers */
+        --border-color: rgba(240, 239, 235, 0.12);
+        --border-strong: rgba(240, 239, 235, 0.3);
+
+        /* Transparent surfaces */
+        --glass-bg: rgba(26, 26, 24, 0.85);
+        --glass-border: rgba(240, 239, 235, 0.08);
+
+        /* === SHADOWS (deeper for dark mode) === */
+        --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
+        --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.7);
+    }
 }

@@ -7,6 +7,15 @@
   <meta property="og:title" content="NEBÚ — We Reject The Real" />
   <meta property="og:description" content="Próximos eventos, lineup y reservas. El club donde la realidad se distorsiona." />
   <meta property="og:type" content="website" />
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  
+  <!-- Mobile App Adaptability -->
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="apple-touch-icon" href="nebu brand.png" />
+
   <title>NEBÚ — We Reject The Real</title>
 
   <!-- Google Fonts -->
@@ -14,20 +23,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Swiper.js for Gallery -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="is-loading">
 
-  <!-- Film Grain Overlay -->
+  <!-- ─── SYSTEM BOOT PRELOADER ─────────────────────────────── -->
+  <div id="preloader" aria-hidden="false">
+    <div class="preloader-counter glitch" data-text="00%">00%</div>
+    <div class="preloader-log">INITIALIZING VOID PROTOCOL...</div>
+  </div>  <!-- Film Grain Overlay -->
   <div class="film-grain" aria-hidden="true"></div>
 
   <!-- ─── NAVIGATION ──────────────────────────────────────── -->
   <nav class="navbar" id="navbar">
     <a href="#hero" class="nav-logo" aria-label="Nebú - Inicio">
-      <img src="nebu brand.png" alt="Nebú" class="nav-logo-img" />
+      <img src="nebu brand.png" alt="Nebú" class="nav-logo-img" decoding="async" />
     </a>
     <div class="nav-links">
       <a href="#lineup" class="nav-link">Eventos</a>
@@ -50,7 +60,7 @@
   <section class="hero" id="hero">
     <!-- Video background (add src when clip is ready) -->
     <div class="hero-video-wrap">
-      <video class="hero-video" autoplay muted loop playsinline>
+      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" preload="metadata" style="background-color: #0A0A0A;">
         <!-- Replace with actual club footage: abstract light traces, smoke, industrial texture -->
         <source src="intro.mp4" type="video/mp4" />
       </video>
@@ -74,7 +84,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow">SOCIAL CLUB · MX</div>
       <h1 class="hero-title">
-        <img src="nebu brand.png" alt="NEBÚ" class="hero-logo-img" />
+        <img src="nebu brand.png" alt="NEBÚ" class="hero-logo-img" decoding="async" />
       </h1>
       <p class="hero-manifesto">WE REJECT THE REAL</p>
       <div class="hero-line" aria-hidden="true"></div>
@@ -94,7 +104,7 @@
   <!-- ─── LINEUP / CARTELERA ───────────────────────────────── -->
   <section class="lineup" id="lineup">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">// PRÓXIMOS EVENTOS</span>
         <h2 class="section-title glitch-sm" data-text="CARTELERA">CARTELERA</h2>
       </div>
@@ -102,7 +112,7 @@
       <div class="events-grid">
 
         <!-- Event Card 1 -->
-        <article class="event-card" id="event-1">
+        <article class="event-card reveal reveal-delay-1" id="event-1">
           <div class="event-card-glow"></div>
           <div class="event-card-inner">
             <div class="event-meta">
@@ -125,7 +135,7 @@
         </article>
 
         <!-- Event Card 2 -->
-        <article class="event-card" id="event-2">
+        <article class="event-card reveal reveal-delay-2" id="event-2">
           <div class="event-card-glow"></div>
           <div class="event-card-inner">
             <div class="event-meta">
@@ -148,7 +158,7 @@
         </article>
 
         <!-- Event Card 3 -->
-        <article class="event-card event-card--featured" id="event-3">
+        <article class="event-card event-card--featured reveal reveal-delay-3" id="event-3">
           <div class="event-card-glow event-card-glow--red"></div>
           <div class="event-card-inner">
             <div class="event-badge">DESTACADO</div>
@@ -208,121 +218,92 @@
   <!-- ─── GALLERY ──────────────────────────────────────────── -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">// ATMÓSFERA</span>
         <h2 class="section-title glitch-sm" data-text="GALERÍA">GALERÍA</h2>
       </div>
     </div>
 
-    <div class="swiper gallery-swiper" id="gallerySwiper">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_696660568_17926550922314082_5446037401595518465_n.jpg" alt="Nebú — atmósfera nocturna" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_724500426_17932714551314082_4532390803142445080_n.jpg" alt="Nebú — flash photography" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_731195601_17935384233314082_3813901149945256983_n.jpg" alt="Nebú — crowd en pista" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_731216981_17935384212314082_2490503632861220999_n.jpg" alt="Nebú — noche underground" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_731442356_17935066971314082_8032547965576427232_n.jpg" alt="Nebú — ambiente analógico" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_736513954_17936765553314082_1193641574142264879_n.jpg" alt="Nebú — luces y pista" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_736562440_17936764479314082_1729072443002582646_n.jpg" alt="Nebú — fotografía de evento" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_741475348_17936764452314082_2833620793731698006_n.jpg" alt="Nebú — social club" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_741495337_17936765529314082_8599666677233012928_n.jpg" alt="Nebú — noche de evento" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_742558401_17936764467314082_5130887722820509652_n.jpg" alt="Nebú — dancefloor" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_743163800_17936764515314082_1194662285573650729_n.jpg" alt="Nebú — ambiente underground" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_743163865_17936764470314082_8402463529870940349_n.jpg" alt="Nebú — crowd nocturno" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="gallery-img-wrap">
-            <img src="SaveClip.App_743186244_17936765559314082_101440781281417237_n.jpg" alt="Nebú — energía del club" class="gallery-img" loading="lazy" />
-            <div class="gallery-img-overlay"></div>
-          </div>
-        </div>
-
+    <div class="gallery-masonry container">
+      
+      <div class="gallery-img-wrap reveal reveal-delay-1">
+        <img src="SaveClip.App_696660568_17926550922314082_5446037401595518465_n.jpg" alt="Nebú — atmósfera nocturna" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
       </div>
-      <div class="swiper-pagination" id="galleryPagination"></div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-2">
+        <img src="SaveClip.App_724500426_17932714551314082_4532390803142445080_n.jpg" alt="Nebú — flash photography" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-3">
+        <img src="SaveClip.App_731195601_17935384233314082_3813901149945256983_n.jpg" alt="Nebú — crowd en pista" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-1">
+        <img src="SaveClip.App_731216981_17935384212314082_2490503632861220999_n.jpg" alt="Nebú — noche underground" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-2">
+        <img src="SaveClip.App_731442356_17935066971314082_8032547965576427232_n.jpg" alt="Nebú — ambiente analógico" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-3">
+        <img src="SaveClip.App_736513954_17936765553314082_1193641574142264879_n.jpg" alt="Nebú — luces y pista" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-1">
+        <img src="SaveClip.App_736562440_17936764479314082_1729072443002582646_n.jpg" alt="Nebú — fotografía de evento" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-2">
+        <img src="SaveClip.App_741475348_17936764452314082_2833620793731698006_n.jpg" alt="Nebú — social club" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-3">
+        <img src="SaveClip.App_741495337_17936765529314082_8599666677233012928_n.jpg" alt="Nebú — noche de evento" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-1">
+        <img src="SaveClip.App_742558401_17936764467314082_5130887722820509652_n.jpg" alt="Nebú — dancefloor" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-2">
+        <img src="SaveClip.App_743163800_17936764515314082_1194662285573650729_n.jpg" alt="Nebú — ambiente underground" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-3">
+        <img src="SaveClip.App_743163865_17936764470314082_8402463529870940349_n.jpg" alt="Nebú — crowd nocturno" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
+      <div class="gallery-img-wrap reveal reveal-delay-1">
+        <img src="SaveClip.App_743186244_17936765559314082_101440781281417237_n.jpg" alt="Nebú — energía del club" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="gallery-img-overlay"></div>
+      </div>
+
     </div>
   </section>
 
   <!-- ─── CONTACT / RESERVE ────────────────────────────────── -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">// ACCESO</span>
         <h2 class="section-title glitch-sm" data-text="RESERVACIONES">RESERVACIONES</h2>
       </div>
 
       <div class="contact-grid">
-        <div class="contact-info">
+        <div class="contact-info reveal reveal-delay-1">
           <p class="contact-text">¿Listo para rechazar la realidad? Contáctanos para Guest List o reserva tu lugar antes de que la pista se llene.</p>
           <div class="contact-links">
             <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20interesa%20reservar%20en%20Neb%C3%BA" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" id="whatsapp-link">
@@ -340,7 +321,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="reservaForm" novalidate>
+        <form class="contact-form reveal reveal-delay-2" id="reservaForm" novalidate>
           <div class="form-group">
             <label for="form-name" class="form-label">Nombre</label>
             <input type="text" id="form-name" name="name" class="form-input" placeholder="Tu nombre" autocomplete="name" required />
@@ -378,7 +359,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="nebu brand.png" alt="Nebú" class="footer-logo-img" />
+          <img src="nebu brand.png" alt="Nebú" class="footer-logo-img" decoding="async" />
           <p class="footer-tagline">We Reject The Real</p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -397,9 +378,7 @@
   </footer>
 
   <!-- Lenis Smooth Scroll -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script defer src="main.js"></script>
 </body>
 </html>

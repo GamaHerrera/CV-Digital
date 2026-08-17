@@ -1,0 +1,57 @@
+.error-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent); /* Rojo Óxido de fondo para urgencia */
+  color: var(--color-dominant);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  text-align: center;
+}
+
+.error-content {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.error-title {
+  font-size: 6rem;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+  color: var(--color-dominant);
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+.error-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+}
+
+.error-details {
+  font-family: monospace;
+  background: rgba(17, 17, 17, 0.1);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  text-align: left;
+  overflow-x: auto;
+}
+
+.error-content .btn-primary {
+  background-color: var(--color-dominant);
+  color: var(--color-secondary);
+}
+
+.error-content .btn-primary:hover {
+  background-color: #000;
+}

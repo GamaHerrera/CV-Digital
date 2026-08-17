@@ -1,0 +1,51 @@
+.theater-container {
+  background-color: #000000;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.theater-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.theater-header h2 {
+  font-size: 4rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.theater-description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: rgba(244, 244, 240, 0.6);
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  position: relative;
+  height: 0;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 0 50px rgba(178, 34, 34, 0.1); /* Ligero resplandor rojo óxido */
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .theater-header h2 {
+    font-size: 2.5rem;
+  }
+}

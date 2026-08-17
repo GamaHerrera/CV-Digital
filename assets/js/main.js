@@ -1,15 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     /* ============================================================
-       0. LENIS SMOOTH SCROLL INIT
+       0. LENIS SMOOTH SCROLL INIT & HEADER STATE
        ============================================================ */
     let lenis;
-    if (typeof Lenis !== 'undefined') {
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const header = document.querySelector('.header');
+    
+    const handleScrollState = (scrollY) => {
+        if (header) {
+            if (scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+    };
+    
+    if (typeof Lenis !== 'undefined' && !prefersReducedMotion) {
         lenis = new Lenis({
             autoRaf: true,
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
         });
+        
+        // Update scroll progress bar and header state efficiently using Lenis event
+        lenis.on('scroll', (e) => {
+            if (scrollProgress) {
+                scrollProgress.style.transform = `scaleX(${e.progress})`;
+            }
+            handleScrollState(e.animatedScroll);
+        });
+    } else {
+        // Fallback for native scroll if reduced motion
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            if (scrollProgress) {
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = winScroll / height;
+                scrollProgress.style.transform = `scaleX(${scrolled})`;
+            }
+            handleScrollState(winScroll);
+        }, { passive: true });
     }
 
     /* ============================================================
@@ -18,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
 
-    if (cursor && cursorFollower && window.innerWidth > 768) {
+    if (cursor && cursorFollower && window.innerWidth > 768 && !prefersReducedMotion) {
         let mouseX = -100, mouseY = -100;
         let followerX = -100, followerY = -100;
 
@@ -68,35 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ============================================================
-       2. SCROLL PROGRESS BAR
-       ============================================================ */
-    const progressBar = document.querySelector('.scroll-progress');
-    if (progressBar) {
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-            progressBar.style.width = progress + '%';
-        }, { passive: true });
-    }
-
-    /* ============================================================
-       3. HEADER: scrolled state
-       ============================================================ */
-    const header = document.querySelector('.header');
-    if (header) {
-        const onScroll = () => {
-            if (window.scrollY > 60) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-    }
-
-    /* ============================================================
        4. SPLIT TEXT HERO ANIMATION
        ============================================================ */
     const heroTitle = document.querySelector('.hero-title[data-split]');
@@ -142,13 +147,20 @@ document.addEventListener('DOMContentLoaded', () => {
         heroTitle.innerHTML = html;
 
         // Trigger animation after a short delay
-        requestAnimationFrame(() => {
-            setTimeout(() => {
-                document.querySelectorAll('.hero-title .char').forEach(ch => {
-                    ch.classList.add('visible');
-                });
-            }, 200);
-        });
+        if (prefersReducedMotion) {
+            document.querySelectorAll('.hero-title .char').forEach(ch => {
+                ch.style.transitionDelay = '0ms';
+                ch.classList.add('visible');
+            });
+        } else {
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    document.querySelectorAll('.hero-title .char').forEach(ch => {
+                        ch.classList.add('visible');
+                    });
+                }, 200);
+            });
+        }
     }
 
     /* ============================================================
@@ -215,80 +227,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ============================================================
-       7. ACTIVE NAV LINK on scroll
+       7. ACTIVE NAV LINK (IntersectionObserver)
        ============================================================ */
     const sections = document.querySelectorAll('section[id]');
     const navItems = document.querySelectorAll('.nav-link[href^="#"]');
 
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            if (window.pageYOffset >= section.offsetTop - 200) {
-                current = section.getAttribute('id');
-            }
-        });
-        navItems.forEach(li => {
-            li.classList.remove('active');
-            if (li.getAttribute('href').includes(current)) li.classList.add('active');
-        });
-    }, { passive: true });
-
-    /* ============================================================
-       8. SCROLL REVEAL (IntersectionObserver)
-       ============================================================ */
-    const revealEls = document.querySelectorAll('.reveal, .reveal-left');
-    if (revealEls.length > 0) {
-        const revealObserver = new IntersectionObserver((entries, obs) => {
+    if (sections.length > 0 && navItems.length > 0) {
+        const navObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    obs.unobserve(entry.target);
+                    const currentId = entry.target.getAttribute('id');
+                    navItems.forEach(li => {
+                        li.classList.remove('active');
+                        if (li.getAttribute('href').includes(currentId)) {
+                            li.classList.add('active');
+                        }
+                    });
                 }
             });
         }, {
-            root: null,
-            threshold: 0.08,
-            rootMargin: '0px 0px -60px 0px'
+            rootMargin: '-20% 0px -79% 0px' // Adjust thresholds to detect which section is mostly in view
         });
 
-        revealEls.forEach(el => revealObserver.observe(el));
-    }
-
-    /* ============================================================
-       9. FILTER BUTTONS (projects & certifications)
-       ============================================================ */
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card[data-category], .certification-card[data-category]');
-
-    if (filterBtns.length > 0 && projectCards.length > 0) {
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filter = btn.getAttribute('data-filter');
-
-                projectCards.forEach(card => {
-                    const cats = card.getAttribute('data-category') || '';
-                    const show = filter === 'all' || cats.includes(filter);
-                    if (show) {
-                        card.style.display = '';
-                        // Micro-animation
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(16px)';
-                        requestAnimationFrame(() => {
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                            }, 50);
-                        });
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+        sections.forEach(section => {
+            navObserver.observe(section);
         });
     }
+
+
+
+
 
     /* ============================================================
        10. MAGNETIC BUTTONS effect
@@ -340,6 +308,125 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusToast.classList.remove('show');
             }
         }, 12000);
+    }
+
+    /* ============================================================
+       13. LIVE LOCAL TIME (Guadalajara, MX)
+       ============================================================ */
+    const timeEl = document.getElementById('local-time');
+    if (timeEl) {
+        const updateTime = () => {
+            try {
+                const formatter = new Intl.DateTimeFormat('es-MX', {
+                    timeZone: 'America/Mexico_City',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false
+                });
+                timeEl.textContent = formatter.format(new Date()) + ' CST';
+            } catch (e) {
+                // Fallback for browsers without proper Intl timeZone support
+                const d = new Date();
+                timeEl.textContent = `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')} Local`;
+            }
+        };
+        updateTime();
+        setInterval(updateTime, 10000); // Update every 10 seconds
+    }
+
+    /* ============================================================
+       14. CLICK-TO-COPY EMAIL (Delight Interaction)
+       ============================================================ */
+    const emailContactCard = document.getElementById('email-contact-card');
+    const copyEmailBtn = document.querySelector('.copy-email-btn');
+    const emailText = document.getElementById('email-text');
+
+    if (emailContactCard && copyEmailBtn && emailText) {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent mailto: default action
+            e.stopPropagation();
+
+            const email = 'hola@gamaherrera.com';
+            
+            // Modern Clipboard API
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(() => {
+                    const originalText = emailText.textContent;
+                    const originalIcon = copyEmailBtn.innerHTML;
+
+                    // Success state
+                    emailText.textContent = '¡Correo copiado!';
+                    emailText.style.color = 'var(--accent-warm)';
+                    copyEmailBtn.innerHTML = '<i class="ri-check-line"></i>';
+                    copyEmailBtn.style.color = 'var(--accent-warm)';
+                    copyEmailBtn.style.transform = 'scale(1.1)';
+
+                    // Revert after 2 seconds
+                    setTimeout(() => {
+                        emailText.textContent = originalText;
+                        emailText.style.color = '';
+                        copyEmailBtn.innerHTML = originalIcon;
+                        copyEmailBtn.style.color = '';
+                        copyEmailBtn.style.transform = '';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    window.location.href = `mailto:${email}`; // Fallback
+                });
+            } else {
+                // Fallback if API not available
+                window.location.href = `mailto:${email}`;
+            }
+        });
+    }
+
+    /* ============================================================
+       15. ONBOARDING: CONTEXTUAL TOOLTIP
+       ============================================================ */
+    const tooltip = document.getElementById('copy-onboard-tooltip');
+    const tooltipClose = document.querySelector('.onboard-tooltip-close');
+    const contactContainer = document.querySelector('.contact-cards-container');
+
+    if (tooltip && contactContainer) {
+        // Check if user has already seen this onboarding
+        const hasSeenOnboarding = localStorage.getItem('onboarding-copy-email');
+
+        if (!hasSeenOnboarding) {
+            // Use IntersectionObserver to show tooltip when contact section is in view
+            const tooltipObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Show tooltip after a small delay
+                        setTimeout(() => {
+                            tooltip.classList.add('show');
+                        }, 1000);
+                        tooltipObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            tooltipObserver.observe(contactContainer);
+
+            // Handle dismiss
+            if (tooltipClose) {
+                tooltipClose.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    tooltip.classList.remove('show');
+                    localStorage.setItem('onboarding-copy-email', 'true');
+                });
+            }
+
+            // Also dismiss if they actually click the email button
+            if (copyEmailBtn) {
+                copyEmailBtn.addEventListener('click', () => {
+                    if (tooltip.classList.contains('show')) {
+                        tooltip.classList.remove('show');
+                        localStorage.setItem('onboarding-copy-email', 'true');
+                    }
+                });
+            }
+        }
     }
 
 });

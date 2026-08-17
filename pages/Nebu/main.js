@@ -8,6 +8,50 @@
 // ─── UTILS ──────────────────────────────────────────────────
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// ─── SYSTEM BOOT PRELOADER ──────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const preloader = document.getElementById('preloader');
+  const counter = document.querySelector('.preloader-counter');
+  const log = document.querySelector('.preloader-log');
+  
+  if (preloader && counter && log && !prefersReducedMotion) {
+    let progress = 0;
+    const logs = [
+      "INITIALIZING VOID PROTOCOL...",
+      "ESTABLISHING SECURE CONNECTION...",
+      "BYPASSING REALITY FILTERS...",
+      "DECRYPTING AUDIO SIGNATURES...",
+      "ACCESS GRANTED."
+    ];
+    
+    // Animate progress to 100
+    const interval = setInterval(() => {
+      progress += Math.floor(Math.random() * 10) + 1;
+      if (progress >= 100) progress = 100;
+      
+      const pctString = progress.toString().padStart(2, '0') + '%';
+      counter.textContent = pctString;
+      counter.dataset.text = pctString;
+      
+      // Update log messages based on progress
+      const logIndex = Math.floor((progress / 100) * (logs.length - 1));
+      log.textContent = logs[logIndex];
+      
+      if (progress === 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          preloader.classList.add('done');
+          document.body.classList.remove('is-loading');
+        }, 300); // short delay after 100% before slide up
+      }
+    }, 40); // fast loop for snappy hacker vibe
+  } else if (preloader) {
+    // Reduced motion fallback
+    preloader.style.display = 'none';
+    document.body.classList.remove('is-loading');
+  }
+});
+
 // ─── LENIS SMOOTH SCROLL ──────────────────────────────────── 
 let lenis;
 
@@ -21,8 +65,27 @@ if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
     infinite: false,
   });
 
+  // Marquee elements
+  const manifestoBand = document.querySelector('.manifesto-band');
+  const manifestoTrack = document.querySelector('.manifesto-track');
+  let marqueeBase = 0;
+
   function lenisRaf(time) {
     lenis.raf(time);
+    
+    // Marquee logic based on scroll velocity
+    if (manifestoTrack) {
+      let velocity = lenis.velocity || 0;
+      let speed = 0.15 + Math.abs(velocity) * 0.03; // More subtle base speed + scroll boost
+      
+      marqueeBase -= speed;
+      if (marqueeBase <= -50) marqueeBase = 0; // Reset loop (assuming 50% width duplication)
+      
+      // Apply subtle skew based on velocity
+      let skew = velocity * 0.05;
+      manifestoTrack.style.transform = `translateX(${marqueeBase}%) skewX(${skew}deg)`;
+    }
+
     requestAnimationFrame(lenisRaf);
   }
   requestAnimationFrame(lenisRaf);
@@ -31,7 +94,12 @@ if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
 // ─── NAVBAR SCROLL ────────────────────────────────────────── 
 const navbar = document.getElementById('navbar');
 
+/**
+ * Updates the navbar visual state (glassmorphism) based on scroll position.
+ * @param {number} scrollY - Current vertical scroll position in pixels.
+ */
 function handleNavbarScroll(scrollY) {
+  if (!navbar) return;
   if (scrollY > 60) {
     navbar.classList.add('scrolled');
   } else {
@@ -51,19 +119,57 @@ handleNavbarScroll(window.scrollY);
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('active', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
-});
+if (hamburger && mobileMenu) {
+  // Focus Trap Logic
+  const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    if (isOpen) {
+      const focusableContent = mobileMenu.querySelectorAll(focusableElements);
+      if (focusableContent.length === 0) return;
+      const firstElement = focusableContent[0];
+      const lastElement = focusableContent[focusableContent.length - 1];
+
+      document.addEventListener('keydown', function trapFocus(e) {
+        if (!mobileMenu.classList.contains('open')) {
+          document.removeEventListener('keydown', trapFocus);
+          return;
+        }
+        let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+        if (!isTabPressed) return;
+
+        if (e.shiftKey) { 
+          if (document.activeElement === firstElement) {
+            hamburger.focus();
+            e.preventDefault();
+          } else if (document.activeElement === hamburger) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else { 
+          if (document.activeElement === lastElement) {
+            hamburger.focus();
+            e.preventDefault();
+          }
+        }
+      });
+    }
+  });
+}
 
 // Close mobile menu when clicking a link
 ['mobileClose1', 'mobileClose2', 'mobileClose3'].forEach(id => {
   const el = document.getElementById(id);
-  if (el) {
+  if (el && mobileMenu && hamburger) {
     el.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
       hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     });
   }
@@ -91,38 +197,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ─── SWIPER GALLERY ───────────────────────────────────────── 
-if (typeof Swiper !== 'undefined') {
-  new Swiper('#gallerySwiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 20,
-    centeredSlides: false,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-      el: '#galleryPagination',
-      clickable: true,
-    },
-    autoplay: prefersReducedMotion ? false : {
-      delay: 3500,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    speed: 600,
-  });
-}
+// ─── SWIPER GALLERY (REMOVED) ─────────────────────────────────
+// Gallery is now a CSS Masonry grid based on DESIGN.md
+
 
 // ─── GLITCH EFFECT ────────────────────────────────────────── 
+/**
+ * Triggers a CSS glitch animation on a given element.
+ * @param {HTMLElement} el - The DOM element to glitch.
+ */
 function triggerGlitch(el) {
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion || !el) return;
   el.classList.add('is-glitching');
   el.addEventListener('animationend', () => {
     el.classList.remove('is-glitching');
   }, { once: true });
 }
 
+/**
+ * Recursively schedules a random glitch effect interval for an element.
+ * @param {HTMLElement} el - The DOM element to schedule glitches on.
+ */
 function scheduleRandomGlitch(el) {
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion || !el) return;
   const delay = (Math.random() * 3000) + 5000; // 5–8 sec
   setTimeout(() => {
     triggerGlitch(el);
@@ -225,6 +322,7 @@ if (form) {
 // ─── CURSOR GLOW (desktop only) ───────────────────────────── 
 if (window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
   const glow = document.createElement('div');
+  glow.id = 'cursor-glow';
   glow.style.cssText = `
     position: fixed;
     width: 320px;
@@ -274,3 +372,86 @@ shakeStyle.textContent = `
   }
 `;
 document.head.appendChild(shakeStyle);
+
+// --- SCROLL REVEALS ----------------------------------------- 
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+  const revealOptions = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.1
+  };
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
+}
+
+// ─── IMPECCABLE DELIGHT: MAGNETIC BUTTONS ────────────────────
+if (window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0px, 0px)';
+    });
+  });
+}
+
+// ─── IMPECCABLE DELIGHT: TEXT SCRAMBLE ON HOVER ──────────────
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+document.querySelectorAll('.nav-link').forEach(link => {
+  let interval = null;
+  link.addEventListener('mouseenter', (e) => {
+    let iteration = 0;
+    const target = e.target;
+    if (!target.dataset.original) target.dataset.original = target.innerText;
+    
+    clearInterval(interval);
+    
+    interval = setInterval(() => {
+      target.innerText = target.dataset.original
+        .split('')
+        .map((letter, index) => {
+          if (index < iteration) {
+            return target.dataset.original[index];
+          }
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join('');
+      
+      if (iteration >= target.dataset.original.length) {
+        clearInterval(interval);
+      }
+      
+      iteration += 1 / 3;
+    }, 30);
+  });
+});
+
+// ─── IMPECCABLE DELIGHT: CLICK FLASH ─────────────────────────
+if (window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
+  window.addEventListener('mousedown', () => {
+    const glow = document.getElementById('cursor-glow');
+    if (glow) {
+      glow.style.background = 'radial-gradient(circle, rgba(229,9,20,0.5) 0%, transparent 80%)';
+      glow.style.transform = 'translate(-50%, -50%) scale(0.8)';
+      setTimeout(() => {
+        glow.style.background = 'radial-gradient(circle, rgba(229,9,20,0.06) 0%, transparent 70%)';
+        glow.style.transform = 'translate(-50%, -50%) scale(1)';
+      }, 100);
+    }
+  });
+}

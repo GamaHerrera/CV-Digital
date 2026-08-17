@@ -1,0 +1,52 @@
+.marquee-container {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  z-index: 50;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-text {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  padding-right: 1rem;
+}
+
+/* Pausar animación cuando se le pasa el cursor (Kinesthetics) */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Mueve la pista exactamente a la mitad para que el span duplicado ocupe el lugar del original sin saltos */
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 1.5rem;
+  }
+  .marquee-container {
+    padding: 1rem 0;
+  }
+}

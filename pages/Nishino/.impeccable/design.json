@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T15:43:00Z",
+  "title": "Design System: Nishino Japan Dining",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Deep Earthy Plum", "canonical": "#7A4B56", "tonalRamp": ["#3D252B", "#492D33", "#5C3841", "#7A4B56", "#8F5864", "#A36472", "#C27A8B", "#E08CA1"] },
+      "secondary": { "role": "secondary", "displayName": "Warm Wood", "canonical": "#C4A882", "tonalRamp": ["#625441", "#75644E", "#89765B", "#C4A882", "#D6B88E", "#E8C89A", "#FAD8A7", "#FFE6B8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only." },
+      "headline": { "displayName": "Headline", "purpose": "Major section headers." },
+      "title": { "displayName": "Title", "purpose": "Subsections and large item titles." },
+      "body": { "displayName": "Body", "purpose": "General paragraphs." },
+      "label": { "displayName": "Label", "purpose": "Structural metadata or overlines." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 1px 3px rgba(0,0,0,0.5), 0 4px 20px rgba(0,0,0,0.3)", "purpose": "Lifts cards slightly off the dark background." },
+      { "name": "glow", "value": "0 0 40px rgba(122, 75, 86, 0.2)", "purpose": "Ambient colored glow for emphasis." },
+      { "name": "fab", "value": "0 4px 20px rgba(0,0,0,0.6), 0 0 0 1px rgba(122,75,86,0.3)", "purpose": "High elevation for floating action buttons." }
+    ],
+    "motion": [
+      { "name": "fast", "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Quick hover interactions." },
+      { "name": "base", "value": "300ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default state transitions." },
+      { "name": "slow", "value": "600ms cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Large deliberate reveals." }
+    ],
+    "breakpoints": [
+      { "name": "container-max", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Used for main calls to action like booking a table.",
+      "html": "<button class=\"ds-btn-primary\">Reserva tu Experiencia</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 36px; background: #7A4B56; color: #F3F4F6; border-radius: 3px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: background 150ms, transform 150ms, box-shadow 150ms; min-height: 54px; border: none; cursor: pointer; } .ds-btn-primary:hover { background: #9D6270; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(122, 75, 86, 0.4); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Used for alternative actions like viewing the menu.",
+      "html": "<button class=\"ds-btn-secondary\">Ver Menú</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 34px; border: 1px solid rgba(243, 244, 246, 0.2); color: #F3F4F6; border-radius: 3px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; transition: border-color 150ms, background 150ms, transform 150ms; min-height: 54px; background: transparent; cursor: pointer; } .ds-btn-secondary:hover { border-color: rgba(243, 244, 246, 0.5); background: rgba(243, 244, 246, 0.05); transform: translateY(-2px); }"
+    },
+    {
+      "name": "Tab Button",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "Used in the menu section to toggle categories.",
+      "html": "<div style=\"display:flex;gap:10px;padding:20px;\"><button class=\"ds-tab-btn active\">Nigiris</button><button class=\"ds-tab-btn\">Sashimi</button></div>",
+      "css": ".ds-tab-btn { position: relative; padding: 14px 22px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #9CA3AF; transition: color 150ms; white-space: nowrap; min-height: 48px; background: none; border: none; cursor: pointer; } .ds-tab-btn::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: #7A4B56; transform: scaleX(0); transition: transform 300ms; } .ds-tab-btn:hover { color: #BCC0CA; } .ds-tab-btn.active { color: #F3F4F6; } .ds-tab-btn.active::after { transform: scaleX(1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Zen Artisan",
+    "overview": "Minimalist, precise, and understated. The design should recede and let the culinary craft and photography stand out. The dark, layered aesthetic conveys a sense of premium authenticity, reserving warmth for the photography and carefully chosen accents.",
+    "keyCharacteristics": [
+      "Deep, immersive dark mode aesthetic.",
+      "Elegant serif typography for impact and display.",
+      "Utilitarian sans-serif for legible interface elements.",
+      "Precise, restrained component styling."
+    ],
+    "rules": [
+      {
+        "name": "The Contrast Rule",
+        "body": "Text on `bg-primary` must always be `#F3F4F6` (Primary) or `#BCC0CA` (Secondary) for legibility. Muted text should only be used on labels or large text.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do allow generous whitespace between sections to let the design breathe.",
+      "Do use the display serif exclusively for large headers, never for body copy or small UI elements.",
+      "Do rely on photography as the primary source of color on the page."
+    ],
+    "donts": [
+      "Don't use large border radii. Keep corners sharp and deliberate (3px–6px max).",
+      "Don't overuse the primary accent color. It should be reserved for actionable items or very subtle underlines.",
+      "Don't use solid opaque backgrounds for floating headers; rely on the blur effect to show depth."
+    ]
+  }
+}

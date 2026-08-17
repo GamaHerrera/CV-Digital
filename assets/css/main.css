@@ -37,6 +37,13 @@ h6 {
     line-height: 1.05;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 a {
@@ -44,6 +51,8 @@ a {
     color: inherit;
     transition: all var(--transition-fast);
     cursor: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 button {
@@ -71,8 +80,8 @@ img {
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
-    transform: translate(-50%, -50%);
-    transition: transform 0.08s linear, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.08s linear, background-color 0.3s ease;
     mix-blend-mode: difference;
     will-change: transform;
 }
@@ -85,10 +94,8 @@ img {
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         opacity 0.3s ease;
     mix-blend-mode: difference;
     will-change: transform;
@@ -96,8 +103,7 @@ img {
 
 .cursor.hovering,
 .cursor-follower.hovering {
-    width: 60px;
-    height: 60px;
+    transform: translate(-50%, -50%) scale(3) !important;
     background-color: #ffffff;
     opacity: 0.15;
 }
@@ -115,9 +121,11 @@ img {
     left: 0;
     height: 2px;
     background: linear-gradient(to right, var(--accent-blue), #1565C0);
-    width: 0%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
     z-index: 10001;
-    transition: width 0.1s linear;
+    transition: transform 0.1s linear;
 }
 
 /* ============================================================
@@ -315,7 +323,7 @@ hr.divider {
 }
 
 .header.scrolled {
-    background-color: rgba(232, 230, 225, 0.92);
+    background-color: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom-color: var(--border-color);
@@ -372,10 +380,12 @@ hr.divider {
     position: absolute;
     bottom: -3px;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 1px;
     background-color: var(--accent-blue);
-    transition: width var(--transition-normal);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
 }
 
 .nav-link:hover,
@@ -385,7 +395,7 @@ hr.divider {
 
 .nav-link:hover::after,
 .nav-link.active::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 .nav-cta {
@@ -599,7 +609,7 @@ hr.divider {
 
 /* ── Oversized headline ── */
 .hero-headline {
-    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: clamp(4rem, 12vw, 11rem);
     font-weight: 800;
     line-height: 0.9;
@@ -1451,6 +1461,10 @@ hr.divider {
     grid-column: span 6;
 }
 
+.project-card:nth-child(7) {
+    grid-column: span 12;
+}
+
 .project-image {
     height: 380px;
     overflow: hidden;
@@ -1676,7 +1690,7 @@ hr.divider {
    ============================================================ */
 .footer {
     background-color: var(--text-primary);
-    color: rgba(232, 230, 225, 0.5);
+    color: var(--bg-color);
     padding: var(--spacing-md) 0;
     border-top: 1px solid var(--border-color);
 }
@@ -1693,7 +1707,7 @@ hr.divider {
     font-family: var(--font-display);
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--text-inverse);
+    color: var(--bg-color);
     letter-spacing: -0.03em;
     display: flex;
     align-items: center;
@@ -1703,7 +1717,7 @@ hr.divider {
     height: 32px;
     width: auto;
     display: block;
-    /* Invert to white since footer background is dark (#0D0D0D) */
+    /* In light mode (dark footer), invert to white. We reset this in the dark mode media query below */
     filter: brightness(0) invert(1);
     opacity: 0.85;
     transition: opacity var(--transition-fast);
@@ -1713,9 +1727,16 @@ hr.divider {
     opacity: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+    .footer-logo-img {
+        filter: none;
+    }
+}
+
 .footer p {
     font-size: 0.8rem;
     letter-spacing: 0.04em;
+    opacity: 0.5;
 }
 
 .footer-links {
@@ -1724,15 +1745,16 @@ hr.divider {
 }
 
 .footer-links a {
-    color: rgba(232, 230, 225, 0.5);
+    color: var(--bg-color);
+    opacity: 0.5;
     font-size: 0.8rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    transition: color var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .footer-links a:hover {
-    color: var(--text-inverse);
+    opacity: 1;
 }
 
 /* ============================================================
@@ -1968,52 +1990,7 @@ hr.divider {
     min-height: 300px;
 }
 
-/* ============================================================
-   SCROLL ANIMATIONS
-   ============================================================ */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.reveal-left {
-    opacity: 0;
-    transform: translateX(-40px);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.reveal-left.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.delay-100 {
-    transition-delay: 0.1s;
-}
-
-.delay-200 {
-    transition-delay: 0.2s;
-}
-
-.delay-300 {
-    transition-delay: 0.3s;
-}
-
-.delay-400 {
-    transition-delay: 0.4s;
-}
-
-.delay-500 {
-    transition-delay: 0.5s;
-}
 
 /* ============================================================
    RESPONSIVE
@@ -2549,7 +2526,7 @@ hr.divider {
     gap: 2rem;
     padding: 2.5rem 3rem;
     background-color: var(--text-primary);
-    color: var(--text-inverse);
+    color: var(--bg-color);
     margin-bottom: var(--spacing-lg);
     position: relative;
     overflow: hidden;
@@ -2563,8 +2540,8 @@ hr.divider {
     font-family: var(--font-display);
     font-size: 7rem;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.05);
-    /* Cambiado de rgba(232, 230, 225, 0.06) a un blanco más puro con baja opacidad */
+    color: var(--bg-color);
+    opacity: 0.05;
     letter-spacing: -0.04em;
     line-height: 1;
     pointer-events: none;
@@ -2582,8 +2559,8 @@ hr.divider {
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
-    /* Cambiado de rgba(232, 230, 225, 0.7) */
+    color: var(--bg-color);
+    opacity: 0.8;
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -2594,8 +2571,8 @@ hr.divider {
     display: inline-block;
     width: 20px;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.6);
-    /* Cambiado de rgba(232, 230, 225, 0.6) */
+    background-color: var(--bg-color);
+    opacity: 0.6;
     flex-shrink: 0;
 }
 
@@ -2604,22 +2581,20 @@ hr.divider {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: #ffffff;
-    /* Cambiado de var(--text-inverse) */
+    color: var(--bg-color);
     line-height: 1.2;
 }
 
 .dual-cv-banner__text {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85);
-    /* Cambiado de rgba(232, 230, 225, 0.82) */
+    color: var(--bg-color);
+    opacity: 0.85;
     line-height: 1.7;
     max-width: 520px;
 }
 
 .dual-cv-banner__text strong {
-    color: #ffffff;
-    /* Cambiado de var(--text-inverse) */
+    color: var(--bg-color);
     font-weight: 600;
 }
 
@@ -2632,12 +2607,10 @@ hr.divider {
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #ffffff;
-    /* Cambiado de var(--text-inverse) */
+    color: var(--bg-color);
     white-space: nowrap;
     padding: 0.75rem 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    /* Cambiado de rgba(232, 230, 225, 0.45) */
+    border: 1px solid var(--bg-color);
     transition: all var(--transition-editorial);
     position: relative;
     overflow: hidden;
@@ -2648,8 +2621,8 @@ hr.divider {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.15);
-    /* Cambiado de rgba(232, 230, 225, 0.1) */
+    background-color: var(--bg-color);
+    opacity: 0.15;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform var(--transition-editorial);
@@ -2657,8 +2630,6 @@ hr.divider {
 }
 
 .dual-cv-banner__cta:hover {
-    border-color: #ffffff;
-    /* Cambiado de rgba(232, 230, 225, 0.6) */
     gap: 1rem;
 }
 
@@ -2867,6 +2838,95 @@ hr.divider {
     transform: translate(0, 0);
 }
 
+.copy-email-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer !important;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+/* ============================================================
+   ONBOARDING: TOOLTIP
+   ============================================================ */
+.onboard-tooltip {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    background-color: var(--accent-blue);
+    color: #fff;
+    padding: 0.5rem 1rem 0.5rem 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 20;
+}
+
+.onboard-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-blue);
+    transform: rotate(45deg);
+}
+
+.onboard-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.onboard-tooltip-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--transition-fast);
+}
+
+.onboard-tooltip-close:hover {
+    color: #fff;
+}
+
+/* ============================================================
+   DELIGHT: LIVE TIME INDICATOR
+   ============================================================ */
+.blinking-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-warm);
+    border-radius: 50%;
+    vertical-align: middle;
+    animation: blink-dot 2s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+@keyframes blink-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 /* ============================================================
    STATUS TOAST NOTIFICATION
    ============================================================ */
@@ -2892,6 +2952,26 @@ hr.divider {
 .status-toast.show {
     transform: translateY(0);
     opacity: 1;
+}
+
+/* Embedded variant for Sobre Mí */
+.status-toast--embedded {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    transform: none;
+    opacity: 1;
+    z-index: 1;
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.status-toast--embedded.show {
+    transform: none;
+}
+
+.status-toast--embedded .status-toast__close {
+    display: none;
 }
 
 .status-toast__icon {
@@ -2975,7 +3055,7 @@ hr.divider {
     border-bottom: 1px solid var(--border-color);
     color: var(--text-primary);
     text-decoration: none;
-    transition: background-color var(--transition-fast), padding var(--transition-fast);
+    transition: background-color var(--transition-fast);
     position: relative;
 }
 
@@ -3139,4 +3219,33 @@ hr.divider {
     background-color: rgba(212, 160, 23, 0.08);
     color: var(--accent-warm);
     border-color: rgba(212, 160, 23, 0.25);
+}
+
+/* ============================================================
+   ACCESSIBILITY: PREFERS REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+        cursor: auto !important;
+    }
+    
+    a, button, .project-card, .about-card, .filter-btn, .skill-chip, .soft-skill-badge, .gallery-item, .certification-card {
+        cursor: pointer !important;
+    }
+    
+    .cursor, 
+    .cursor-follower {
+        display: none !important;
+    }
+    
+    .marquee-track,
+    .hero-scroll-hint::after,
+    .blinking-dot {
+        animation: none !important;
+    }
+
+    .hero-title .char {
+        transform: none !important;
+    }
 }

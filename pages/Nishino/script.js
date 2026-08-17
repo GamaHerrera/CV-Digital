@@ -18,6 +18,13 @@
 
     setTimeout(() => {
       preloader.classList.add('loaded');
+      
+      // Synchronize hero choreography with the veil dropping
+      const hero = document.getElementById('hero');
+      if (hero) {
+        hero.classList.add('hero-is-loaded');
+      }
+
       setTimeout(() => {
         preloader.setAttribute('aria-hidden', 'true');
         if (typeof ScrollTrigger !== 'undefined') {
@@ -267,6 +274,20 @@
     revealEls.forEach(el => observer.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // ─── Delight: Hanko Stamp Reveal ────────────────────────────────
+  const hankoStamp = document.querySelector('.hanko-stamp');
+  if (hankoStamp && 'IntersectionObserver' in window) {
+    const hankoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          hankoStamp.classList.add('stamped');
+          hankoObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    hankoObserver.observe(document.querySelector('.footer-logo-name'));
   }
 
   // ─── Smooth Scroll for anchor links (via Lenis) ──────────────
