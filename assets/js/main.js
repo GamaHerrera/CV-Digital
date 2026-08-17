@@ -259,6 +259,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ============================================================
+       9. IMPECCABLE OVERDRIVE: 3D TILT EFFECT
+       ============================================================ */
+    const projectCards = document.querySelectorAll('.project-card');
+    if (!prefersReducedMotion && window.innerWidth > 768 && projectCards.length > 0) {
+        projectCards.forEach(card => {
+            const img = card.querySelector('.project-image img');
+            
+            // Setup smooth return transition
+            card.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            if(img) img.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease';
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const maxTilt = 8;
+                
+                const tiltX = ((y - centerY) / centerY) * -maxTilt;
+                const tiltY = ((x - centerX) / centerX) * maxTilt;
+                
+                card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                // Enhance Parallax on inner image
+                if(img) {
+                    const imgX = ((x - centerX) / centerX) * -15;
+                    const imgY = ((y - centerY) / centerY) * -15;
+                    img.style.transform = `scale(1.1) translate(${imgX}px, ${imgY}px) translateZ(-20px)`;
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                if(img) {
+                    img.style.transform = '';
+                }
+            });
+        });
+    }
+
+    /* ============================================================
        10. MAGNETIC BUTTONS effect
        ============================================================ */
     document.querySelectorAll('.btn-primary, .btn-outline').forEach(btn => {
@@ -281,33 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clone items to ensure seamless looping
         const originalContent = marqueeTrack.innerHTML;
         marqueeTrack.innerHTML = originalContent + originalContent;
-    }
-
-    /* ============================================================
-       12. STATUS TOAST NOTIFICATION
-       ============================================================ */
-    const statusToast = document.getElementById('status-toast');
-    const statusToastClose = document.getElementById('status-toast-close');
-    
-    if (statusToast) {
-        // Show after 2 seconds
-        setTimeout(() => {
-            statusToast.classList.add('show');
-        }, 2000);
-
-        // Hide on close click
-        if (statusToastClose) {
-            statusToastClose.addEventListener('click', () => {
-                statusToast.classList.remove('show');
-            });
-        }
-        
-        // Auto-hide after 12 seconds
-        setTimeout(() => {
-            if (statusToast.classList.contains('show')) {
-                statusToast.classList.remove('show');
-            }
-        }, 12000);
     }
 
     /* ============================================================

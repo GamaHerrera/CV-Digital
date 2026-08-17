@@ -183,6 +183,11 @@ html.lenis body {
     margin-bottom: var(--spacing-lg);
 }
 
+/* Impeccable Layout: Standardize transition padding for grid discipline */
+#proyectos .section-header {
+    margin-bottom: var(--spacing-xl);
+}
+
 .section-title {
     font-size: clamp(2.8rem, 5vw, 4.5rem);
     line-height: 1.05;
@@ -202,6 +207,13 @@ html.lenis body {
     font-weight: 400;
     line-height: 1.7;
     margin-top: var(--spacing-sm);
+}
+
+.editorial-p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 480px;
 }
 
 hr.divider {
@@ -224,7 +236,7 @@ hr.divider {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     cursor: none;
-    transition: all var(--transition-editorial);
+    transition: all var(--transition-editorial), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
 }
@@ -323,9 +335,7 @@ hr.divider {
 }
 
 .header.scrolled {
-    background-color: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background-color: var(--bg-color); /* Solid background to prevent text bleeding (P1 Fix) */
     border-bottom-color: var(--border-color);
 }
 
@@ -382,9 +392,9 @@ hr.divider {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--accent-blue);
+    background-color: var(--text-primary);
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform var(--transition-normal);
 }
 
@@ -396,6 +406,7 @@ hr.divider {
 .nav-link:hover::after,
 .nav-link.active::after {
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 .nav-cta {
@@ -1120,13 +1131,21 @@ hr.divider {
     align-items: center;
     gap: 1.5rem;
     padding: 0 2.5rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-secondary);
     white-space: nowrap;
     flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.marquee-item:hover {
+    color: var(--text-primary);
+    -webkit-text-stroke: 1px var(--text-primary);
 }
 
 .marquee-item .sep {
@@ -1435,8 +1454,28 @@ hr.divider {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1px;
-    background-color: var(--border-color);
+    gap: var(--spacing-sm);
+    background-color: transparent;
+}
+
+/* Impeccable Layout: Recursive Brutalist Pattern (Works for 8+ projects) */
+.project-card:nth-child(7n + 1),
+.project-card:nth-child(7n + 4) {
+    grid-column: span 7;
+}
+
+.project-card:nth-child(7n + 2),
+.project-card:nth-child(7n + 3) {
+    grid-column: span 5;
+}
+
+.project-card:nth-child(7n + 5),
+.project-card:nth-child(7n + 6) {
+    grid-column: span 6;
+}
+
+.project-card:nth-child(7n) {
+    grid-column: span 12;
 }
 
 .project-card {
@@ -1444,25 +1483,11 @@ hr.divider {
     overflow: hidden;
     background-color: var(--bg-alt);
     cursor: none;
-}
-
-.project-card:nth-child(1),
-.project-card:nth-child(4) {
-    grid-column: span 7;
-}
-
-.project-card:nth-child(2),
-.project-card:nth-child(3) {
-    grid-column: span 5;
-}
-
-.project-card:nth-child(5),
-.project-card:nth-child(6) {
-    grid-column: span 6;
-}
-
-.project-card:nth-child(7) {
-    grid-column: span 12;
+    border: 1px solid var(--border-color); /* Retain structural discipline with borders */
+    /* Impeccable Overdrive: 3D setup */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 .project-image {
@@ -1482,38 +1507,68 @@ hr.divider {
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.0);
+    transform: scale(1.05) translateZ(10px);
     filter: grayscale(0%);
 }
 
-/* Overlay on hover */
+/* Overlay on hover (Glassmorphism Overdrive) */
 .project-overlay {
     position: absolute;
     inset: 0;
-    background-color: var(--text-primary);
+    background: linear-gradient(to top, rgba(10, 10, 12, 0.95) 0%, rgba(10, 10, 12, 0.4) 40%, transparent 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     opacity: 0;
-    transform: translateY(12px);
-    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 2;
+    transform: translateZ(30px); /* Lift overlay in 3D space */
 }
 
 .project-card:hover .project-overlay {
-    opacity: 0.94;
+    opacity: 1;
+}
+
+/* Staggered text animations inside overlay */
+.project-overlay h3,
+.project-overlay .project-tags,
+.project-link {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.5s ease;
+}
+
+.project-card:hover .project-overlay h3 {
     transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.project-card:hover .project-overlay .project-tags {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.15s;
+}
+
+.project-card:hover .project-link {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.2s;
 }
 
 .project-overlay h3 {
     font-family: var(--font-display);
-    font-size: 1.8rem;
-    color: var(--text-inverse);
+    font-size: 2rem;
+    color: #F0EFEB; /* Fixed light color for dark overlay */
     letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     line-height: 1.1;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .project-overlay .project-tags {
@@ -1528,41 +1583,57 @@ hr.divider {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(232, 230, 225, 0.6);
-    border: 1px solid rgba(232, 230, 225, 0.2);
+    color: rgba(240, 239, 235, 0.7); /* Fixed light color */
+    border: 1px solid rgba(240, 239, 235, 0.2);
     padding: 0.25rem 0.6rem;
 }
 
 .project-link {
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--text-inverse);
+    color: #F0EFEB; /* Fixed light color for dark overlay */
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     margin-top: auto;
-    transition: gap var(--transition-fast), color var(--transition-fast);
+    padding-top: 1rem;
+    transition: gap var(--transition-fast), color var(--transition-fast), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s ease !important;
+}
+
+/* Make the whole card clickable by stretching the link */
+.project-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 10;
 }
 
 .project-link:hover {
-    gap: 1rem;
-    color: rgba(232, 230, 225, 0.7);
+    gap: 1.2rem;
+    color: var(--accent-blue);
 }
 
 /* Project card bottom label (visible by default) */
 .project-info {
-    padding: 1.25rem var(--spacing-sm);
+    padding: 1.5rem var(--spacing-md);
     background-color: var(--bg-color);
     border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 3; /* Keep text above tilt effect */
 }
 
 .project-info h3 {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     font-family: var(--font-body);
     letter-spacing: -0.01em;
+    transition: color var(--transition-fast);
+}
+
+.project-card:hover .project-info h3 {
+    color: var(--accent-blue);
 }
 
 .project-info .project-tags {
@@ -2274,6 +2345,7 @@ hr.divider {
     /* --- PROJECTS GRID --- */
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
 
     .project-card:nth-child(n) {
@@ -2282,6 +2354,43 @@ hr.divider {
 
     .project-image {
         height: 260px;
+    }
+
+    /* Impeccable Adapt: Disable image filters on mobile */
+    .project-image img {
+        filter: none;
+        transform: scale(1.05);
+    }
+    
+    .project-card:hover .project-image img {
+        transform: scale(1.05) !important;
+        filter: none !important;
+    }
+
+    /* Impeccable Adapt: Hide visual overlay but keep the link active */
+    .project-overlay {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        padding: 0;
+    }
+    
+    .project-overlay h3,
+    .project-overlay .project-tags,
+    .project-link {
+        opacity: 0 !important;
+        color: transparent !important;
+        pointer-events: none;
+    }
+
+    .project-link::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        display: block;
+        pointer-events: auto;
     }
 
     /* --- SKILLS GRID --- */
