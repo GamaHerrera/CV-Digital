@@ -1,0 +1,24 @@
+{
+  "name": "cv-digital",
+  "version": "1.0.0",
+  "description": "> Bienvenido a mi CV digital. Aquí encontrarás información sobre mi experiencia profesional, proyectos destacados, habilidades y cómo contactarme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GamaHerrera/CV-Digital.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GamaHerrera/CV-Digital/issues"
+  },
+  "homepage": "https://github.com/GamaHerrera/CV-Digital#readme",
+  "dependencies": {
+    "clean-css": "^5.3.3",
+    "sharp": "^0.35.3",
+    "terser": "^5.50.0"
+  }
+}
