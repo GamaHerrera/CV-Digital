@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ladrones — Sitio Oficial | Gama Herrera</title>
+    <title>Ladrones | Sitio Oficial | Gama Herrera</title>
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
     <meta name="description" content="Diseño y desarrollo web para Ladrones. Sitio oficial, nueva música, mercancía y fechas de tour.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
-    
+    <link rel="stylesheet" href="../assets/css/gallery.css">
     <!-- Scripts -->
     <script defer src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
     <script defer src="../assets/js/main.js"></script>
@@ -22,8 +22,8 @@
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="header">
         <div class="container nav">
-            <a href="../index.html" class="logo" aria-label="Gama Herrera — Inicio">
-                <img src="../gh brand.png" alt="gh brand — Gama Herrera" class="logo-img">
+            <a href="../index.html" class="logo" aria-label="Gama Herrera | Inicio">
+                <img src="../gh brand.png" alt="gh brand | Gama Herrera" class="logo-img">
             </a>
             <nav class="nav-links" aria-label="Navegación principal">
                 <a href="/#proyectos" class="nav-link active">Portafolio</a>
@@ -88,17 +88,96 @@
                     <img src="Ladrones/src/assets/hero.jpg" alt="Ladrones Hero" style="width:100%; height:520px; object-fit:cover; transition:filter 0.8s ease; display:block;" loading="lazy">
                 </div>
 
+                <div class="reveal" style="margin-bottom: var(--spacing-xl);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-sm); letter-spacing: -0.02em; color: var(--text-primary); text-transform: uppercase;"><i class="ri-music-line" style="margin-right: 0.4rem; color: var(--text-light); font-weight: normal;"></i> Pilares de Diseño y Desarrollo</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem; max-width: 720px; margin-bottom: var(--spacing-md);">Traduciendo la identidad visual y sonora de Ladrones en una experiencia digital inmersiva, moderna y magnética.</p>
+                </div>
+
+                <div class="star-block reveal">
+                    <span class="star-label star-label--s">Pilar 01</span>
+                    <h2 class="star-block-title">Identidad Visual & Estética Urbana</h2>
+                    <p class="star-block-text"><strong>El Enfoque:</strong> Capturar la energía cruda y el carácter urbano de la banda desde el primer scroll, creando una atmósfera que resuene con su audiencia.</p>
+                    <p class="star-block-text" style="margin-top:0.75rem;"><strong>Ejecución:</strong> Paleta oscura con acentos de alto contraste, tipografía bold condensada para headings e Inter para body copy. Animaciones de entrada progresivas y un hero section con video de fondo en modo teatro que sumerge al usuario en la identidad de la banda.</p>
+                </div>
+
+                <div class="star-block reveal">
+                    <span class="star-label star-label--t">Pilar 02</span>
+                    <h2 class="star-block-title">Experiencia Musical Interactiva & Tour Dates</h2>
+                    <p class="star-block-text"><strong>El Enfoque:</strong> Presentar la discografía, próximos shows y mercancía de forma visualmente atractiva, convirtiendo fans en asistentes y compradores.</p>
+                    <p class="star-block-text" style="margin-top:0.75rem;"><strong>Ejecución:</strong> Sección de Tour Dates con cards de eventos y CTA directos a compra de boletos. Galería fotográfica con grid masonry para archivo de shows. Integración de streaming via links directos a plataformas. Marquee animado con el nombre de la banda para refuerzo de marca constante.</p>
+                </div>
+
+                <div class="star-block reveal">
+                    <span class="star-label star-label--a">Pilar 03</span>
+                    <h2 class="star-block-title">React + Vite & Arquitectura por Componentes</h2>
+                    <p class="star-block-text"><strong>El Enfoque:</strong> Construir un sitio escalable y de alta performance usando tecnología moderna de frontend, listo para iterar con nuevos lanzamientos y eventos.</p>
+                    <p class="star-block-text" style="margin-top:0.75rem;"><strong>Ejecución:</strong> Arquitectura modular con componentes React independientes (Hero, Gallery, Tour, Bio, Contact). Custom hook <code>useReveal</code> con Intersection Observer para animaciones de entrada. Build optimizado con Vite para carga ultrarrápida. CSS Modules por componente para estilos encapsulados y mantenibles.</p>
+                </div>
+
+                <!-- Galería Visual -->
+                <div class="reveal" style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-lg);">
+                    <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: var(--spacing-sm); letter-spacing: -0.02em; color: var(--text-primary); text-transform: uppercase;"><i class="ri-image-line" style="margin-right: 0.4rem; color: var(--text-light); font-weight: normal;"></i> Galería Visual</h2>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1rem; max-width: 680px; margin-bottom: var(--spacing-md);">Archivo fotográfico de shows en vivo y streetwear integrado en el diseño para reforzar la identidad visual de la banda.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: var(--spacing-xl);">
+                    <div style="overflow: hidden; border-radius: 8px; aspect-ratio: 4/3;">
+                        <img src="Ladrones/gallery/gallery-1.jpg" alt="Ladrones | Show en vivo 1" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="overflow: hidden; border-radius: 8px; aspect-ratio: 4/3;">
+                        <img src="Ladrones/gallery/gallery-3.jpg" alt="Ladrones | Show en vivo 3" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="overflow: hidden; border-radius: 8px; aspect-ratio: 4/3;">
+                        <img src="Ladrones/gallery/gallery-6.jpg" alt="Ladrones | Show en vivo 6" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                    <div style="overflow: hidden; border-radius: 8px; aspect-ratio: 4/3;">
+                        <img src="Ladrones/gallery/gallery-4.jpg" alt="Ladrones | Show en vivo 4" style="width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </div>
+                </div>
+
+                <!-- Stack Técnico -->
+                <div class="reveal" style="margin-top: var(--spacing-xl); padding-bottom: var(--spacing-lg);">
+                    <h2 class="section-number" style="margin-bottom: var(--spacing-sm);"><i class="ri-tools-line" style="margin-right: 0.4rem; font-weight: normal;"></i> Stack Técnico</h2>
+                    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Dirección Creativa</h4>
+                            <ul style="list-style: none; padding: 0; line-height: 1.8; color: var(--text-primary); font-weight: 500;">
+                                <li><i class="ri-palette-line" style="margin-right:0.5rem; color:var(--text-light);"></i> Urban Dark Aesthetic</li>
+                                <li><i class="ri-font-size" style="margin-right:0.5rem; color:var(--text-light);"></i> Bold Condensed & Inter</li>
+                                <li><i class="ri-contrast-2-line" style="margin-right:0.5rem; color:var(--text-light);"></i> High Contrast Color System</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Frontend / Web</h4>
+                            <ul style="list-style: none; padding: 0; line-height: 1.8; color: var(--text-primary); font-weight: 500;">
+                                <li><i class="ri-reactjs-line" style="margin-right:0.5rem; color:var(--text-light);"></i> React 18 + Hooks</li>
+                                <li><i class="ri-flashlight-line" style="margin-right:0.5rem; color:var(--text-light);"></i> Vite Build Tool</li>
+                                <li><i class="ri-css3-line" style="margin-right:0.5rem; color:var(--text-light);"></i> CSS Modules & Animations</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">UX & Performance</h4>
+                            <ul style="list-style: none; padding: 0; line-height: 1.8; color: var(--text-primary); font-weight: 500;">
+                                <li><i class="ri-eye-line" style="margin-right:0.5rem; color:var(--text-light);"></i> Intersection Observer API</li>
+                                <li><i class="ri-speed-line" style="margin-right:0.5rem; color:var(--text-light);"></i> Lazy Loading & Optimización</li>
+                                <li><i class="ri-global-line" style="margin-right:0.5rem; color:var(--text-light);"></i> <a href="Ladrones/dist/index.html" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">Ver Ladrones Live Demo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container footer-inner">
-            <a href="../index.html" class="footer-logo" aria-label="gh brand — Inicio">
+            <a href="../index.html" class="footer-logo" aria-label="gh brand | Inicio">
                 <img src="../gh brand.png" alt="gh brand" class="footer-logo-img">
             </a>
-            <p>© 2026 Gama Herrera — Diseñador UI/UX Senior.</p>
+            <p>© 2026 Gama Herrera | Diseñador UI/UX Senior.</p>
             <nav class="footer-links"><a href="/#proyectos">Portafolio</a><a href="/#servicios">Servicios</a><a href="/#sobre-mi">Sobre Mí</a><a href="../certificaciones.html">Credenciales</a></nav>
         </div>
     </footer>
 </body>
 </html>
+

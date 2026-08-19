@@ -55,8 +55,41 @@ a {
     word-wrap: break-word;
 }
 
+/* A11y Focus State */
+:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
 button {
     cursor: none;
+}
+
+/* Inline Text Links Micro-interactions */
+p a {
+    color: var(--text-primary);
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+p a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: transform var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+p a:hover::after {
+    transform: scaleX(1);
 }
 
 ul {
@@ -329,7 +362,9 @@ hr.divider {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: transparent;
+    background-color: color-mix(in srgb, var(--bg-color) 80%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: background-color var(--transition-normal), backdrop-filter var(--transition-normal);
     border-bottom: 1px solid transparent;
 }
