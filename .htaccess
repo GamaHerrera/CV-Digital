@@ -1,4 +1,4 @@
-# ============================================================
+﻿# ============================================================
 #  Gama Herrera Portfolio — URL Rewrite & Clean URLs
 #  gamaherrera.com
 # ============================================================
@@ -26,6 +26,8 @@ RewriteRule ^proyecto/urrea-colombia/?$         pages/proyecto-e-commerce-urrea-
 RewriteRule ^proyecto/alicet/?$                 pages/proyecto-branding-alicet.html    [R=301,L]
 RewriteRule ^proyecto/bocanegra/?$              pages/proyecto-branding-bocanegra.html [R=301,L]
 RewriteRule ^proyecto/soluciones-pd/?$          pages/proyecto-branding-soluciones-pd.html [R=301,L]
+RewriteRule ^proyecto/ladrones/?$               pages/proyecto-ladrones.html           [R=301,L]
+RewriteRule ^proyecto/nishino/?$                pages/proyecto-nishino.html            [R=301,L]
 
 # ── Security headers ──
 <IfModule mod_headers.c>
@@ -44,3 +46,4 @@ RewriteRule ^proyecto/soluciones-pd/?$          pages/proyecto-branding-solucion
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
+
