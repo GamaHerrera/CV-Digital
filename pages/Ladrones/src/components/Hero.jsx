@@ -16,7 +16,7 @@ export default function Hero() {
           poster="https://images.unsplash.com/photo-1598387181032-a310322db565?q=80&w=2075&auto=format&fit=crop"
         >
           {/* Local Ay Ay Ay video */}
-          <source src="/video.mp4" type="video/mp4" />
+          <source src="./video.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay halftone-bg"></div>
       </div>
