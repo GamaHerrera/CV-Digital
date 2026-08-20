@@ -953,6 +953,8 @@ hr.divider {
     letter-spacing: -0.04em;
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
+    word-break: keep-all;
+    hyphens: none;
 }
 
 .hero-title--value {
@@ -1682,6 +1684,10 @@ hr.divider {
     color: var(--text-light);
     border-color: var(--border-color);
     background: transparent;
+}
+
+.project-mobile-btn {
+    display: none;
 }
 
 /* ============================================================
@@ -2428,6 +2434,25 @@ hr.divider {
         pointer-events: auto;
     }
 
+    .project-mobile-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent-blue);
+        border-bottom: 1px solid var(--accent-blue);
+        padding-bottom: 2px;
+        transition: gap var(--transition-fast);
+        pointer-events: auto;
+    }
+    .project-mobile-btn i {
+        font-size: 1.1rem;
+    }
+
     /* --- SKILLS GRID --- */
     .skills-grid {
         grid-template-columns: 1fr;
@@ -2491,6 +2516,8 @@ hr.divider {
     .footer-links {
         justify-content: center;
         flex-wrap: wrap;
+        row-gap: 0.8rem;
+        column-gap: 1.2rem;
     }
 
     /* --- BACK LINK on project pages --- */
@@ -2558,7 +2585,9 @@ hr.divider {
 
     /* --- General --- */
     .hero-title {
-        font-size: 2.1rem;
+        font-size: clamp(1.8rem, 10vw, 2.1rem);
+        word-break: keep-all;
+        hyphens: none;
     }
 
     .section-title {

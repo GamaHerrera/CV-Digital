@@ -446,4 +446,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* ============================================================
+       16. MOBILE PROJECT CARDS
+       ============================================================ */
+    const allProjectCards = document.querySelectorAll('.project-card');
+    allProjectCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+            if (!e.target.closest('a') || e.target.closest('a').classList.contains('project-link') || e.target.closest('a').classList.contains('project-mobile-btn')) {
+                const link = card.querySelector('.project-link');
+                if (link) {
+                    window.location.href = link.href;
+                }
+            }
+        });
+
+        const info = card.querySelector('.project-info');
+        if (info && !info.querySelector('.project-mobile-btn')) {
+            const btn = document.createElement('span');
+            btn.className = 'project-mobile-btn';
+            btn.innerHTML = 'Ver detalles <i class="ri-arrow-right-line"></i>';
+            info.appendChild(btn);
+        }
+    });
+
 });
