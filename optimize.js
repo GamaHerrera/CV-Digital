@@ -12,8 +12,8 @@ async function runOptimization() {
 
     // 1. Minificar CSS
     if (fs.existsSync(cssFile)) {
-        const cssContent = fs.readFileSync(cssFile, 'utf8');
-        const minifiedCss = new CleanCSS({ level: 2 }).minify(cssContent);
+        // Pass the file path so clean-css can resolve @import 'variables.css'
+        const minifiedCss = new CleanCSS({ level: 2 }).minify([cssFile]);
         fs.writeFileSync('assets/css/main.min.css', minifiedCss.styles);
         console.log(`✅ CSS minificado: ${minifiedCss.stats.originalSize}B -> ${minifiedCss.stats.minifiedSize}B`);
     }

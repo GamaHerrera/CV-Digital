@@ -303,6 +303,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ============================================================
+       9b. IMPECCABLE OVERDRIVE: HERO TILT EFFECT
+       ============================================================ */
+    const heroSection = document.querySelector('.hero--editorial');
+    const heroBody = document.querySelector('.hero-editorial-body');
+    if (!prefersReducedMotion && window.innerWidth > 768 && heroSection && heroBody) {
+        // Setup smooth return transition
+        heroBody.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+
+        heroSection.addEventListener('mousemove', (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Subtle tilt for the large hero section
+            const maxTilt = 4;
+            
+            const tiltX = ((y - centerY) / centerY) * -maxTilt;
+            const tiltY = ((x - centerX) / centerX) * maxTilt;
+            
+            heroBody.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.01, 1.01, 1.01)`;
+        });
+        
+        heroSection.addEventListener('mouseleave', () => {
+            heroBody.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+    }
+
+    /* ============================================================
        10. MAGNETIC BUTTONS effect
        ============================================================ */
     document.querySelectorAll('.btn-primary, .btn-outline').forEach(btn => {

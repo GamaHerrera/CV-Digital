@@ -518,6 +518,8 @@ hr.divider {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 /* ── Entrance keyframes ── */
@@ -626,6 +628,8 @@ hr.divider {
     padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem) clamp(4rem, 7vw, 6rem);
     position: relative;
     z-index: 2;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 /* Top row: eyebrow + year */
@@ -674,6 +678,8 @@ hr.divider {
 .hero-headline__line {
     display: block;
     overflow: hidden;
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
     animation: hero-line-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -2235,9 +2241,13 @@ hr.divider {
     }
 
     .hero-headline {
-        font-size: clamp(2.5rem, 13vw, 4.5rem);
+        font-size: clamp(1.8rem, 11vw, 4.5rem);
         gap: 0;
         margin: 0.5rem 0;
+    }
+
+    .hero-headline__line {
+        white-space: nowrap;
     }
 
     /* On mobile no indentation — all lines flush left */
