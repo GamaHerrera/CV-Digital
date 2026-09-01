@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +7,13 @@
   <meta property="og:title" content="NEBÚ — We Reject The Real" />
   <meta property="og:description" content="Próximos eventos, lineup y reservas. El club donde la realidad se distorsiona." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="nebu brand.png" />
+  <meta property="og:url" content="https://nebumx.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NEBÚ — We Reject The Real" />
+  <meta name="twitter:description" content="Próximos eventos, lineup y reservas. El club donde la realidad se distorsiona." />
+  <meta name="twitter:image" content="nebu brand.png" />
+  <link rel="canonical" href="https://nebumx.com" />
   
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self';" />
@@ -21,19 +28,19 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="is-loading">
 
   <!-- ─── SYSTEM BOOT PRELOADER ─────────────────────────────── -->
-  <div id="preloader" aria-hidden="false">
+  <div id="preloader" aria-hidden="true">
     <div class="preloader-counter glitch" data-text="00%">00%</div>
     <div class="preloader-log">INITIALIZING VOID PROTOCOL...</div>
-  </div>  <!-- Film Grain Overlay -->
+  </div>
+
+  <!-- Film Grain Overlay -->
   <div class="film-grain" aria-hidden="true"></div>
 
   <!-- ─── NAVIGATION ──────────────────────────────────────── -->
@@ -52,17 +59,20 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
     <a href="#lineup" class="mobile-link" id="mobileClose1">Eventos</a>
     <a href="#gallery" class="mobile-link" id="mobileClose2">Galería</a>
     <a href="#contact" class="mobile-link" id="mobileClose3">Reservar</a>
   </div>
 
+  <!-- ─── MAIN CONTENT ─────────────────────────────────────── -->
+  <main id="main-content">
+
   <!-- ─── HERO SECTION ─────────────────────────────────────── -->
   <section class="hero" id="hero">
     <!-- Video background (add src when clip is ready) -->
     <div class="hero-video-wrap">
-      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" preload="metadata" style="background-color: #0A0A0A;">
+      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" preload="metadata" poster="nebu brand.png" style="background-color: #0A0A0A;">
         <!-- Replace with actual club footage: abstract light traces, smoke, industrial texture -->
         <source src="intro.mp4" type="video/mp4" />
       </video>
@@ -87,6 +97,7 @@
       <div class="hero-eyebrow">SOCIAL CLUB · MX</div>
       <h1 class="hero-title">
         <img src="nebu brand.png" alt="NEBÚ" class="hero-logo-img" decoding="async" />
+        <span class="sr-only">Nebú Social Club</span>
       </h1>
       <p class="hero-manifesto">WE REJECT THE REAL</p>
       <div class="hero-line" aria-hidden="true"></div>
@@ -336,9 +347,9 @@
             <label for="form-event" class="form-label">Evento</label>
             <select id="form-event" name="event" class="form-input form-select" required>
               <option value="" disabled selected>Selecciona un evento</option>
-              <option value="kobe">18 &amp; 19 Jul — KOBE DSMORPHYA</option>
-              <option value="fractured">01 &amp; 02 Ago — FRACTURED FREQUENCIES</option>
-              <option value="void">14 &amp; 15 Ago — VOID PROTOCOL</option>
+              <option value="kobe">18 & 19 Jul — KOBE DSMORPHYA</option>
+              <option value="fractured">01 & 02 Ago — FRACTURED FREQUENCIES</option>
+              <option value="void">14 & 15 Ago — VOID PROTOCOL</option>
             </select>
           </div>
           <div class="form-group">
@@ -355,6 +366,8 @@
       </div>
     </div>
   </section>
+
+  </main><!-- /main-content -->
 
   <!-- ─── FOOTER ────────────────────────────────────────────── -->
   <footer class="footer" id="footer">
@@ -384,4 +397,3 @@
   <script defer src="main.js"></script>
 </body>
 </html>
-

@@ -11,7 +11,7 @@ The design is powered by CSS custom properties located in `style.css`.
 ### Colors
 - **Backgrounds**: `--bg-primary` (`#0A0A0A`), `--bg-secondary` (`#000000`), `--bg-card` (`#0D0D0D`)
 - **Brand Accent**: `--brand-accent` (`#E50914` - Blood Red), `--brand-accent-dim` (`#8B0000`)
-- **Text**: `--text-primary` (`#F5F5F5`), `--text-muted` (`#888888`), `--text-faint` (`#444444`)
+- **Text**: `--text-primary` (`#F5F5F5`), `--text-muted` (`#888888`), `--text-faint` (`#666666`)
 - **Borders**: `--border-subtle` (`#1A1A1A`), `--border-mid` (`#2A2A2A`)
 
 ### Typography

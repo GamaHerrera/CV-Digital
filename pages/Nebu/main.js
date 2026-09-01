@@ -41,7 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(interval);
         setTimeout(() => {
           preloader.classList.add('done');
+          preloader.setAttribute('aria-hidden', 'true');
           document.body.classList.remove('is-loading');
+          // Smooth entrance — fade in body content
+          document.body.style.opacity = '0';
+          document.body.style.transition = 'opacity 0.5s ease';
+          requestAnimationFrame(() => {
+            document.body.style.opacity = '1';
+          });
         }, 300); // short delay after 100% before slide up
       }
     }, 40); // fast loop for snappy hacker vibe
@@ -120,8 +127,20 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (hamburger && mobileMenu) {
-  // Focus Trap Logic
+  // Focus Trap Logic — single persistent handler
   const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+  let trapFocusHandler = null;
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (trapFocusHandler) {
+      document.removeEventListener('keydown', trapFocusHandler);
+      trapFocusHandler = null;
+    }
+  }
 
   hamburger.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
@@ -130,14 +149,20 @@ if (hamburger && mobileMenu) {
     document.body.style.overflow = isOpen ? 'hidden' : '';
 
     if (isOpen) {
+      // Remove old handler if any before creating a new one
+      if (trapFocusHandler) {
+        document.removeEventListener('keydown', trapFocusHandler);
+      }
+
       const focusableContent = mobileMenu.querySelectorAll(focusableElements);
       if (focusableContent.length === 0) return;
       const firstElement = focusableContent[0];
       const lastElement = focusableContent[focusableContent.length - 1];
 
-      document.addEventListener('keydown', function trapFocus(e) {
-        if (!mobileMenu.classList.contains('open')) {
-          document.removeEventListener('keydown', trapFocus);
+      trapFocusHandler = function (e) {
+        if (e.key === 'Escape') {
+          closeMobileMenu();
+          hamburger.focus();
           return;
         }
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
@@ -157,7 +182,14 @@ if (hamburger && mobileMenu) {
             e.preventDefault();
           }
         }
-      });
+      };
+      document.addEventListener('keydown', trapFocusHandler);
+    } else {
+      // Menu closed via hamburger click
+      if (trapFocusHandler) {
+        document.removeEventListener('keydown', trapFocusHandler);
+        trapFocusHandler = null;
+      }
     }
   });
 }
@@ -167,10 +199,7 @@ if (hamburger && mobileMenu) {
   const el = document.getElementById(id);
   if (el && mobileMenu && hamburger) {
     el.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeMobileMenu();
     });
   }
 });
@@ -251,6 +280,7 @@ function initReveal() {
     ...document.querySelectorAll('.section-header'),
     ...document.querySelectorAll('.contact-info'),
     ...document.querySelectorAll('.contact-form'),
+    ...document.querySelectorAll('.gallery-img-wrap'),
   ];
 
   targets.forEach((el, i) => {
@@ -268,25 +298,80 @@ const form = document.getElementById('reservaForm');
 const formSuccess = document.getElementById('formSuccess');
 
 if (form) {
+  /**
+   * Clears validation state from a form field.
+   * @param {HTMLElement} field - The input/select element to clear.
+   */
+  function clearFieldError(field) {
+    field.removeAttribute('aria-invalid');
+    field.style.borderColor = '';
+    field.style.animation = '';
+    const errorEl = field.parentElement.querySelector('.form-error');
+    if (errorEl) errorEl.remove();
+  }
+
+  /**
+   * Marks a form field as invalid with a visible error message.
+   * @param {HTMLElement} field - The input/select element.
+   * @param {string} message - The error text to display.
+   */
+  function setFieldError(field, message) {
+    field.setAttribute('aria-invalid', 'true');
+    field.style.borderColor = 'var(--brand-accent)';
+    field.style.animation = 'none';
+    requestAnimationFrame(() => {
+      field.style.animation = 'shakeField 0.35s ease';
+    });
+
+    // Inject error message if not already present
+    if (!field.parentElement.querySelector('.form-error')) {
+      const errorSpan = document.createElement('span');
+      errorSpan.className = 'form-error';
+      errorSpan.setAttribute('role', 'alert');
+      errorSpan.textContent = message;
+      field.parentElement.appendChild(errorSpan);
+    }
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name    = document.getElementById('form-name').value.trim();
-    const email   = document.getElementById('form-email').value.trim();
-    const event   = document.getElementById('form-event').value;
-    const guests  = document.getElementById('form-guests').value;
+    // Clear previous errors
+    this.querySelectorAll('.form-input').forEach(clearFieldError);
 
-    if (!name || !email || !event || !guests) {
-      // Shake invalid fields
-      this.querySelectorAll(':invalid').forEach(field => {
-        field.style.borderColor = 'var(--brand-accent)';
-        field.style.animation = 'none';
-        requestAnimationFrame(() => {
-          field.style.animation = 'shakeField 0.35s ease';
-        });
-      });
-      return;
+    const nameField   = document.getElementById('form-name');
+    const emailField  = document.getElementById('form-email');
+    const eventField  = document.getElementById('form-event');
+    const guestsField = document.getElementById('form-guests');
+
+    let hasError = false;
+
+    if (!nameField.value.trim()) {
+      setFieldError(nameField, 'Campo requerido');
+      hasError = true;
     }
+    if (!emailField.value.trim()) {
+      setFieldError(emailField, 'Campo requerido');
+      hasError = true;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+      setFieldError(emailField, 'Email no válido');
+      hasError = true;
+    }
+    if (!eventField.value) {
+      setFieldError(eventField, 'Selecciona un evento');
+      hasError = true;
+    }
+    if (!guestsField.value) {
+      setFieldError(guestsField, 'Campo requerido');
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    const name   = nameField.value.trim();
+    const email  = emailField.value.trim();
+    const event  = eventField.value;
+    const guests = guestsField.value;
 
     // Simulate submission (replace with actual API/WhatsApp redirect)
     const submitBtn = this.querySelector('#submit-reserva');
@@ -310,12 +395,9 @@ if (form) {
     }, 1200);
   });
 
-  // Clear red border on input focus
+  // Clear error state on input focus
   form.querySelectorAll('.form-input').forEach(input => {
-    input.addEventListener('focus', () => {
-      input.style.borderColor = '';
-      input.style.animation = '';
-    });
+    input.addEventListener('focus', () => clearFieldError(input));
   });
 }
 
@@ -323,26 +405,12 @@ if (form) {
 if (window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion) {
   const glow = document.createElement('div');
   glow.id = 'cursor-glow';
-  glow.style.cssText = `
-    position: fixed;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(229,9,20,0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: left 0.12s ease, top 0.12s ease;
-    will-change: left, top;
-  `;
+  // Styles defined in style.css #cursor-glow rule
   document.body.appendChild(glow);
 
-  let mouseX = 0, mouseY = 0;
   window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    glow.style.left = mouseX + 'px';
-    glow.style.top  = mouseY + 'px';
+    glow.style.left = e.clientX + 'px';
+    glow.style.top  = e.clientY + 'px';
   }, { passive: true });
 }
 
@@ -360,39 +428,44 @@ if (heroVideo) {
   }
 }
 
-// ─── SHAKE ANIMATION (inline CSS) ─────────────────────────── 
-const shakeStyle = document.createElement('style');
-shakeStyle.textContent = `
-  @keyframes shakeField {
-    0%, 100% { transform: translateX(0); }
-    20%       { transform: translateX(-5px); }
-    40%       { transform: translateX(5px); }
-    60%       { transform: translateX(-4px); }
-    80%       { transform: translateX(4px); }
-  }
-`;
-document.head.appendChild(shakeStyle);
+// Shake animation and scroll reveal styles moved to style.css
+// Duplicate scroll reveal observer removed — handled by initReveal() above
 
-// --- SCROLL REVEALS ----------------------------------------- 
-if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-  const revealOptions = {
-    root: null,
-    rootMargin: '0px 0px -10% 0px',
-    threshold: 0.1
-  };
+// ─── IMPECCABLE POLISH: HERO PARALLAX-LITE ───────────────────
+if (!prefersReducedMotion) {
+  const heroContent = document.querySelector('.hero-content');
+  const heroScrollHint = document.querySelector('.hero-scroll-hint');
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  if (heroContent) {
+    const parallaxHandler = () => {
+      const scrollY = window.scrollY;
+      const heroH = window.innerHeight;
+      if (scrollY < heroH) {
+        const ratio = scrollY / heroH;
+        heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
+        heroContent.style.opacity = 1 - ratio * 1.2;
+        if (heroScrollHint) {
+          heroScrollHint.style.opacity = 1 - ratio * 3;
+        }
       }
-    });
-  }, revealOptions);
+    };
 
-  document.querySelectorAll('.reveal').forEach(el => {
-    revealObserver.observe(el);
-  });
+    if (lenis) {
+      lenis.on('scroll', ({ scroll }) => {
+        const heroH = window.innerHeight;
+        if (scroll < heroH) {
+          const ratio = scroll / heroH;
+          heroContent.style.transform = `translateY(${scroll * 0.15}px)`;
+          heroContent.style.opacity = 1 - ratio * 1.2;
+          if (heroScrollHint) {
+            heroScrollHint.style.opacity = 1 - ratio * 3;
+          }
+        }
+      });
+    } else {
+      window.addEventListener('scroll', parallaxHandler, { passive: true });
+    }
+  }
 }
 
 // ─── IMPECCABLE DELIGHT: MAGNETIC BUTTONS ────────────────────
