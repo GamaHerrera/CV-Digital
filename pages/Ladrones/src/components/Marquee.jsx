@@ -1,9 +1,9 @@
-import React from 'react';
+
 import './Marquee.css';
 
 export default function Marquee() {
   return (
-    <div className="marquee-container">
+    <div className="marquee-container" aria-hidden="true">
       <div className="marquee-track">
         <span className="marquee-text">
           LADRONES • FLOW PESADO • STREETWEAR • MEXICAN PESADO • 

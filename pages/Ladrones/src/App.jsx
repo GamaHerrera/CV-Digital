@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Lenis from 'lenis'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
@@ -24,40 +24,50 @@ function App() {
       infinite: false,
     });
 
+    let rafId;
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     // Conectar el scroll de Lenis a los anchors de navegación
     const navLinks = document.querySelectorAll('a[href^="#"]');
+    const handlers = new Map();
     navLinks.forEach((link) => {
-      link.addEventListener('click', (e) => {
+      const handler = (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
         lenis.scrollTo(targetId);
-      });
+      };
+      handlers.set(link, handler);
+      link.addEventListener('click', handler);
     });
 
     return () => {
+      cancelAnimationFrame(rafId);
+      navLinks.forEach((link) => {
+        const handler = handlers.get(link);
+        if (handler) link.removeEventListener('click', handler);
+      });
       lenis.destroy();
     };
   }, []);
 
   return (
     <>
+      <a className="skip-to-content" href="#main-content">Saltar al contenido</a>
       <div className="noise-overlay"></div>
       <Navigation />
-      <main className="main-content">
-      <Hero />
-      <Marquee />
-      <Bio />
-      <Tour />
-      <Gallery />
-      <TheaterMode />
-      <Contact />
+      <main className="main-content" id="main-content">
+        <Hero />
+        <Marquee />
+        <Bio />
+        <Tour />
+        <Gallery />
+        <TheaterMode />
+        <Contact />
       </main>
       <Footer />
     </>

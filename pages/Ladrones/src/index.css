@@ -122,3 +122,49 @@ ul {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Skip-to-content para accesibilidad con teclado */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  z-index: 10001;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Respeto a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .hero-l-icon:hover {
+    animation: none;
+  }
+
+  .btn-primary {
+    transition: none;
+  }
+
+  .gallery-item img {
+    transition: none;
+  }
+}

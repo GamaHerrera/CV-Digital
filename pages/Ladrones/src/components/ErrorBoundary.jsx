@@ -23,7 +23,9 @@ class ErrorBoundary extends React.Component {
           <div className="error-content">
             <h1 className="error-title">SYSTEM FAILURE</h1>
             <p className="error-subtitle">ALGO SE ROMPIÓ EN EL CAMINO.</p>
-            <p className="error-details">{this.state.error?.toString()}</p>
+            {import.meta.env.DEV && (
+              <p className="error-details">{this.state.error?.toString()}</p>
+            )}
             <button 
               className="btn-primary" 
               onClick={() => window.location.reload()}

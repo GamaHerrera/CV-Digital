@@ -1,4 +1,4 @@
-import React from 'react';
+
 import iconL from '../assets/icon-l.png';
 import './Hero.css';
 
@@ -12,6 +12,7 @@ export default function Hero() {
           muted 
           loop 
           playsInline 
+          preload="metadata"
           className="hero-video"
           poster="https://images.unsplash.com/photo-1598387181032-a310322db565?q=80&w=2075&auto=format&fit=crop"
         >
